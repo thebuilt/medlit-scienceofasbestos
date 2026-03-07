@@ -240,13 +240,15 @@ function buildTermQueryAndMatchers() {
   return { aliasToLabel, query };
 }
 
-async function fetchJson(url) {
-  const res = await fetch(url);
+async function fetchJson(url, init = undefined) {
+  const res = await fetch(url, init);
   if (!res.ok) {
-    throw new Error(`HTTP ${res.status} for ${url}`);
+    const body = await res.text().catch(() => "");
+    throw new Error(`HTTP ${res.status} for ${url}${body ? ` | ${body.slice(0, 400)}` : ""}`);
   }
   return res.json();
 }
+
 
 async function fetchText(url) {
   const res = await fetch(url);
@@ -283,23 +285,35 @@ function parseArticles(xml) {
 }
 
 async function pullPubMedData() {
-  const email = process.env.NCBI_EMAIL || "scienceofasbestos@example.org";
-  const tool = "scienceofasbestos-dashboard";
+const email = process.env.NCBI_EMAIL || "scienceofasbestos@example.org";
+const apiKey = process.env.NCBI_API_KEY || "";
+const tool = "scienceofasbestos-dashboard";
+
 
   const { aliasToLabel, query } = buildTermQueryAndMatchers();
   const fullQuery = `(${query}) AND ("${START_DATE}"[Date - Publication] : "${END_DATE}"[Date - Publication])`;
 
-  const esearchUrl = new URL("https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi");
-  esearchUrl.searchParams.set("db", "pubmed");
-  esearchUrl.searchParams.set("term", fullQuery);
-  esearchUrl.searchParams.set("retmode", "json");
-  esearchUrl.searchParams.set("retmax", "0");
-  esearchUrl.searchParams.set("usehistory", "y");
-  esearchUrl.searchParams.set("sort", "pub+date");
-  esearchUrl.searchParams.set("tool", tool);
-  esearchUrl.searchParams.set("email", email);
+const esearchUrl = "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi";
+const esearchBody = new URLSearchParams({
+  db: "pubmed",
+  term: fullQuery,
+  retmode: "json",
+  retmax: "0",
+  usehistory: "y",
+  sort: "pub+date",
+  tool,
+  email
+});
+if (apiKey) esearchBody.set("api_key", apiKey);
 
-  const search = await fetchJson(esearchUrl.toString());
+const search = await fetchJson(esearchUrl, {
+  method: "POST",
+  headers: {
+    "Content-Type": "application/x-www-form-urlencoded"
+  },
+  body: esearchBody.toString()
+});
+
   const count = Number(search?.esearchresult?.count || 0);
   const webenv = search?.esearchresult?.webenv;
   const queryKey = search?.esearchresult?.querykey;
@@ -320,6 +334,8 @@ async function pullPubMedData() {
     efetchUrl.searchParams.set("retmode", "xml");
     efetchUrl.searchParams.set("tool", tool);
     efetchUrl.searchParams.set("email", email);
+    if (apiKey) efetchUrl.searchParams.set("api_key", apiKey);
+
 
     const xml = await fetchText(efetchUrl.toString());
     const articles = parseArticles(xml);
