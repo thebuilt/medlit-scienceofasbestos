@@ -8,9 +8,9 @@ const __dirname = path.dirname(__filename);
 const ROOT = path.resolve(__dirname, "..");
 const OUT_PATH = path.join(ROOT, "data", "papers.json");
 
-const BATCH_SIZE = 100;
+const BATCH_SIZE = 40;
 const FETCH_TIMEOUT_MS = 120000;
-const MAX_RETRIES = 5;
+const MAX_RETRIES = 8;
 
 const START_DATE = "2000/01/01";
 const END_DATE = "3000";
@@ -247,20 +247,40 @@ function sleep(ms) {
   return new Promise((resolve) => setTimeout(resolve, ms));
 }
 
-async function fetchWithRetry(url, init = undefined, attempt = 1) {
-  const controller = new AbortController();
-  const timeout = setTimeout(() => controller.abort(), FETCH_TIMEOUT_MS);
+function isRetryableError(err) {
+  const msg = String(err?.message || err || "");
+  return (
+    err?.name === "AbortError" ||
+    msg.includes("terminated") ||
+    msg.includes("UND_ERR_SOCKET") ||
+    msg.includes("ECONNRESET") ||
+    msg.includes("ETIMEDOUT")
+  );
+}
 
-  try {
-    const res = await fetch(url, { ...(init || {}), signal: controller.signal });
-    clearTimeout(timeout);
-    return res;
-  } catch (err) {
-    clearTimeout(timeout);
-    if (attempt >= MAX_RETRIES) throw err;
-    await sleep(1000 * attempt);
-    return fetchWithRetry(url, init, attempt + 1);
+async function fetchWithRetry(url, init = undefined) {
+  for (let attempt = 1; attempt <= MAX_RETRIES; attempt += 1) {
+    const controller = new AbortController();
+    const timeout = setTimeout(() => controller.abort(), FETCH_TIMEOUT_MS);
+
+    try {
+      const res = await fetch(url, { ...(init || {}), signal: controller.signal });
+      clearTimeout(timeout);
+
+      if ((res.status === 429 || res.status >= 500) && attempt < MAX_RETRIES) {
+        await sleep(1000 * attempt);
+        continue;
+      }
+
+      return res;
+    } catch (err) {
+      clearTimeout(timeout);
+      if (!isRetryableError(err) || attempt === MAX_RETRIES) throw err;
+      await sleep(1200 * attempt);
+    }
   }
+
+  throw new Error("fetchWithRetry exhausted retries");
 }
 
 async function fetchJson(url, init = undefined) {
@@ -271,8 +291,6 @@ async function fetchJson(url, init = undefined) {
   }
   return res.json();
 }
-
-
 
 async function fetchText(url, init = undefined) {
   const res = await fetchWithRetry(url, init);
