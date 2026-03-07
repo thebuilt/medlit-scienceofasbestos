@@ -489,17 +489,7 @@ function renderWordMap() {
     return;
   }
 
-  if (!state.wordFocus) {
-    const degree = new Map();
-    network.links.forEach((l) => {
-      const a = l.source.id || l.source;
-      const b = l.target.id || l.target;
-      degree.set(a, (degree.get(a) || 0) + l.value);
-      degree.set(b, (degree.get(b) || 0) + l.value);
-    });
-    const best = [...degree.entries()].sort((a, b) => b[1] - a[1])[0]?.[0] || network.nodes[0].id;
-    state.wordFocus = best;
-  }
+
 
   const valueExtent = d3.extent(network.nodes, (d) => d.value);
   const radius = d3.scaleSqrt().domain(valueExtent).range([8, 30]);
