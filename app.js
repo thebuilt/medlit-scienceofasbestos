@@ -49,6 +49,9 @@ const dom = {
   activeWordChip: document.getElementById("active-word-chip"),
   activeWordLabel: document.getElementById("active-word-label"),
   clearWordFilter: document.getElementById("clear-word-filter"),
+  loadingWrap: document.getElementById("loading-wrap"),
+  loadingText: document.getElementById("loading-text"),
+  loadingFill: document.getElementById("loading-fill"),
   relatedWords: document.getElementById("related-words"),
   wordTrendSvg: d3.select("#word-trend"),
   exportCsv: document.getElementById("export-csv"),
@@ -72,6 +75,17 @@ function formatDateIso(dateIso) {
   const dt = new Date(dateIso);
   if (Number.isNaN(dt.getTime())) return dateIso;
   return dt.toISOString().slice(0, 10);
+}
+
+function setLoading(visible, message = "Loading...", progress = null) {
+  dom.loadingWrap.classList.toggle("visible", visible);
+  dom.loadingText.textContent = message;
+  if (typeof progress === "number") {
+    const pct = Math.max(0, Math.min(100, progress));
+    dom.loadingFill.style.width = `${pct}%`;
+  } else if (!visible) {
+    dom.loadingFill.style.width = "0%";
+  }
 }
 
 function uniqueYears(papers) {
@@ -423,9 +437,23 @@ function renderWordMap() {
   state.lastWordNetwork = network;
 
   if (!network.nodes.length) {
+    state.wordFocus = "";
+    state.wordFilter = "";
     renderRelatedWords();
     renderWordTrend();
     return;
+  }
+
+  if (!state.wordFocus) {
+    const degree = new Map();
+    network.links.forEach((l) => {
+      const a = l.source.id || l.source;
+      const b = l.target.id || l.target;
+      degree.set(a, (degree.get(a) || 0) + l.value);
+      degree.set(b, (degree.get(b) || 0) + l.value);
+    });
+    const best = [...degree.entries()].sort((a, b) => b[1] - a[1])[0]?.[0] || network.nodes[0].id;
+    state.wordFocus = best;
   }
 
   const valueExtent = d3.extent(network.nodes, (d) => d.value);
@@ -755,40 +783,51 @@ function bindHelpEvents() {
   });
 }
 
-function refresh() {
+function refreshInternal() {
   applyFilters();
   renderKpis(state.meta);
   renderPaperList();
   renderBubbleChart();
   if (state.worldTopo) renderWorldMap(state.worldTopo);
   renderWordMap();
+  syncUiFromState();
 
   if (state.filtered.length) renderPaperHover(state.filtered[0]);
+}
+
+function refresh(message = "Updating visuals...") {
+  setLoading(true, message);
+  requestAnimationFrame(() => {
+    requestAnimationFrame(() => {
+      refreshInternal();
+      setLoading(false);
+    });
+  });
 }
 
 function bindEvents() {
   dom.search.addEventListener("input", (e) => {
     state.search = e.target.value;
-    refresh();
+    refresh("Applying search filter...");
   });
 
   dom.yearMin.addEventListener("change", (e) => {
     state.yearMin = Number(e.target.value);
     if (state.yearMin > state.yearMax) state.yearMax = state.yearMin;
     syncUiFromState();
-    refresh();
+    refresh("Updating year range...");
   });
 
   dom.yearMax.addEventListener("change", (e) => {
     state.yearMax = Number(e.target.value);
     if (state.yearMax < state.yearMin) state.yearMin = state.yearMax;
     syncUiFromState();
-    refresh();
+    refresh("Updating year range...");
   });
 
   dom.termFilter.addEventListener("change", (e) => {
     state.selectedTerms = Array.from(e.target.selectedOptions).map((opt) => opt.value);
-    refresh();
+    refresh("Applying keyword filters...");
   });
 
   dom.wordClickMode.addEventListener("change", (e) => {
@@ -796,7 +835,7 @@ function bindEvents() {
     if (state.wordClickMode === "highlight") state.wordFilter = "";
     if (state.wordClickMode === "filter" && state.wordFocus) state.wordFilter = state.wordFocus;
     syncUiFromState();
-    refresh();
+    refresh("Switching word interaction mode...");
   });
 
   dom.resetFilters.addEventListener("click", () => {
@@ -806,14 +845,14 @@ function bindEvents() {
   dom.clearCountryFilter.addEventListener("click", () => {
     state.countryFilter = "";
     syncUiFromState();
-    refresh();
+    refresh("Clearing country filter...");
   });
 
   dom.clearWordFilter.addEventListener("click", () => {
     state.wordFilter = "";
     state.wordFocus = "";
     syncUiFromState();
-    refresh();
+    refresh("Clearing word filter...");
   });
 
   dom.exportCsv.addEventListener("click", () => {
@@ -824,15 +863,17 @@ function bindEvents() {
     state.theme = state.theme === "dark" ? "light" : "dark";
     applyTheme();
     syncUiFromState();
-    refresh();
+    refresh("Switching theme...");
   });
 }
 
 async function init() {
+  setLoading(true, "Loading dataset...", 10);
   const [paperData, worldTopo] = await Promise.all([
     d3.json(CONFIG.papersUrl),
     d3.json(CONFIG.worldTopoUrl)
   ]);
+  setLoading(true, "Preparing dashboard...", 55);
 
   state.papers = (paperData.papers || []).filter((p) => Number.isInteger(p.year) && p.year >= CONFIG.startYearFloor);
   state.meta = paperData.meta || {};
@@ -841,12 +882,14 @@ async function init() {
   fillControls(state.meta.terms || []);
   applyTheme();
   syncUiFromState();
-  refresh();
+  refreshInternal();
+  setLoading(true, "Finalizing charts...", 90);
 
   bindEvents();
   bindFocusEvents();
   bindHelpEvents();
   applyFocusMode();
+  setLoading(false, "Ready", 100);
 
   dom.footnote.textContent = `Source: NCBI E-utilities (PubMed) via automated update workflow. Query start date: ${CONFIG.startYearFloor}-01-01. Last generated: ${formatDateIso(state.meta.generatedAt)}.`;
 }
