@@ -13,11 +13,23 @@
       --line: rgba(111, 169, 223, 0.24);
       --ink: #e9f4ff;
       --muted: #9cc0dd;
-      --teal: #22c7b8;
-      --cyan: #3ea9ff;
-      --amber: #ffb74a;
-      --danger: #ff6572;
+      --chip-bg: rgba(21, 56, 90, 0.8);
+      --chip-line: rgba(127, 189, 245, 0.5);
+      --map-default: rgba(22, 43, 66, 0.9);
       --glow: 0 18px 48px rgba(4, 12, 23, 0.42);
+    }
+
+    body.theme-light {
+      --bg: #edf3fb;
+      --panel: rgba(255, 255, 255, 0.96);
+      --panel-2: rgba(246, 251, 255, 0.98);
+      --line: rgba(33, 89, 148, 0.2);
+      --ink: #12304e;
+      --muted: #4d6f8f;
+      --chip-bg: rgba(222, 236, 249, 0.96);
+      --chip-line: rgba(93, 146, 201, 0.5);
+      --map-default: rgba(220, 232, 245, 0.98);
+      --glow: 0 14px 36px rgba(20, 48, 76, 0.16);
     }
 
     * { box-sizing: border-box; }
@@ -29,14 +41,29 @@
       background:
         radial-gradient(900px 400px at 15% -10%, rgba(62, 169, 255, 0.2), transparent 60%),
         radial-gradient(1100px 500px at 110% 0%, rgba(34, 199, 184, 0.18), transparent 55%),
-        linear-gradient(180deg, #060d17, #08111d 34%, #07101a);
+        linear-gradient(180deg, #060d17, var(--bg) 34%, #07101a);
       min-height: 100vh;
     }
 
+    body.theme-light {
+      background:
+        radial-gradient(900px 400px at 15% -10%, rgba(82, 162, 255, 0.16), transparent 60%),
+        radial-gradient(1100px 500px at 110% 0%, rgba(63, 178, 163, 0.14), transparent 55%),
+        linear-gradient(180deg, #f4f9ff, var(--bg) 34%, #eaf3fd);
+    }
+
     .page {
-      width: min(1400px, 96%);
+      width: min(1440px, 96%);
       margin: 0 auto;
       padding: 20px 0 30px;
+    }
+
+    .topbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
     }
 
     h1 {
@@ -45,6 +72,17 @@
       font-size: clamp(1.5rem, 3.8vw, 2.7rem);
       letter-spacing: 0.02em;
       line-height: 1.1;
+    }
+
+    .theme-toggle {
+      border: 1px solid var(--line);
+      background: var(--panel);
+      color: var(--ink);
+      border-radius: 999px;
+      padding: 8px 14px;
+      font-size: 0.82rem;
+      font-weight: 700;
+      cursor: pointer;
     }
 
     .sub {
@@ -63,7 +101,7 @@
 
     .chip {
       border: 1px solid var(--line);
-      background: linear-gradient(160deg, rgba(17, 36, 60, 0.84), rgba(9, 22, 38, 0.9));
+      background: var(--panel);
       border-radius: 12px;
       padding: 10px;
       box-shadow: var(--glow);
@@ -79,7 +117,7 @@
       border-radius: 14px;
       padding: 10px;
       display: grid;
-      grid-template-columns: 1.3fr minmax(100px, 150px) minmax(100px, 150px) minmax(180px, 240px) auto;
+      grid-template-columns: 1.25fr minmax(100px, 145px) minmax(100px, 145px) minmax(180px, 240px) minmax(150px, 190px) auto;
       gap: 8px;
       align-items: end;
       box-shadow: var(--glow);
@@ -97,20 +135,23 @@
     input, select {
       background: rgba(3, 10, 18, 0.85);
       color: var(--ink);
-      border: 1px solid rgba(106, 164, 219, 0.34);
+      border: 1px solid var(--line);
       border-radius: 9px;
       padding: 8px 10px;
       font: inherit;
     }
 
-    select[multiple] {
-      min-height: 84px;
+    body.theme-light input,
+    body.theme-light select {
+      background: #fff;
     }
 
-    .reset-btn {
-      border: 1px solid rgba(110, 174, 235, 0.55);
-      background: rgba(20, 53, 84, 0.88);
-      color: #e3f4ff;
+    select[multiple] { min-height: 84px; }
+
+    .reset-btn, .export-btn {
+      border: 1px solid var(--line);
+      background: var(--panel);
+      color: var(--ink);
       border-radius: 9px;
       height: 38px;
       padding: 0 12px;
@@ -118,12 +159,6 @@
       font-size: 0.82rem;
       font-weight: 700;
       cursor: pointer;
-      transition: background 120ms ease, border-color 120ms ease;
-    }
-
-    .reset-btn:hover {
-      background: rgba(30, 77, 118, 0.93);
-      border-color: rgba(136, 196, 251, 0.9);
     }
 
     .active-filters {
@@ -139,9 +174,9 @@
       display: inline-flex;
       align-items: center;
       gap: 6px;
-      border: 1px solid rgba(127, 189, 245, 0.5);
-      background: rgba(21, 56, 90, 0.8);
-      color: #def3ff;
+      border: 1px solid var(--chip-line);
+      background: var(--chip-bg);
+      color: var(--ink);
       border-radius: 999px;
       padding: 3px 9px;
       font-size: 0.74rem;
@@ -150,7 +185,7 @@
     .chip-clear {
       border: 0;
       background: transparent;
-      color: #cbeaff;
+      color: var(--muted);
       cursor: pointer;
       font-size: 0.75rem;
       line-height: 1;
@@ -165,13 +200,8 @@
       transition: grid-template-columns 220ms ease;
     }
 
-    .layout.focus-mode.focus-viz {
-      grid-template-columns: 1.7fr 0.75fr;
-    }
-
-    .layout.focus-mode.focus-list {
-      grid-template-columns: 0.75fr 1.7fr;
-    }
+    .layout.focus-mode.focus-viz { grid-template-columns: 1.7fr 0.75fr; }
+    .layout.focus-mode.focus-list { grid-template-columns: 0.75fr 1.7fr; }
 
     .panel {
       border: 1px solid var(--line);
@@ -191,7 +221,6 @@
     .panel-head {
       padding: 10px 12px;
       border-bottom: 1px solid var(--line);
-      background: linear-gradient(90deg, rgba(18, 46, 76, 0.8), rgba(8, 21, 37, 0.8));
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -211,10 +240,10 @@
       gap: 8px;
     }
 
-    .focus-btn {
-      border: 1px solid rgba(112, 177, 238, 0.45);
-      background: rgba(14, 35, 58, 0.9);
-      color: #d9efff;
+    .focus-btn, .help-btn {
+      border: 1px solid var(--line);
+      background: var(--panel);
+      color: var(--ink);
       border-radius: 999px;
       padding: 4px 10px;
       font-size: 0.7rem;
@@ -222,13 +251,27 @@
       letter-spacing: 0.05em;
       text-transform: uppercase;
       cursor: pointer;
-      transition: background 140ms ease, border-color 140ms ease;
     }
 
-    .focus-btn:hover {
-      background: rgba(26, 62, 100, 0.94);
-      border-color: rgba(112, 177, 238, 0.75);
+    .help-btn {
+      width: 24px;
+      height: 24px;
+      padding: 0;
+      font-weight: 800;
+      text-transform: none;
+      border-radius: 999px;
     }
+
+    .panel-help {
+      display: none;
+      border-bottom: 1px solid var(--line);
+      padding: 8px 12px;
+      font-size: 0.8rem;
+      color: var(--muted);
+      line-height: 1.45;
+    }
+
+    .panel-help.open { display: block; }
 
     .viz-grid {
       display: grid;
@@ -240,10 +283,7 @@
       transition: min-height 220ms ease, transform 220ms ease, opacity 220ms ease, border-color 220ms ease;
     }
 
-    .focus-panel.dimmed {
-      opacity: 0.62;
-      transform: scale(0.985);
-    }
+    .focus-panel.dimmed { opacity: 0.62; transform: scale(0.985); }
 
     .focus-panel.active {
       border-color: rgba(142, 217, 255, 0.78);
@@ -252,22 +292,10 @@
       transform: scale(1);
     }
 
-    .viz-card {
-      min-height: 320px;
-    }
-
-    .viz-card.wide-card {
-      grid-column: 1 / -1;
-    }
-
-    .viz-grid.focus-mode .viz-card {
-      min-height: 230px;
-    }
-
-    .viz-grid.focus-mode .viz-card.active {
-      grid-column: 1 / -1;
-      min-height: 560px;
-    }
+    .viz-card { min-height: 320px; }
+    .viz-card.wide-card { grid-column: 1 / -1; }
+    .viz-grid.focus-mode .viz-card { min-height: 230px; }
+    .viz-grid.focus-mode .viz-card.active { grid-column: 1 / -1; min-height: 620px; }
 
     .viz-card svg {
       width: 100%;
@@ -277,28 +305,68 @@
       transition: min-height 220ms ease;
     }
 
-    .viz-grid.focus-mode .viz-card svg {
-      min-height: 220px;
+    body.theme-light .viz-card svg {
+      background: linear-gradient(160deg, rgba(240, 247, 255, 0.96), rgba(231, 243, 255, 0.96));
     }
 
-    .viz-grid.focus-mode .viz-card.active svg {
-      min-height: 500px;
+    .viz-grid.focus-mode .viz-card svg { min-height: 220px; }
+    .viz-grid.focus-mode .viz-card.active svg { min-height: 500px; }
+
+    .word-insights {
+      border-top: 1px solid var(--line);
+      display: grid;
+      grid-template-columns: 1fr 1.1fr;
+      gap: 8px;
+      padding: 8px;
+    }
+
+    .insight-card {
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      padding: 8px;
+      background: var(--panel-2);
+    }
+
+    .insight-title {
+      margin: 0 0 6px;
+      color: var(--muted);
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+
+    .related-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      min-height: 30px;
+    }
+
+    .related-btn {
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: var(--panel);
+      color: var(--ink);
+      font-size: 0.72rem;
+      padding: 2px 8px;
+      cursor: pointer;
+    }
+
+    #word-trend {
+      width: 100%;
+      min-height: 82px;
+      background: transparent;
     }
 
     .list-panel {
       display: grid;
-      grid-template-rows: auto auto 1fr;
+      grid-template-rows: auto auto auto 1fr;
       min-height: 660px;
       transition: min-height 220ms ease;
     }
 
-    .layout.focus-mode .list-panel {
-      min-height: 560px;
-    }
-
-    .layout.focus-mode .list-panel.active {
-      min-height: 900px;
-    }
+    .layout.focus-mode .list-panel { min-height: 560px; }
+    .layout.focus-mode .list-panel.active { min-height: 900px; }
 
     .hover-card {
       margin: 10px;
@@ -325,7 +393,6 @@
       margin: 0;
       font-size: 0.84rem;
       line-height: 1.45;
-      color: #d5ebff;
       display: -webkit-box;
       -webkit-line-clamp: 5;
       -webkit-box-orient: vertical;
@@ -341,16 +408,14 @@
       transition: max-height 220ms ease;
     }
 
-    .layout.focus-mode .list-panel.active .paper-list {
-      max-height: 700px;
-    }
+    .layout.focus-mode .list-panel.active .paper-list { max-height: 700px; }
 
     .paper-item {
       margin: 8px 0;
-      border: 1px solid rgba(95, 154, 211, 0.23);
+      border: 1px solid var(--line);
       border-radius: 10px;
       padding: 9px;
-      background: rgba(11, 24, 41, 0.88);
+      background: var(--panel-2);
       transition: border-color 120ms ease, transform 120ms ease;
       cursor: pointer;
     }
@@ -359,6 +424,8 @@
       border-color: rgba(62, 169, 255, 0.7);
       transform: translateY(-1px);
     }
+
+    .paper-item.word-hit { border-color: rgba(255, 212, 112, 0.65); }
 
     .paper-title {
       margin: 0;
@@ -384,9 +451,8 @@
       font-size: 0.7rem;
       padding: 2px 7px;
       border-radius: 999px;
-      border: 1px solid rgba(126, 181, 234, 0.35);
-      color: #d8efff;
-      background: rgba(23, 56, 92, 0.55);
+      border: 1px solid var(--line);
+      background: var(--panel);
     }
 
     .empty {
@@ -402,7 +468,7 @@
     }
 
     .map-tip {
-      fill: #dff4ff;
+      fill: var(--ink);
       font-size: 0.74rem;
       pointer-events: none;
     }
@@ -427,6 +493,7 @@
       .viz-grid { grid-template-columns: 1fr; }
       .status-strip { grid-template-columns: repeat(2, minmax(120px, 1fr)); }
       .toolbar { grid-template-columns: 1fr 1fr; }
+      .word-insights { grid-template-columns: 1fr; }
     }
 
     @media (max-width: 640px) {
@@ -437,7 +504,11 @@
 </head>
 <body>
   <main class="page">
-    <h1>PubMed Asbestos Intelligence Grid</h1>
+    <div class="topbar">
+      <h1>PubMed Asbestos Intelligence Grid</h1>
+      <button type="button" id="theme-toggle" class="theme-toggle">Switch Theme</button>
+    </div>
+
     <p class="sub">
       Continuous monitoring of asbestos literature from 2000 onward. Includes multilingual keyword matching, interactive paper hover summaries,
       first-author affiliation country heat map, and word-network trend mapping.
@@ -463,12 +534,23 @@
       <label>Keyword focus
         <select id="term-filter" multiple></select>
       </label>
+      <label>Word click behavior
+        <select id="word-click-mode">
+          <option value="filter">Filter Papers</option>
+          <option value="highlight">Highlight Only</option>
+        </select>
+      </label>
       <button id="reset-filters" class="reset-btn" type="button">Reset Filters</button>
     </section>
+
     <div class="active-filters">
       <span id="active-country-chip" class="filter-chip" style="display:none;">
         Country: <span id="active-country-label"></span>
         <button type="button" class="chip-clear" id="clear-country-filter">x</button>
+      </span>
+      <span id="active-word-chip" class="filter-chip" style="display:none;">
+        Word: <span id="active-word-label"></span>
+        <button type="button" class="chip-clear" id="clear-word-filter">x</button>
       </span>
     </div>
 
@@ -478,9 +560,13 @@
           <div class="panel-head">
             <h2>Keyword Bubble Matrix</h2>
             <span class="panel-actions">
-              <span class="panel-sub">Click a bubble to focus</span>
+              <span class="panel-sub">Click bubbles to add/remove terms</span>
+              <button type="button" class="help-btn" data-help-target="help-bubble">i</button>
               <button type="button" class="focus-btn" data-focus-target="bubble">Focus</button>
             </span>
+          </div>
+          <div class="panel-help" id="help-bubble">
+            Shows all tracked asbestos terms as bubbles sized by paper count. Click a bubble to toggle that keyword filter.
           </div>
           <svg id="bubble-chart" viewBox="0 0 760 360" role="img" aria-label="Keyword bubble chart"></svg>
         </article>
@@ -489,9 +575,13 @@
           <div class="panel-head">
             <h2>First-Author Country Map</h2>
             <span class="panel-actions">
-              <span class="panel-sub">Paper count by country</span>
+              <span class="panel-sub">Click country to filter papers</span>
+              <button type="button" class="help-btn" data-help-target="help-world">i</button>
               <button type="button" class="focus-btn" data-focus-target="world">Focus</button>
             </span>
+          </div>
+          <div class="panel-help" id="help-world">
+            Heat map of paper counts by first-author country. Click any country to filter the paper stream to that country.
           </div>
           <svg id="world-map" viewBox="0 0 760 360" role="img" aria-label="World map"></svg>
         </article>
@@ -500,11 +590,25 @@
           <div class="panel-head">
             <h2>Word Co-occurrence Map</h2>
             <span class="panel-actions">
-              <span class="panel-sub">Concept structure across abstracts</span>
+              <span class="panel-sub">Click words for drill-down</span>
+              <button type="button" class="help-btn" data-help-target="help-word">i</button>
               <button type="button" class="focus-btn" data-focus-target="word">Focus</button>
             </span>
           </div>
+          <div class="panel-help" id="help-word">
+            Network of frequent abstract/title words and their connections. Click a node to either filter papers or highlight relations (based on Word click behavior).
+          </div>
           <svg id="word-map" viewBox="0 0 1240 340" role="img" aria-label="Word network map"></svg>
+          <div class="word-insights">
+            <div class="insight-card">
+              <p class="insight-title">Top Related Words</p>
+              <div class="related-list" id="related-words"></div>
+            </div>
+            <div class="insight-card">
+              <p class="insight-title">Selected Word Trend By Year</p>
+              <svg id="word-trend" viewBox="0 0 460 120" role="img" aria-label="Word trend chart"></svg>
+            </div>
+          </div>
         </article>
       </div>
 
@@ -513,8 +617,13 @@
           <h2>Paper Stream</h2>
           <span class="panel-actions">
             <span class="panel-sub" id="paper-count-label">0 papers</span>
+            <button type="button" id="export-csv" class="export-btn">Export CSV</button>
+            <button type="button" class="help-btn" data-help-target="help-papers">i</button>
             <button type="button" class="focus-btn" data-focus-target="papers">Focus</button>
           </span>
+        </div>
+        <div class="panel-help" id="help-papers">
+          Hover for abstract preview, click paper to open PubMed, and use Export CSV to download the currently filtered list.
         </div>
         <div class="hover-card" id="hover-card">
           <h3>Hover any paper to preview title and abstract.</h3>
