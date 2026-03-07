@@ -3,7 +3,7 @@ name: Update PubMed Data
 concurrency:
   group: pubmed-data-update
   cancel-in-progress: true
-  
+
 on:
   workflow_dispatch:
   schedule:
@@ -30,9 +30,10 @@ jobs:
       - name: Refresh PubMed dataset
         env:
           NCBI_EMAIL: ${{ secrets.NCBI_EMAIL }}
+          NCBI_API_KEY: ${{ secrets.NCBI_API_KEY }}
         run: npm run update:data
 
-        - name: Commit updated data
+      - name: Commit updated data
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
@@ -42,7 +43,7 @@ jobs:
             exit 0
           fi
           git commit -m "chore(data): refresh pubmed dataset"
-
           git pull --rebase origin main
           git push origin HEAD:main
+
 
