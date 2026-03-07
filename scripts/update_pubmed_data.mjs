@@ -310,6 +310,13 @@ function parseArticles(xml) {
   return Array.isArray(articles) ? articles : [articles];
 }
 
+function chunkArray(arr, size) {
+  const out = [];
+  for (let i = 0; i < arr.length; i += size) out.push(arr.slice(i, i + size));
+  return out;
+}
+
+
 async function pullPubMedData() {
 const email = process.env.NCBI_EMAIL || "scienceofasbestos@example.org";
 const apiKey = process.env.NCBI_API_KEY || "";
@@ -348,61 +355,83 @@ const search = await fetchJson(esearchUrl, {
     throw new Error("PubMed search did not return WebEnv/query key.");
   }
 
-  const papers = [];
+    const papers = [];
+  const currentYear = new Date().getFullYear();
 
-  for (let start = 0; start < count; start += BATCH_SIZE) {
-    const efetchUrl = new URL("https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi");
-    efetchUrl.searchParams.set("db", "pubmed");
-    efetchUrl.searchParams.set("query_key", String(queryKey));
-    efetchUrl.searchParams.set("WebEnv", String(webenv));
-    efetchUrl.searchParams.set("retstart", String(start));
-    efetchUrl.searchParams.set("retmax", String(BATCH_SIZE));
-    efetchUrl.searchParams.set("retmode", "xml");
-    efetchUrl.searchParams.set("tool", tool);
-    efetchUrl.searchParams.set("email", email);
-    if (apiKey) efetchUrl.searchParams.set("api_key", apiKey);
+  for (let year = 2000; year <= currentYear; year += 1) {
+    const yearQuery = `(${query}) AND ("${year}/01/01"[Date - Publication] : "${year}/12/31"[Date - Publication])`;
 
+    const esearchBody = new URLSearchParams({
+      db: "pubmed",
+      term: yearQuery,
+      retmode: "json",
+      retmax: "9999",
+      sort: "pub+date",
+      tool,
+      email
+    });
+    if (apiKey) esearchBody.set("api_key", apiKey);
 
-    const xml = await fetchText(efetchUrl.toString());
-    await sleep(350);
+    const search = await fetchJson("https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: esearchBody.toString()
+    });
 
-    const articles = parseArticles(xml);
+    const ids = search?.esearchresult?.idlist || [];
+    if (!ids.length) continue;
 
-    for (const rec of articles) {
-      const pmid = flattenText(rec?.MedlineCitation?.PMID).trim();
-      const article = rec?.MedlineCitation?.Article;
-      if (!pmid || !article) continue;
+    for (const idChunk of chunkArray(ids, BATCH_SIZE)) {
+      const efetchUrl = new URL("https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi");
+      efetchUrl.searchParams.set("db", "pubmed");
+      efetchUrl.searchParams.set("id", idChunk.join(","));
+      efetchUrl.searchParams.set("retmode", "xml");
+      efetchUrl.searchParams.set("tool", tool);
+      efetchUrl.searchParams.set("email", email);
+      if (apiKey) efetchUrl.searchParams.set("api_key", apiKey);
 
-      const title = flattenText(article.ArticleTitle).trim();
-      const abstract = flattenText(article?.Abstract?.AbstractText).trim();
-      const pubDate = extractPubDate(article);
-      const year = Number((pubDate || "").slice(0, 4));
-      if (!Number.isInteger(year) || year < 2000) continue;
+      const xml = await fetchText(efetchUrl.toString());
+      await sleep(350);
 
-      const journal = flattenText(article?.Journal?.Title || "").trim();
-      const language = flattenText(firstArray(article?.Language) || "").trim();
-      const doi = extractDoi(article);
-      const firstAuthor = extractFirstAuthor(article);
-      const termsMatched = detectTerms(title, abstract, aliasToLabel);
-      if (!termsMatched.length) continue;
+      const articles = parseArticles(xml);
 
-      papers.push({
-        pmid,
-        title,
-        abstract,
-        journal,
-        pubDate,
-        year,
-        doi,
-        url: `https://pubmed.ncbi.nlm.nih.gov/${pmid}/`,
-        firstAuthor: firstAuthor.name,
-        firstAffiliation: firstAuthor.affiliation,
-        country: extractCountry(firstAuthor.affiliation),
-        language,
-        termsMatched
-      });
+      for (const rec of articles) {
+        const pmid = flattenText(rec?.MedlineCitation?.PMID).trim();
+        const article = rec?.MedlineCitation?.Article;
+        if (!pmid || !article) continue;
+
+        const title = flattenText(article.ArticleTitle).trim();
+        const abstract = flattenText(article?.Abstract?.AbstractText).trim();
+        const pubDate = extractPubDate(article);
+        const pubYear = Number((pubDate || "").slice(0, 4));
+        if (!Number.isInteger(pubYear) || pubYear < 2000) continue;
+
+        const journal = flattenText(article?.Journal?.Title || "").trim();
+        const language = flattenText(firstArray(article?.Language) || "").trim();
+        const doi = extractDoi(article);
+        const firstAuthor = extractFirstAuthor(article);
+        const termsMatched = detectTerms(title, abstract, aliasToLabel);
+        if (!termsMatched.length) continue;
+
+        papers.push({
+          pmid,
+          title,
+          abstract,
+          journal,
+          pubDate,
+          year: pubYear,
+          doi,
+          url: `https://pubmed.ncbi.nlm.nih.gov/${pmid}/`,
+          firstAuthor: firstAuthor.name,
+          firstAffiliation: firstAuthor.affiliation,
+          country: extractCountry(firstAuthor.affiliation),
+          language,
+          termsMatched
+        });
+      }
     }
   }
+
 
   const dedup = new Map();
   for (const p of papers) dedup.set(p.pmid, p);
