@@ -1,0 +1,20 @@
+{
+  "meta": {
+    "generatedAt": "",
+    "source": "NCBI E-utilities (PubMed)",
+    "terms": [
+      "asbestos",
+      "mesothelioma",
+      "chrysotile",
+      "asbestosis",
+      "tremolite",
+      "amosite",
+      "anthophyllite",
+      "actinolite"
+    ],
+    "query": "",
+    "startYear": 2000,
+    "notes": "Run npm run update:data (or GitHub Action) to populate this file."
+  },
+  "papers": []
+}
