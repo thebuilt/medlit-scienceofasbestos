@@ -8,7 +8,10 @@ const __dirname = path.dirname(__filename);
 const ROOT = path.resolve(__dirname, "..");
 const OUT_PATH = path.join(ROOT, "data", "papers.json");
 
-const BATCH_SIZE = 200;
+const BATCH_SIZE = 100;
+const FETCH_TIMEOUT_MS = 120000;
+const MAX_RETRIES = 5;
+
 const START_DATE = "2000/01/01";
 const END_DATE = "3000";
 
@@ -240,8 +243,28 @@ function buildTermQueryAndMatchers() {
   return { aliasToLabel, query };
 }
 
+function sleep(ms) {
+  return new Promise((resolve) => setTimeout(resolve, ms));
+}
+
+async function fetchWithRetry(url, init = undefined, attempt = 1) {
+  const controller = new AbortController();
+  const timeout = setTimeout(() => controller.abort(), FETCH_TIMEOUT_MS);
+
+  try {
+    const res = await fetch(url, { ...(init || {}), signal: controller.signal });
+    clearTimeout(timeout);
+    return res;
+  } catch (err) {
+    clearTimeout(timeout);
+    if (attempt >= MAX_RETRIES) throw err;
+    await sleep(1000 * attempt);
+    return fetchWithRetry(url, init, attempt + 1);
+  }
+}
+
 async function fetchJson(url, init = undefined) {
-  const res = await fetch(url, init);
+  const res = await fetchWithRetry(url, init);
   if (!res.ok) {
     const body = await res.text().catch(() => "");
     throw new Error(`HTTP ${res.status} for ${url}${body ? ` | ${body.slice(0, 400)}` : ""}`);
@@ -250,13 +273,16 @@ async function fetchJson(url, init = undefined) {
 }
 
 
-async function fetchText(url) {
-  const res = await fetch(url);
+
+async function fetchText(url, init = undefined) {
+  const res = await fetchWithRetry(url, init);
   if (!res.ok) {
-    throw new Error(`HTTP ${res.status} for ${url}`);
+    const body = await res.text().catch(() => "");
+    throw new Error(`HTTP ${res.status} for ${url}${body ? ` | ${body.slice(0, 400)}` : ""}`);
   }
   return res.text();
 }
+
 
 function detectTerms(title, abstract, aliasToLabel) {
   const blob = normalize(`${title} ${abstract}`);
@@ -338,6 +364,8 @@ const search = await fetchJson(esearchUrl, {
 
 
     const xml = await fetchText(efetchUrl.toString());
+    await sleep(350);
+
     const articles = parseArticles(xml);
 
     for (const rec of articles) {
