@@ -10,6 +10,7 @@ const state = {
   termCounts: {},
   countryCounts: {},
   worldTopo: null,
+  focusPanel: "",
   yearMin: CONFIG.startYearFloor,
   yearMax: new Date().getFullYear(),
   termFilter: "all",
@@ -35,6 +36,10 @@ const dom = {
   paperList: document.getElementById("paper-list"),
   hoverCard: document.getElementById("hover-card"),
   footnote: document.getElementById("footnote"),
+  layout: document.querySelector(".layout"),
+  vizGrid: document.querySelector(".viz-grid"),
+  focusPanels: Array.from(document.querySelectorAll(".focus-panel")),
+  focusButtons: Array.from(document.querySelectorAll(".focus-btn")),
   bubbleSvg: d3.select("#bubble-chart"),
   worldSvg: d3.select("#world-map"),
   wordSvg: d3.select("#word-map")
@@ -409,6 +414,47 @@ function syncUiFromState() {
   dom.search.value = state.search;
 }
 
+function applyFocusMode() {
+  const activePanel = state.focusPanel;
+  const hasFocus = Boolean(activePanel);
+
+  dom.layout.classList.toggle("focus-mode", hasFocus);
+  dom.vizGrid.classList.toggle("focus-mode", hasFocus);
+  dom.layout.classList.remove("focus-viz", "focus-list");
+
+  dom.focusPanels.forEach((panel) => {
+    const isActive = panel.dataset.panel === activePanel;
+    panel.classList.toggle("active", hasFocus && isActive);
+    panel.classList.toggle("dimmed", hasFocus && !isActive);
+  });
+
+  dom.focusButtons.forEach((btn) => {
+    const isActive = btn.dataset.focusTarget === activePanel;
+    btn.textContent = isActive ? "Back to Grid" : "Focus";
+    btn.setAttribute("aria-pressed", String(isActive));
+  });
+
+  if (!hasFocus) return;
+
+  const activeEl = dom.focusPanels.find((panel) => panel.dataset.panel === activePanel);
+  if (!activeEl) return;
+  if (activeEl.classList.contains("list-panel")) {
+    dom.layout.classList.add("focus-list");
+  } else {
+    dom.layout.classList.add("focus-viz");
+  }
+}
+
+function bindFocusEvents() {
+  dom.focusButtons.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const target = btn.dataset.focusTarget || "";
+      state.focusPanel = state.focusPanel === target ? "" : target;
+      applyFocusMode();
+    });
+  });
+}
+
 function refresh(meta = {}) {
   applyFilters();
   renderKpis(meta);
@@ -462,6 +508,8 @@ async function init() {
   refresh(paperData.meta || {});
 
   bindEvents(paperData.meta || {});
+  bindFocusEvents();
+  applyFocusMode();
 
   dom.footnote.textContent = `Source: NCBI E-utilities (PubMed) via automated update workflow. Query start date: ${CONFIG.startYearFloor}-01-01. Last generated: ${formatDateIso(paperData.meta?.generatedAt)}.`;
 }
