@@ -192,6 +192,45 @@
       padding: 0;
     }
 
+    .loading-wrap {
+      margin-top: 8px;
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      background: var(--panel);
+      padding: 8px 10px;
+      display: none;
+      gap: 8px;
+      align-items: center;
+      box-shadow: var(--glow);
+    }
+
+    .loading-wrap.visible {
+      display: grid;
+      grid-template-columns: auto 1fr;
+    }
+
+    .loading-text {
+      font-size: 0.78rem;
+      color: var(--muted);
+      white-space: nowrap;
+    }
+
+    .loading-bar {
+      height: 8px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: var(--panel-2);
+      overflow: hidden;
+    }
+
+    .loading-fill {
+      width: 0%;
+      height: 100%;
+      border-radius: 999px;
+      background: linear-gradient(90deg, #2bc6c2, #47a8ff);
+      transition: width 220ms ease;
+    }
+
     .layout {
       margin-top: 12px;
       display: grid;
@@ -552,6 +591,10 @@
         Word: <span id="active-word-label"></span>
         <button type="button" class="chip-clear" id="clear-word-filter">x</button>
       </span>
+    </div>
+    <div id="loading-wrap" class="loading-wrap" aria-live="polite">
+      <span id="loading-text" class="loading-text">Loading dashboard...</span>
+      <div class="loading-bar"><div id="loading-fill" class="loading-fill"></div></div>
     </div>
 
     <section class="layout">
