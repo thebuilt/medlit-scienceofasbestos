@@ -108,6 +108,15 @@
       display: grid;
       grid-template-columns: 1.25fr 1fr;
       gap: 12px;
+      transition: grid-template-columns 220ms ease;
+    }
+
+    .layout.focus-mode.focus-viz {
+      grid-template-columns: 1.7fr 0.75fr;
+    }
+
+    .layout.focus-mode.focus-list {
+      grid-template-columns: 0.75fr 1.7fr;
     }
 
     .panel {
@@ -142,14 +151,68 @@
       text-transform: uppercase;
     }
 
+    .panel-actions {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .focus-btn {
+      border: 1px solid rgba(112, 177, 238, 0.45);
+      background: rgba(14, 35, 58, 0.9);
+      color: #d9efff;
+      border-radius: 999px;
+      padding: 4px 10px;
+      font-size: 0.7rem;
+      line-height: 1;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: background 140ms ease, border-color 140ms ease;
+    }
+
+    .focus-btn:hover {
+      background: rgba(26, 62, 100, 0.94);
+      border-color: rgba(112, 177, 238, 0.75);
+    }
+
     .viz-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 12px;
     }
 
+    .focus-panel {
+      transition: min-height 220ms ease, transform 220ms ease, opacity 220ms ease, border-color 220ms ease;
+    }
+
+    .focus-panel.dimmed {
+      opacity: 0.62;
+      transform: scale(0.985);
+    }
+
+    .focus-panel.active {
+      border-color: rgba(142, 217, 255, 0.78);
+      box-shadow: 0 20px 60px rgba(3, 14, 28, 0.6);
+      opacity: 1;
+      transform: scale(1);
+    }
+
     .viz-card {
       min-height: 320px;
+    }
+
+    .viz-card.wide-card {
+      grid-column: 1 / -1;
+    }
+
+    .viz-grid.focus-mode .viz-card {
+      min-height: 230px;
+    }
+
+    .viz-grid.focus-mode .viz-card.active {
+      grid-column: 1 / -1;
+      min-height: 560px;
     }
 
     .viz-card svg {
@@ -157,12 +220,30 @@
       min-height: 280px;
       display: block;
       background: linear-gradient(160deg, rgba(8, 16, 28, 0.9), rgba(5, 14, 24, 0.96));
+      transition: min-height 220ms ease;
+    }
+
+    .viz-grid.focus-mode .viz-card svg {
+      min-height: 220px;
+    }
+
+    .viz-grid.focus-mode .viz-card.active svg {
+      min-height: 500px;
     }
 
     .list-panel {
       display: grid;
       grid-template-rows: auto auto 1fr;
       min-height: 660px;
+      transition: min-height 220ms ease;
+    }
+
+    .layout.focus-mode .list-panel {
+      min-height: 560px;
+    }
+
+    .layout.focus-mode .list-panel.active {
+      min-height: 900px;
     }
 
     .hover-card {
@@ -203,6 +284,11 @@
       padding: 0 8px 8px;
       overflow: auto;
       max-height: 460px;
+      transition: max-height 220ms ease;
+    }
+
+    .layout.focus-mode .list-panel.active .paper-list {
+      max-height: 700px;
     }
 
     .paper-item {
@@ -322,35 +408,47 @@
 
     <section class="layout">
       <div class="viz-grid">
-        <article class="panel viz-card">
+        <article class="panel viz-card focus-panel" data-panel="bubble">
           <div class="panel-head">
             <h2>Keyword Bubble Matrix</h2>
-            <span class="panel-sub">Click a bubble to focus</span>
+            <span class="panel-actions">
+              <span class="panel-sub">Click a bubble to focus</span>
+              <button type="button" class="focus-btn" data-focus-target="bubble">Focus</button>
+            </span>
           </div>
           <svg id="bubble-chart" viewBox="0 0 760 360" role="img" aria-label="Keyword bubble chart"></svg>
         </article>
 
-        <article class="panel viz-card">
+        <article class="panel viz-card focus-panel" data-panel="world">
           <div class="panel-head">
             <h2>First-Author Country Map</h2>
-            <span class="panel-sub">Paper count by country</span>
+            <span class="panel-actions">
+              <span class="panel-sub">Paper count by country</span>
+              <button type="button" class="focus-btn" data-focus-target="world">Focus</button>
+            </span>
           </div>
           <svg id="world-map" viewBox="0 0 760 360" role="img" aria-label="World map"></svg>
         </article>
 
-        <article class="panel viz-card" style="grid-column: 1 / -1;">
+        <article class="panel viz-card wide-card focus-panel" data-panel="word">
           <div class="panel-head">
             <h2>Word Co-occurrence Map</h2>
-            <span class="panel-sub">Concept structure across abstracts</span>
+            <span class="panel-actions">
+              <span class="panel-sub">Concept structure across abstracts</span>
+              <button type="button" class="focus-btn" data-focus-target="word">Focus</button>
+            </span>
           </div>
           <svg id="word-map" viewBox="0 0 1240 340" role="img" aria-label="Word network map"></svg>
         </article>
       </div>
 
-      <article class="panel list-panel">
+      <article class="panel list-panel focus-panel" data-panel="papers">
         <div class="panel-head">
           <h2>Paper Stream</h2>
-          <span class="panel-sub" id="paper-count-label">0 papers</span>
+          <span class="panel-actions">
+            <span class="panel-sub" id="paper-count-label">0 papers</span>
+            <button type="button" class="focus-btn" data-focus-target="papers">Focus</button>
+          </span>
         </div>
         <div class="hover-card" id="hover-card">
           <h3>Hover any paper to preview title and abstract.</h3>
