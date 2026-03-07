@@ -9,11 +9,13 @@ const state = {
   filtered: [],
   termCounts: {},
   countryCounts: {},
+  meta: {},
   worldTopo: null,
   focusPanel: "",
+  countryFilter: "",
   yearMin: CONFIG.startYearFloor,
   yearMax: new Date().getFullYear(),
-  termFilter: "all",
+  selectedTerms: [],
   search: ""
 };
 
@@ -32,6 +34,10 @@ const dom = {
   yearMin: document.getElementById("year-min"),
   yearMax: document.getElementById("year-max"),
   termFilter: document.getElementById("term-filter"),
+  resetFilters: document.getElementById("reset-filters"),
+  activeCountryChip: document.getElementById("active-country-chip"),
+  activeCountryLabel: document.getElementById("active-country-label"),
+  clearCountryFilter: document.getElementById("clear-country-filter"),
   paperCountLabel: document.getElementById("paper-count-label"),
   paperList: document.getElementById("paper-list"),
   hoverCard: document.getElementById("hover-card"),
@@ -78,9 +84,14 @@ function summarizeCountries(papers) {
 function matchesFilter(paper) {
   if (paper.year < state.yearMin || paper.year > state.yearMax) return false;
 
-  if (state.termFilter !== "all") {
+  if (state.selectedTerms.length) {
     const matched = (paper.termsMatched || []).map(normalize);
-    if (!matched.includes(normalize(state.termFilter))) return false;
+    const matchesSelectedTerm = state.selectedTerms.some((term) => matched.includes(normalize(term)));
+    if (!matchesSelectedTerm) return false;
+  }
+
+  if (state.countryFilter && mapAliases(paper.country) !== mapAliases(state.countryFilter)) {
+    return false;
   }
 
   if (!state.search) return true;
@@ -161,8 +172,9 @@ function fillControls(metaTerms) {
   dom.yearMin.value = String(firstYear);
   dom.yearMax.value = String(lastYear);
 
-  const termOptions = ["all", ...(metaTerms || Object.keys(summarizeTerms(state.papers)).sort())]
-    .map((term) => `<option value="${term}">${term === "all" ? "All terms" : term}</option>`)
+  const terms = (metaTerms && metaTerms.length) ? metaTerms : Object.keys(summarizeTerms(state.papers)).sort();
+  const termOptions = terms
+    .map((term) => `<option value="${term}">${term}</option>`)
     .join("");
   dom.termFilter.innerHTML = termOptions;
 }
@@ -211,8 +223,14 @@ function renderBubbleChart() {
     .attr("stroke-width", 1)
     .style("cursor", "pointer")
     .on("click", (_, d) => {
-      state.termFilter = d.data.term;
-      dom.termFilter.value = d.data.term;
+      const term = d.data.term;
+      const idx = state.selectedTerms.findIndex((t) => normalize(t) === normalize(term));
+      if (idx >= 0) {
+        state.selectedTerms.splice(idx, 1);
+      } else {
+        state.selectedTerms.push(term);
+      }
+      syncUiFromState();
       refresh();
     });
 
@@ -273,6 +291,8 @@ function renderWorldMap(worldTopo) {
 
   const tooltip = svg.append("text").attr("class", "map-tip").attr("x", 12).attr("y", 22).text("Hover country");
 
+  const selectedCountryNorm = mapAliases(state.countryFilter);
+
   svg.append("g")
     .selectAll("path")
     .data(features)
@@ -285,6 +305,7 @@ function renderWorldMap(worldTopo) {
       const count = countryCountsNorm.get(name) || 0;
       return count ? color(count) : "rgba(22, 43, 66, 0.9)";
     })
+    .classed("selected", (d) => mapAliases(d.properties?.name || "") === selectedCountryNorm)
     .on("mouseenter", function (_, d) {
       const rawName = d.properties?.name || "Unknown";
       const count = countryCountsNorm.get(mapAliases(rawName)) || 0;
@@ -293,7 +314,18 @@ function renderWorldMap(worldTopo) {
     })
     .on("mouseleave", function () {
       tooltip.text("Hover country");
-      d3.select(this).attr("stroke", "rgba(171, 211, 248, 0.45)").attr("stroke-width", 0.4);
+      d3.select(this).attr("stroke", null).attr("stroke-width", null);
+    })
+    .on("click", (_, d) => {
+      const rawName = d.properties?.name || "";
+      const canonical = String(rawName).trim();
+      if (normalize(state.countryFilter) === normalize(canonical)) {
+        state.countryFilter = "";
+      } else {
+        state.countryFilter = canonical;
+      }
+      syncUiFromState();
+      refresh();
     });
 }
 
@@ -410,8 +442,24 @@ function renderWordMap() {
 function syncUiFromState() {
   dom.yearMin.value = String(state.yearMin);
   dom.yearMax.value = String(state.yearMax);
-  dom.termFilter.value = state.termFilter;
+  Array.from(dom.termFilter.options).forEach((opt) => {
+    opt.selected = state.selectedTerms.some((term) => normalize(term) === normalize(opt.value));
+  });
   dom.search.value = state.search;
+  const hasCountry = Boolean(state.countryFilter);
+  dom.activeCountryChip.style.display = hasCountry ? "inline-flex" : "none";
+  dom.activeCountryLabel.textContent = state.countryFilter || "";
+}
+
+function resetFilters() {
+  const years = uniqueYears(state.papers);
+  state.yearMin = years[0] || CONFIG.startYearFloor;
+  state.yearMax = years[years.length - 1] || new Date().getFullYear();
+  state.search = "";
+  state.countryFilter = "";
+  state.selectedTerms = [];
+  syncUiFromState();
+  refresh(state.meta);
 }
 
 function applyFocusMode() {
@@ -455,7 +503,7 @@ function bindFocusEvents() {
   });
 }
 
-function refresh(meta = {}) {
+function refresh(meta = state.meta) {
   applyFilters();
   renderKpis(meta);
   renderPaperList();
@@ -489,7 +537,17 @@ function bindEvents(meta) {
   });
 
   dom.termFilter.addEventListener("change", (e) => {
-    state.termFilter = e.target.value;
+    state.selectedTerms = Array.from(e.target.selectedOptions).map((opt) => opt.value);
+    refresh(meta);
+  });
+
+  dom.resetFilters.addEventListener("click", () => {
+    resetFilters();
+  });
+
+  dom.clearCountryFilter.addEventListener("click", () => {
+    state.countryFilter = "";
+    syncUiFromState();
     refresh(meta);
   });
 }
@@ -501,13 +559,14 @@ async function init() {
   ]);
 
   state.papers = (paperData.papers || []).filter((p) => Number.isInteger(p.year) && p.year >= CONFIG.startYearFloor);
+  state.meta = paperData.meta || {};
   state.worldTopo = worldTopo;
 
-  fillControls(paperData.meta?.terms || []);
+  fillControls(state.meta.terms || []);
   syncUiFromState();
-  refresh(paperData.meta || {});
+  refresh(state.meta);
 
-  bindEvents(paperData.meta || {});
+  bindEvents(state.meta);
   bindFocusEvents();
   applyFocusMode();
 
