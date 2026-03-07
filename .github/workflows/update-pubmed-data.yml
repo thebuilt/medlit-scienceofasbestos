@@ -1,5 +1,9 @@
 name: Update PubMed Data
 
+concurrency:
+  group: pubmed-data-update
+  cancel-in-progress: true
+  
 on:
   workflow_dispatch:
   schedule:
