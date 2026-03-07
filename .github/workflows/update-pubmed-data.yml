@@ -28,7 +28,7 @@ jobs:
           NCBI_EMAIL: ${{ secrets.NCBI_EMAIL }}
         run: npm run update:data
 
-      - name: Commit updated data
+        - name: Commit updated data
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
@@ -38,4 +38,7 @@ jobs:
             exit 0
           fi
           git commit -m "chore(data): refresh pubmed dataset"
-          git push
+
+          git pull --rebase origin main
+          git push origin HEAD:main
+
