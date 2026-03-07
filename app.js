@@ -1,7 +1,8 @@
 const CONFIG = {
   papersUrl: "./data/papers.json",
   worldTopoUrl: "./data/world/countries-110m.json",
-  startYearFloor: 2000
+  startYearFloor: 2000,
+  themeStorageKey: "medlit_theme_v1"
 };
 
 const state = {
@@ -13,10 +14,15 @@ const state = {
   worldTopo: null,
   focusPanel: "",
   countryFilter: "",
+  wordFilter: "",
+  wordFocus: "",
+  wordClickMode: "filter",
+  lastWordNetwork: null,
   yearMin: CONFIG.startYearFloor,
   yearMax: new Date().getFullYear(),
   selectedTerms: [],
-  search: ""
+  search: "",
+  theme: localStorage.getItem(CONFIG.themeStorageKey) || "dark"
 };
 
 const normalize = (v) => String(v || "")
@@ -34,10 +40,18 @@ const dom = {
   yearMin: document.getElementById("year-min"),
   yearMax: document.getElementById("year-max"),
   termFilter: document.getElementById("term-filter"),
+  wordClickMode: document.getElementById("word-click-mode"),
   resetFilters: document.getElementById("reset-filters"),
+  themeToggle: document.getElementById("theme-toggle"),
   activeCountryChip: document.getElementById("active-country-chip"),
   activeCountryLabel: document.getElementById("active-country-label"),
   clearCountryFilter: document.getElementById("clear-country-filter"),
+  activeWordChip: document.getElementById("active-word-chip"),
+  activeWordLabel: document.getElementById("active-word-label"),
+  clearWordFilter: document.getElementById("clear-word-filter"),
+  relatedWords: document.getElementById("related-words"),
+  wordTrendSvg: d3.select("#word-trend"),
+  exportCsv: document.getElementById("export-csv"),
   paperCountLabel: document.getElementById("paper-count-label"),
   paperList: document.getElementById("paper-list"),
   hoverCard: document.getElementById("hover-card"),
@@ -46,6 +60,8 @@ const dom = {
   vizGrid: document.querySelector(".viz-grid"),
   focusPanels: Array.from(document.querySelectorAll(".focus-panel")),
   focusButtons: Array.from(document.querySelectorAll(".focus-btn")),
+  helpButtons: Array.from(document.querySelectorAll(".help-btn")),
+  panelHelps: Array.from(document.querySelectorAll(".panel-help")),
   bubbleSvg: d3.select("#bubble-chart"),
   worldSvg: d3.select("#world-map"),
   wordSvg: d3.select("#word-map")
@@ -81,7 +97,31 @@ function summarizeCountries(papers) {
   return counts;
 }
 
-function matchesFilter(paper) {
+function mapAliases(name) {
+  const aliases = {
+    usa: "united states",
+    us: "united states",
+    "u s a": "united states",
+    uk: "united kingdom",
+    "south korea": "korea republic of",
+    "korea south": "korea republic of",
+    russia: "russian federation",
+    iran: "iran islamic republic of",
+    czechia: "czech republic",
+    "viet nam": "vietnam"
+  };
+  const n = normalize(name);
+  return aliases[n] || n;
+}
+
+function paperHasWord(paper, word) {
+  if (!word) return false;
+  return normalize(`${paper.title || ""} ${paper.abstract || ""}`).includes(normalize(word));
+}
+
+function matchesFilter(paper, options = {}) {
+  const ignoreWord = Boolean(options.ignoreWord);
+
   if (paper.year < state.yearMin || paper.year > state.yearMax) return false;
 
   if (state.selectedTerms.length) {
@@ -94,7 +134,12 @@ function matchesFilter(paper) {
     return false;
   }
 
+  if (!ignoreWord && state.wordFilter && !paperHasWord(paper, state.wordFilter)) {
+    return false;
+  }
+
   if (!state.search) return true;
+
   const s = normalize(state.search);
   return normalize(paper.title).includes(s)
     || normalize(paper.abstract).includes(s)
@@ -104,7 +149,7 @@ function matchesFilter(paper) {
 }
 
 function applyFilters() {
-  state.filtered = state.papers.filter(matchesFilter).sort((a, b) => {
+  state.filtered = state.papers.filter((p) => matchesFilter(p)).sort((a, b) => {
     const ad = new Date(a.pubDate || `${a.year}-01-01`).getTime();
     const bd = new Date(b.pubDate || `${b.year}-01-01`).getTime();
     return bd - ad;
@@ -136,11 +181,19 @@ function renderPaperList() {
   state.filtered.forEach((paper) => {
     const li = document.createElement("li");
     li.className = "paper-item";
+    if (state.wordFocus && paperHasWord(paper, state.wordFocus)) {
+      li.classList.add("word-hit");
+    }
+
+    const termTags = (paper.termsMatched || []).slice(0, 6).map((t) => `<span class="tag">${t}</span>`).join("");
+    const wordTag = state.wordFocus && paperHasWord(paper, state.wordFocus)
+      ? `<span class="tag">word: ${state.wordFocus}</span>`
+      : "";
 
     li.innerHTML = `
       <p class="paper-title">${paper.title || "Untitled"}</p>
       <p class="paper-meta">${paper.year || "-"} | ${paper.journal || "Unknown journal"} | ${paper.firstAuthor || "Unknown"}${paper.country ? ` | ${paper.country}` : ""}</p>
-      <div class="tags">${(paper.termsMatched || []).slice(0, 6).map((t) => `<span class="tag">${t}</span>`).join("")}</div>
+      <div class="tags">${wordTag}${termTags}</div>
     `;
 
     li.addEventListener("mouseenter", () => renderPaperHover(paper));
@@ -159,9 +212,7 @@ function fillControls(metaTerms) {
   const years = uniqueYears(state.papers);
   const firstYear = years[0] || CONFIG.startYearFloor;
   const lastYear = years[years.length - 1] || new Date().getFullYear();
-  const yearsForControls = years.length
-    ? years
-    : d3.range(firstYear, lastYear + 1);
+  const yearsForControls = years.length ? years : d3.range(firstYear, lastYear + 1);
 
   state.yearMin = firstYear;
   state.yearMax = lastYear;
@@ -169,14 +220,9 @@ function fillControls(metaTerms) {
   const yearOptions = yearsForControls.map((y) => `<option value="${y}">${y}</option>`).join("");
   dom.yearMin.innerHTML = yearOptions;
   dom.yearMax.innerHTML = yearOptions;
-  dom.yearMin.value = String(firstYear);
-  dom.yearMax.value = String(lastYear);
 
   const terms = (metaTerms && metaTerms.length) ? metaTerms : Object.keys(summarizeTerms(state.papers)).sort();
-  const termOptions = terms
-    .map((term) => `<option value="${term}">${term}</option>`)
-    .join("");
-  dom.termFilter.innerHTML = termOptions;
+  dom.termFilter.innerHTML = terms.map((term) => `<option value="${term}">${term}</option>`).join("");
 }
 
 function renderKpis(meta) {
@@ -204,9 +250,8 @@ function renderBubbleChart() {
   const pack = d3.pack().size([width, height]).padding(6);
   const nodes = pack(root).leaves();
 
-  const scale = d3.scaleLinear()
-    .domain(d3.extent(entries, (d) => d.count))
-    .range([0.3, 1]);
+  const scale = d3.scaleLinear().domain(d3.extent(entries, (d) => d.count)).range([0.3, 1]);
+  const selected = new Set(state.selectedTerms.map((t) => normalize(t)));
 
   const g = svg.append("g");
 
@@ -219,17 +264,14 @@ function renderBubbleChart() {
     .attr("r", (d) => d.r)
     .attr("fill", (d) => d3.interpolateTurbo(scale(d.data.count)))
     .attr("fill-opacity", 0.86)
-    .attr("stroke", "rgba(210, 239, 255, 0.75)")
-    .attr("stroke-width", 1)
+    .attr("stroke", (d) => selected.has(normalize(d.data.term)) ? "#ffd166" : "rgba(210, 239, 255, 0.75)")
+    .attr("stroke-width", (d) => selected.has(normalize(d.data.term)) ? 2.2 : 1)
     .style("cursor", "pointer")
     .on("click", (_, d) => {
       const term = d.data.term;
       const idx = state.selectedTerms.findIndex((t) => normalize(t) === normalize(term));
-      if (idx >= 0) {
-        state.selectedTerms.splice(idx, 1);
-      } else {
-        state.selectedTerms.push(term);
-      }
+      if (idx >= 0) state.selectedTerms.splice(idx, 1);
+      else state.selectedTerms.push(term);
       syncUiFromState();
       refresh();
     });
@@ -252,46 +294,24 @@ function renderBubbleChart() {
     });
 }
 
-function mapAliases(name) {
-  const aliases = {
-    "usa": "united states",
-    "us": "united states",
-    "u s a": "united states",
-    "uk": "united kingdom",
-    "south korea": "korea republic of",
-    "korea south": "korea republic of",
-    "russia": "russian federation",
-    "iran": "iran islamic republic of",
-    "czechia": "czech republic",
-    "viet nam": "vietnam"
-  };
-  const n = normalize(name);
-  return aliases[n] || n;
-}
-
 function renderWorldMap(worldTopo) {
   const svg = dom.worldSvg;
   svg.selectAll("*").remove();
 
   const width = 760;
   const height = 360;
-
   const projection = d3.geoNaturalEarth1();
   const path = d3.geoPath(projection);
 
   const features = topojson.feature(worldTopo, worldTopo.objects.countries).features;
   projection.fitExtent([[8, 8], [width - 8, height - 8]], { type: "FeatureCollection", features });
 
-  const countryCountsNorm = new Map(
-    Object.entries(state.countryCounts).map(([k, v]) => [mapAliases(k), v])
-  );
-
+  const countryCountsNorm = new Map(Object.entries(state.countryCounts).map(([k, v]) => [mapAliases(k), v]));
   const max = d3.max(Object.values(state.countryCounts)) || 1;
   const color = d3.scaleSequential().domain([0, max]).interpolator(d3.interpolateYlGnBu);
+  const selectedCountryNorm = mapAliases(state.countryFilter);
 
   const tooltip = svg.append("text").attr("class", "map-tip").attr("x", 12).attr("y", 22).text("Hover country");
-
-  const selectedCountryNorm = mapAliases(state.countryFilter);
 
   svg.append("g")
     .selectAll("path")
@@ -303,7 +323,7 @@ function renderWorldMap(worldTopo) {
     .attr("fill", (d) => {
       const name = mapAliases(d.properties?.name || "");
       const count = countryCountsNorm.get(name) || 0;
-      return count ? color(count) : "rgba(22, 43, 66, 0.9)";
+      return count ? color(count) : "var(--map-default)";
     })
     .classed("selected", (d) => mapAliases(d.properties?.name || "") === selectedCountryNorm)
     .on("mouseenter", function (_, d) {
@@ -317,13 +337,8 @@ function renderWorldMap(worldTopo) {
       d3.select(this).attr("stroke", null).attr("stroke-width", null);
     })
     .on("click", (_, d) => {
-      const rawName = d.properties?.name || "";
-      const canonical = String(rawName).trim();
-      if (normalize(state.countryFilter) === normalize(canonical)) {
-        state.countryFilter = "";
-      } else {
-        state.countryFilter = canonical;
-      }
+      const clicked = String(d.properties?.name || "").trim();
+      state.countryFilter = normalize(state.countryFilter) === normalize(clicked) ? "" : clicked;
       syncUiFromState();
       refresh();
     });
@@ -344,7 +359,7 @@ function buildWordNetwork(papers) {
   const freq = new Map();
   const co = new Map();
 
-  papers.slice(0, 1600).forEach((p) => {
+  papers.slice(0, 1800).forEach((p) => {
     const words = [...new Set(tokenize(`${p.title || ""} ${p.abstract || ""}`).filter((w) => w.length > 3 && !stop.has(w)))].slice(0, 24);
 
     words.forEach((w) => {
@@ -363,7 +378,7 @@ function buildWordNetwork(papers) {
 
   const topNodes = [...freq.entries()]
     .sort((a, b) => b[1] - a[1])
-    .slice(0, 42)
+    .slice(0, 48)
     .map(([id, value]) => ({ id, value }));
 
   const nodeSet = new Set(topNodes.map((n) => n.id));
@@ -375,9 +390,27 @@ function buildWordNetwork(papers) {
     })
     .filter((l) => nodeSet.has(l.source) && nodeSet.has(l.target) && l.value >= 3)
     .sort((a, b) => b.value - a.value)
-    .slice(0, 120);
+    .slice(0, 140);
 
   return { nodes: topNodes, links };
+}
+
+function setWordSelection(word) {
+  const norm = normalize(word);
+  if (!norm) {
+    state.wordFocus = "";
+    state.wordFilter = "";
+    return;
+  }
+
+  if (normalize(state.wordFocus) === norm) {
+    state.wordFocus = "";
+    state.wordFilter = "";
+    return;
+  }
+
+  state.wordFocus = word;
+  state.wordFilter = state.wordClickMode === "filter" ? word : "";
 }
 
 function renderWordMap() {
@@ -387,8 +420,13 @@ function renderWordMap() {
   const width = 1240;
   const height = 340;
   const network = buildWordNetwork(state.filtered);
+  state.lastWordNetwork = network;
 
-  if (!network.nodes.length) return;
+  if (!network.nodes.length) {
+    renderRelatedWords();
+    renderWordTrend();
+    return;
+  }
 
   const valueExtent = d3.extent(network.nodes, (d) => d.value);
   const radius = d3.scaleSqrt().domain(valueExtent).range([8, 30]);
@@ -403,8 +441,18 @@ function renderWordMap() {
 
   for (let i = 0; i < 220; i += 1) simulation.tick();
 
+  const selectedWordNorm = normalize(state.wordFocus);
+  const connected = new Set();
+  if (selectedWordNorm) {
+    network.links.forEach((l) => {
+      const a = normalize(l.source.id || l.source);
+      const b = normalize(l.target.id || l.target);
+      if (a === selectedWordNorm) connected.add(b);
+      if (b === selectedWordNorm) connected.add(a);
+    });
+  }
+
   svg.append("g")
-    .attr("stroke", "rgba(143, 198, 255, 0.2)")
     .selectAll("line")
     .data(network.links)
     .enter()
@@ -413,6 +461,14 @@ function renderWordMap() {
     .attr("y1", (d) => d.source.y)
     .attr("x2", (d) => d.target.x)
     .attr("y2", (d) => d.target.y)
+    .attr("stroke", (d) => {
+      if (!selectedWordNorm) return "rgba(143, 198, 255, 0.2)";
+      const a = normalize(d.source.id || d.source);
+      const b = normalize(d.target.id || d.target);
+      return (a === selectedWordNorm || b === selectedWordNorm)
+        ? "rgba(255, 218, 122, 0.7)"
+        : "rgba(143, 198, 255, 0.08)";
+    })
     .attr("stroke-width", (d) => Math.min(4.5, 0.5 + d.value / 3));
 
   const nodes = svg.append("g")
@@ -424,10 +480,21 @@ function renderWordMap() {
 
   nodes.append("circle")
     .attr("r", (d) => radius(d.value))
-    .attr("fill", (d) => color(d.value))
+    .attr("fill", (d) => {
+      const n = normalize(d.id);
+      if (selectedWordNorm && n === selectedWordNorm) return "#ffd166";
+      if (selectedWordNorm && connected.has(n)) return "#8ee7ff";
+      return color(d.value);
+    })
     .attr("fill-opacity", 0.9)
     .attr("stroke", "rgba(212, 241, 255, 0.8)")
-    .attr("stroke-width", 0.9);
+    .attr("stroke-width", (d) => normalize(d.id) === selectedWordNorm ? 2.2 : 0.9)
+    .style("cursor", "pointer")
+    .on("click", (_, d) => {
+      setWordSelection(d.id);
+      syncUiFromState();
+      refresh();
+    });
 
   nodes.append("text")
     .text((d) => d.id)
@@ -437,6 +504,136 @@ function renderWordMap() {
     .attr("font-weight", 600)
     .attr("fill", "#f4fbff")
     .style("pointer-events", "none");
+
+  renderRelatedWords();
+  renderWordTrend();
+}
+
+function renderRelatedWords() {
+  dom.relatedWords.innerHTML = "";
+  const network = state.lastWordNetwork;
+  const selected = normalize(state.wordFocus);
+
+  if (!selected || !network) {
+    dom.relatedWords.innerHTML = `<span class="panel-sub">Select a word node to see related words.</span>`;
+    return;
+  }
+
+  const rel = [];
+  network.links.forEach((l) => {
+    const a = normalize(l.source.id || l.source);
+    const b = normalize(l.target.id || l.target);
+    if (a === selected) rel.push({ word: l.target.id || l.target, score: l.value });
+    if (b === selected) rel.push({ word: l.source.id || l.source, score: l.value });
+  });
+
+  const uniq = new Map();
+  rel.forEach((r) => {
+    const key = normalize(r.word);
+    uniq.set(key, Math.max(uniq.get(key) || 0, r.score));
+  });
+
+  const sorted = [...uniq.entries()]
+    .sort((a, b) => b[1] - a[1])
+    .slice(0, 10)
+    .map(([wordNorm, score]) => {
+      const original = rel.find((x) => normalize(x.word) === wordNorm)?.word || wordNorm;
+      return { word: original, score };
+    });
+
+  if (!sorted.length) {
+    dom.relatedWords.innerHTML = `<span class="panel-sub">No strong links for this word in current filter context.</span>`;
+    return;
+  }
+
+  sorted.forEach((item) => {
+    const btn = document.createElement("button");
+    btn.type = "button";
+    btn.className = "related-btn";
+    btn.textContent = `${item.word} (${item.score})`;
+    btn.addEventListener("click", () => {
+      setWordSelection(item.word);
+      syncUiFromState();
+      refresh();
+    });
+    dom.relatedWords.appendChild(btn);
+  });
+}
+
+function renderWordTrend() {
+  const svg = dom.wordTrendSvg;
+  svg.selectAll("*").remove();
+
+  const width = 460;
+  const height = 120;
+
+  if (!state.wordFocus) {
+    svg.append("text")
+      .attr("x", 8)
+      .attr("y", 22)
+      .attr("fill", "var(--muted)")
+      .attr("font-size", 12)
+      .text("Select a word to show year trend");
+    return;
+  }
+
+  const base = state.papers.filter((p) => matchesFilter(p, { ignoreWord: true }));
+  const byYear = new Map();
+
+  base.forEach((p) => {
+    if (!paperHasWord(p, state.wordFocus)) return;
+    byYear.set(p.year, (byYear.get(p.year) || 0) + 1);
+  });
+
+  const years = [...byYear.keys()].sort((a, b) => a - b);
+  if (!years.length) {
+    svg.append("text")
+      .attr("x", 8)
+      .attr("y", 22)
+      .attr("fill", "var(--muted)")
+      .attr("font-size", 12)
+      .text("No papers for this word in current filter context");
+    return;
+  }
+
+  const data = years.map((year) => ({ year, count: byYear.get(year) }));
+  const x = d3.scaleLinear().domain(d3.extent(years)).range([34, width - 8]);
+  const y = d3.scaleLinear().domain([0, d3.max(data, (d) => d.count) || 1]).nice().range([height - 20, 10]);
+
+  const line = d3.line()
+    .x((d) => x(d.year))
+    .y((d) => y(d.count));
+
+  svg.append("path")
+    .datum(data)
+    .attr("fill", "none")
+    .attr("stroke", "#ffd166")
+    .attr("stroke-width", 2)
+    .attr("d", line);
+
+  svg.selectAll("circle")
+    .data(data)
+    .enter()
+    .append("circle")
+    .attr("cx", (d) => x(d.year))
+    .attr("cy", (d) => y(d.count))
+    .attr("r", 2.2)
+    .attr("fill", "#ffd166");
+
+  const xAxis = d3.axisBottom(x).ticks(Math.min(6, years.length)).tickFormat(d3.format("d"));
+  const yAxis = d3.axisLeft(y).ticks(4);
+
+  svg.append("g")
+    .attr("transform", `translate(0,${height - 20})`)
+    .call(xAxis)
+    .call((g) => g.selectAll("text").attr("fill", "var(--muted)").attr("font-size", 10))
+    .call((g) => g.selectAll("line,path").attr("stroke", "var(--line)"));
+
+  svg.append("g")
+    .attr("transform", "translate(34,0)")
+    .call(yAxis)
+    .call((g) => g.selectAll("text").attr("fill", "var(--muted)").attr("font-size", 10))
+    .call((g) => g.selectAll("line,path").attr("stroke", "var(--line)"));
 }
 
 function syncUiFromState() {
@@ -445,10 +642,24 @@ function syncUiFromState() {
   Array.from(dom.termFilter.options).forEach((opt) => {
     opt.selected = state.selectedTerms.some((term) => normalize(term) === normalize(opt.value));
   });
+  dom.wordClickMode.value = state.wordClickMode;
   dom.search.value = state.search;
-  const hasCountry = Boolean(state.countryFilter);
-  dom.activeCountryChip.style.display = hasCountry ? "inline-flex" : "none";
+
+  dom.activeCountryChip.style.display = state.countryFilter ? "inline-flex" : "none";
   dom.activeCountryLabel.textContent = state.countryFilter || "";
+
+  const hasWord = Boolean(state.wordFocus);
+  dom.activeWordChip.style.display = hasWord ? "inline-flex" : "none";
+  dom.activeWordLabel.textContent = hasWord
+    ? `${state.wordFocus}${state.wordFilter ? " (filter)" : " (highlight)"}`
+    : "";
+
+  dom.themeToggle.textContent = state.theme === "dark" ? "Switch to Light" : "Switch to Dark";
+}
+
+function applyTheme() {
+  document.body.classList.toggle("theme-light", state.theme === "light");
+  localStorage.setItem(CONFIG.themeStorageKey, state.theme);
 }
 
 function resetFilters() {
@@ -457,9 +668,41 @@ function resetFilters() {
   state.yearMax = years[years.length - 1] || new Date().getFullYear();
   state.search = "";
   state.countryFilter = "";
+  state.wordFilter = "";
+  state.wordFocus = "";
   state.selectedTerms = [];
   syncUiFromState();
-  refresh(state.meta);
+  refresh();
+}
+
+function toCsvCell(value) {
+  const text = String(value ?? "");
+  if (/[",\n]/.test(text)) return `"${text.replace(/"/g, '""')}"`;
+  return text;
+}
+
+function exportFilteredCsv() {
+  if (!state.filtered.length) return;
+  const header = ["pmid", "title", "year", "journal", "firstAuthor", "country", "termsMatched", "url"];
+  const rows = state.filtered.map((p) => [
+    p.pmid,
+    p.title,
+    p.year,
+    p.journal,
+    p.firstAuthor,
+    p.country,
+    (p.termsMatched || []).join("|"),
+    p.url
+  ]);
+
+  const csv = [header, ...rows].map((r) => r.map(toCsvCell).join(",")).join("\n");
+  const blob = new Blob([csv], { type: "text/csv;charset=utf-8;" });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement("a");
+  a.href = url;
+  a.download = `medlit_filtered_${new Date().toISOString().slice(0, 10)}.csv`;
+  a.click();
+  URL.revokeObjectURL(url);
 }
 
 function applyFocusMode() {
@@ -483,14 +726,10 @@ function applyFocusMode() {
   });
 
   if (!hasFocus) return;
-
   const activeEl = dom.focusPanels.find((panel) => panel.dataset.panel === activePanel);
   if (!activeEl) return;
-  if (activeEl.classList.contains("list-panel")) {
-    dom.layout.classList.add("focus-list");
-  } else {
-    dom.layout.classList.add("focus-viz");
-  }
+  if (activeEl.classList.contains("list-panel")) dom.layout.classList.add("focus-list");
+  else dom.layout.classList.add("focus-viz");
 }
 
 function bindFocusEvents() {
@@ -503,42 +742,61 @@ function bindFocusEvents() {
   });
 }
 
-function refresh(meta = state.meta) {
+function bindHelpEvents() {
+  dom.helpButtons.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const target = btn.dataset.helpTarget;
+      const pane = document.getElementById(target);
+      if (!pane) return;
+      const isOpen = pane.classList.contains("open");
+      dom.panelHelps.forEach((p) => p.classList.remove("open"));
+      if (!isOpen) pane.classList.add("open");
+    });
+  });
+}
+
+function refresh() {
   applyFilters();
-  renderKpis(meta);
+  renderKpis(state.meta);
   renderPaperList();
   renderBubbleChart();
   if (state.worldTopo) renderWorldMap(state.worldTopo);
   renderWordMap();
 
-  if (state.filtered.length) {
-    renderPaperHover(state.filtered[0]);
-  }
+  if (state.filtered.length) renderPaperHover(state.filtered[0]);
 }
 
-function bindEvents(meta) {
+function bindEvents() {
   dom.search.addEventListener("input", (e) => {
     state.search = e.target.value;
-    refresh(meta);
+    refresh();
   });
 
   dom.yearMin.addEventListener("change", (e) => {
     state.yearMin = Number(e.target.value);
     if (state.yearMin > state.yearMax) state.yearMax = state.yearMin;
     syncUiFromState();
-    refresh(meta);
+    refresh();
   });
 
   dom.yearMax.addEventListener("change", (e) => {
     state.yearMax = Number(e.target.value);
     if (state.yearMax < state.yearMin) state.yearMin = state.yearMax;
     syncUiFromState();
-    refresh(meta);
+    refresh();
   });
 
   dom.termFilter.addEventListener("change", (e) => {
     state.selectedTerms = Array.from(e.target.selectedOptions).map((opt) => opt.value);
-    refresh(meta);
+    refresh();
+  });
+
+  dom.wordClickMode.addEventListener("change", (e) => {
+    state.wordClickMode = e.target.value;
+    if (state.wordClickMode === "highlight") state.wordFilter = "";
+    if (state.wordClickMode === "filter" && state.wordFocus) state.wordFilter = state.wordFocus;
+    syncUiFromState();
+    refresh();
   });
 
   dom.resetFilters.addEventListener("click", () => {
@@ -548,7 +806,25 @@ function bindEvents(meta) {
   dom.clearCountryFilter.addEventListener("click", () => {
     state.countryFilter = "";
     syncUiFromState();
-    refresh(meta);
+    refresh();
+  });
+
+  dom.clearWordFilter.addEventListener("click", () => {
+    state.wordFilter = "";
+    state.wordFocus = "";
+    syncUiFromState();
+    refresh();
+  });
+
+  dom.exportCsv.addEventListener("click", () => {
+    exportFilteredCsv();
+  });
+
+  dom.themeToggle.addEventListener("click", () => {
+    state.theme = state.theme === "dark" ? "light" : "dark";
+    applyTheme();
+    syncUiFromState();
+    refresh();
   });
 }
 
@@ -563,14 +839,16 @@ async function init() {
   state.worldTopo = worldTopo;
 
   fillControls(state.meta.terms || []);
+  applyTheme();
   syncUiFromState();
-  refresh(state.meta);
+  refresh();
 
-  bindEvents(state.meta);
+  bindEvents();
   bindFocusEvents();
+  bindHelpEvents();
   applyFocusMode();
 
-  dom.footnote.textContent = `Source: NCBI E-utilities (PubMed) via automated update workflow. Query start date: ${CONFIG.startYearFloor}-01-01. Last generated: ${formatDateIso(paperData.meta?.generatedAt)}.`;
+  dom.footnote.textContent = `Source: NCBI E-utilities (PubMed) via automated update workflow. Query start date: ${CONFIG.startYearFloor}-01-01. Last generated: ${formatDateIso(state.meta.generatedAt)}.`;
 }
 
 init().catch((err) => {
