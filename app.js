@@ -116,15 +116,60 @@ function mapAliases(name) {
     usa: "united states",
     us: "united states",
     "u s a": "united states",
+    "u s": "united states",
+    "united states of america": "united states",
     uk: "united kingdom",
-    "south korea": "korea republic of",
-    "korea south": "korea republic of",
+    "great britain": "united kingdom",
+    england: "united kingdom",
+    scotland: "united kingdom",
+    wales: "united kingdom",
+    "northern ireland": "united kingdom",
+    "korea republic of": "south korea",
+    "republic of korea": "south korea",
+    "korea south": "south korea",
+    "south korea": "south korea",
+    "korea north": "north korea",
+    "democratic people's republic of korea": "north korea",
     russia: "russian federation",
-    iran: "iran islamic republic of",
+    "russian federation": "russian federation",
+    "iran islamic republic of": "iran",
+    "iran, islamic republic of": "iran",
     czechia: "czech republic",
-    "viet nam": "vietnam"
+    "slovak republic": "slovakia",
+    "viet nam": "vietnam",
+    "lao pdr": "laos",
+    "lao people's democratic republic": "laos",
+    syrian: "syria",
+    "syrian arab republic": "syria",
+    "bolivia plurinational state of": "bolivia",
+    "venezuela bolivarian republic of": "venezuela",
+    "moldova republic of": "moldova",
+    "tanzania united republic of": "tanzania",
+    "brunei darussalam": "brunei",
+    "cabo verde": "cape verde",
+    "cote d ivoire": "ivory coast",
+    "cote d'ivoire": "ivory coast",
+    "côte d'ivoire": "ivory coast",
+    "myanmar (burma)": "myanmar",
+    "swaziland": "eswatini",
+    "palestine state of": "palestine",
+    "occupied palestinian territory": "palestine",
+    "macedonia the former yugoslav republic of": "north macedonia",
+    "taiwan province of china": "taiwan",
+    "hong kong sar": "hong kong",
+    "macao sar": "macao",
+    "congo democratic republic of the": "democratic republic of the congo",
+    "democratic republic of congo": "democratic republic of the congo",
+    drc: "democratic republic of the congo",
+    "congo republic of the": "republic of the congo",
+    "republic of congo": "republic of the congo"
   };
-  const n = normalize(name);
+
+  let n = normalize(name);
+  n = n.replace(/^the\s+/g, "").replace(/\s+/g, " ").trim();
+  n = n.replace(/\(.*?\)/g, "").replace(/\s+/g, " ").trim();
+  n = n.replace(/,/g, " ").replace(/\s+/g, " ").trim();
+
   return aliases[n] || n;
 }
 
