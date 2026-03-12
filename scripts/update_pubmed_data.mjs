@@ -8,7 +8,7 @@ const __dirname = path.dirname(__filename);
 const ROOT = path.resolve(__dirname, "..");
 const OUT_PATH = path.join(ROOT, "data", "papers.json");
 
-const BATCH_SIZE = 100;
+const BATCH_SIZE = 50;
 const START_YEAR = 2000;
 const FETCH_TIMEOUT_MS = 60_000;
 const FETCH_RETRIES = 5;
@@ -49,11 +49,11 @@ const TERM_GROUPS = [
   },
   {
     label: "anthophyllite",
-    aliases: ["anthophyllite", "antofillita", "антофиллит", "直闪石", "안소필라이트", "أنثوفيليت", "एंथोफिलाइट"]
+    aliases: ["anthophyllite", "antofillita", "антофиллит", "直闪石", "안소필라이트", "أنثوفيليت", "एंथोफилाइट"]
   },
   {
     label: "actinolite",
-    aliases: ["actinolite", "actinolita", "актинолит", "阳起石", "악티놀라이트", "أكتينोलيت", "ऐक्टिनोलाइट"]
+    aliases: ["actinolite", "actinolita", "актинолит", "阳起石", "악티놀라이트", "أكتينوليت", "ऐक्टिनोलाइट"]
   }
 ];
 
@@ -63,6 +63,8 @@ const COUNTRY_ALIASES = {
   "usa": "United States",
   "u.s.": "United States",
   "us": "United States",
+  "united states of america": "United States",
+  "america": "United States",
   "united kingdom": "United Kingdom",
   "uk": "United Kingdom",
   "england": "United Kingdom",
@@ -109,7 +111,11 @@ const COUNTRY_MATCHERS = Object.keys(COUNTRY_ALIASES)
   .sort((a, b) => b.alias.length - a.alias.length);
 
 function titleCase(text) {
-  return String(text || "").split(" ").filter(Boolean).map((w) => w[0].toUpperCase() + w.slice(1)).join(" ");
+  return String(text || "")
+    .split(" ")
+    .filter(Boolean)
+    .map((w) => w[0].toUpperCase() + w.slice(1))
+    .join(" ");
 }
 
 function normalize(value) {
@@ -242,24 +248,6 @@ function buildTermQueryAndMatchers() {
   return { aliasToLabel, query };
 }
 
-async function fetchJson(url, init = undefined) {
-  const res = await fetchWithRetry(url, init);
-  const text = await res.text();
-  if (!res.ok) {
-    throw new Error(`HTTP ${res.status} for ${url}${text ? ` | ${text.slice(0, 400)}` : ""}`);
-  }
-  return JSON.parse(text);
-}
-
-async function fetchText(url) {
-  const res = await fetchWithRetry(url);
-  if (!res.ok) {
-    const body = await res.text().catch(() => "");
-    throw new Error(`HTTP ${res.status} for ${url}${body ? ` | ${body.slice(0, 400)}` : ""}`);
-  }
-  return res.text();
-}
-
 function sleep(ms) {
   return new Promise((resolve) => setTimeout(resolve, ms));
 }
@@ -267,31 +255,58 @@ function sleep(ms) {
 function isRetryableError(err) {
   const msg = String(err?.message || "").toLowerCase();
   const code = String(err?.code || err?.cause?.code || "").toUpperCase();
+
   if (msg.includes("terminated")) return true;
   if (msg.includes("fetch failed")) return true;
   if (msg.includes("socket")) return true;
   if (msg.includes("timed out")) return true;
+  if (msg.includes("other side closed")) return true;
   if (code.includes("UND_ERR_SOCKET")) return true;
+  if (code.includes("UND_ERR_BODY_TIMEOUT")) return true;
   if (code.includes("ECONNRESET")) return true;
   if (code.includes("ETIMEDOUT")) return true;
   if (code.includes("EAI_AGAIN")) return true;
+
   return false;
 }
 
-async function fetchWithRetry(url, init = undefined) {
+async function fetchBodyWithRetry(url, init = undefined) {
   let lastError = null;
+
   for (let attempt = 1; attempt <= FETCH_RETRIES; attempt++) {
     try {
       const signal = AbortSignal.timeout(FETCH_TIMEOUT_MS);
-      return await fetch(url, { ...init, signal });
+      const res = await fetch(url, { ...init, signal });
+      const text = await res.text();
+
+      if (!res.ok) {
+        throw new Error(`HTTP ${res.status} for ${url}${text ? ` | ${text.slice(0, 400)}` : ""}`);
+      }
+
+      return text;
     } catch (err) {
       lastError = err;
-      if (!isRetryableError(err) || attempt === FETCH_RETRIES) break;
+
+      if (!isRetryableError(err) || attempt === FETCH_RETRIES) {
+        break;
+      }
+
       const backoff = RETRY_BASE_MS * attempt;
+      console.warn(`Retrying request (${attempt}/${FETCH_RETRIES}) after error: ${err.message}`);
       await sleep(backoff);
     }
   }
+
   throw lastError;
+}
+
+async function fetchJson(url, init = undefined) {
+  const text = await fetchBodyWithRetry(url, init);
+  return JSON.parse(text);
+}
+
+async function fetchText(url, init = undefined) {
+  return fetchBodyWithRetry(url, init);
 }
 
 function detectTerms(title, abstract, aliasToLabel) {
@@ -336,6 +351,7 @@ async function pullPubMedData() {
 
   for (let year = START_YEAR; year <= endYear; year++) {
     const lastMonth = year === endYear ? endMonth : 12;
+
     for (let month = 1; month <= lastMonth; month++) {
       const startDate = `${year}/${String(month).padStart(2, "0")}/01`;
       const monthEnd = new Date(Date.UTC(year, month, 0)).getUTCDate();
@@ -352,6 +368,7 @@ async function pullPubMedData() {
         tool,
         email
       });
+
       if (apiKey) esearchBody.set("api_key", apiKey);
 
       const search = await fetchJson(esearchUrl, {
@@ -365,7 +382,9 @@ async function pullPubMedData() {
       const count = Number(search?.esearchresult?.count || 0);
       const webenv = search?.esearchresult?.webenv;
       const queryKey = search?.esearchresult?.querykey;
+
       if (!count) continue;
+
       if (!webenv || !queryKey) {
         throw new Error(`PubMed search did not return WebEnv/query key for ${year}-${String(month).padStart(2, "0")}.`);
       }
@@ -425,6 +444,7 @@ async function pullPubMedData() {
 
   const dedup = new Map();
   for (const p of papers) dedup.set(p.pmid, p);
+
   const rows = [...dedup.values()].sort((a, b) => {
     const ad = new Date(a.pubDate || `${a.year}-01-01`).getTime();
     const bd = new Date(b.pubDate || `${b.year}-01-01`).getTime();
