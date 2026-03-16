@@ -13,6 +13,7 @@ const START_YEAR = 2000;
 const FETCH_TIMEOUT_MS = 60_000;
 const FETCH_RETRIES = 5;
 const RETRY_BASE_MS = 1500;
+const REQUEST_PAUSE_MS = 250;
 
 const TERM_GROUPS = [
   {
@@ -24,7 +25,7 @@ const TERM_GROUPS = [
   {
     label: "mesothelioma",
     aliases: [
-      "mesothelioma", "mésothéliome", "mesotelioma", "мезотелиома", "间皮瘤", "중피종", "ورم المتوسطة", "मेसोथелियोमा"
+      "mesothelioma", "mésothéliome", "mesotelioma", "мезотелиома", "间皮瘤", "중피종", "ورم المتوسطة", "मेसोथелियोма"
     ]
   },
   {
@@ -45,11 +46,11 @@ const TERM_GROUPS = [
   },
   {
     label: "amosite",
-    aliases: ["amosite", "amosita", "амозит", "铁石棉", "아모사이트", "أموسايت", "अमोसाइट"]
+    aliases: ["amosite", "amosita", "амозит", "铁石棉", "아모사이트", "أमोसाइट", "अमोसाइट"]
   },
   {
     label: "anthophyllite",
-    aliases: ["anthophyllite", "antofillita", "антофиллит", "直闪石", "안소필라이트", "أنثوفيليت", "एंथोफилाइट"]
+    aliases: ["anthophyllite", "antofillita", "антофиллит", "直闪石", "안소필라이트", "أنثوفيليت", "एंथोफिलाइट"]
   },
   {
     label: "actinolite",
@@ -280,7 +281,19 @@ async function fetchBodyWithRetry(url, init = undefined) {
       const text = await res.text();
 
       if (!res.ok) {
-        throw new Error(`HTTP ${res.status} for ${url}${text ? ` | ${text.slice(0, 400)}` : ""}`);
+        const message = `HTTP ${res.status} for ${url}${text ? ` | ${text.slice(0, 400)}` : ""}`;
+        const error = new Error(message);
+        error.status = res.status;
+
+        if (res.status >= 500 && attempt < FETCH_RETRIES) {
+          lastError = error;
+          const backoff = RETRY_BASE_MS * attempt;
+          console.warn(`Retrying request (${attempt}/${FETCH_RETRIES}) after server error: ${message}`);
+          await sleep(backoff);
+          continue;
+        }
+
+        throw error;
       }
 
       return text;
@@ -438,6 +451,8 @@ async function pullPubMedData() {
             termsMatched
           });
         }
+
+        await sleep(REQUEST_PAUSE_MS);
       }
     }
   }
