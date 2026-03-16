@@ -14,6 +14,7 @@ const FETCH_TIMEOUT_MS = 60_000;
 const FETCH_RETRIES = 5;
 const RETRY_BASE_MS = 1500;
 const REQUEST_PAUSE_MS = 250;
+const INCREMENTAL_LOOKBACK_DAYS = 45;
 
 const TERM_GROUPS = [
   {
@@ -25,7 +26,7 @@ const TERM_GROUPS = [
   {
     label: "mesothelioma",
     aliases: [
-      "mesothelioma", "mésothéliome", "mesotelioma", "мезотелиома", "间皮瘤", "중피종", "ورم المتوسطة", "मेसोथелियोма"
+      "mesothelioma", "mésothéliome", "mesotelioma", "мезотелиома", "间皮瘤", "중피종", "ورم المتوسطة", "मेसोथелियोमा"
     ]
   },
   {
@@ -46,11 +47,11 @@ const TERM_GROUPS = [
   },
   {
     label: "amosite",
-    aliases: ["amosite", "amosita", "амозит", "铁石棉", "아모사이트", "أमोसाइट", "अमोसाइट"]
+    aliases: ["amosite", "amosita", "амозит", "铁石棉", "아모사이트", "أموسايت", "अमोसाइट"]
   },
   {
     label: "anthophyllite",
-    aliases: ["anthophyllite", "antofillita", "антофиллит", "直闪石", "안소필라이트", "أنثوفيليت", "एंथोफिलाइट"]
+    aliases: ["anthophyllite", "antofillita", "антофиллит", "直闪石", "안소필라이트", "أنثوفيليت", "एंथोफилाइट"]
   },
   {
     label: "actinolite",
@@ -253,6 +254,75 @@ function sleep(ms) {
   return new Promise((resolve) => setTimeout(resolve, ms));
 }
 
+function toNcbiDate(date) {
+  const y = date.getUTCFullYear();
+  const m = String(date.getUTCMonth() + 1).padStart(2, "0");
+  const d = String(date.getUTCDate()).padStart(2, "0");
+  return `${y}/${m}/${d}`;
+}
+
+function addDays(date, days) {
+  const out = new Date(date);
+  out.setUTCDate(out.getUTCDate() + days);
+  return out;
+}
+
+function monthStart(year, month) {
+  return new Date(Date.UTC(year, month - 1, 1));
+}
+
+function monthEnd(year, month) {
+  return new Date(Date.UTC(year, month, 0));
+}
+
+function buildMonthlyWindows(startYear) {
+  const windows = [];
+  const now = new Date();
+  const endYear = now.getUTCFullYear();
+  const endMonth = now.getUTCMonth() + 1;
+
+  for (let year = startYear; year <= endYear; year++) {
+    const lastMonth = year === endYear ? endMonth : 12;
+    for (let month = 1; month <= lastMonth; month++) {
+      windows.push({
+        start: monthStart(year, month),
+        end: monthEnd(year, month)
+      });
+    }
+  }
+
+  return windows;
+}
+
+function buildIncrementalWindows(existingMeta) {
+  const now = new Date();
+  const fallbackStart = addDays(now, -INCREMENTAL_LOOKBACK_DAYS);
+
+  const generatedAt = existingMeta?.generatedAt ? new Date(existingMeta.generatedAt) : null;
+  const baseStart = generatedAt && !Number.isNaN(generatedAt.getTime())
+    ? addDays(generatedAt, -INCREMENTAL_LOOKBACK_DAYS)
+    : fallbackStart;
+
+  const start = baseStart < fallbackStart ? fallbackStart : baseStart;
+  return [{ start, end: now }];
+}
+
+async function readExistingData() {
+  try {
+    const raw = await fs.readFile(OUT_PATH, "utf8");
+    const parsed = JSON.parse(raw);
+    return {
+      meta: parsed?.meta || {},
+      papers: Array.isArray(parsed?.papers) ? parsed.papers : []
+    };
+  } catch (err) {
+    if (err && err.code === "ENOENT") {
+      return { meta: {}, papers: [] };
+    }
+    throw err;
+  }
+}
+
 function isRetryableError(err) {
   const msg = String(err?.message || "").toLowerCase();
   const code = String(err?.code || err?.cause?.code || "").toUpperCase();
@@ -348,131 +418,146 @@ function parseArticles(xml) {
   return Array.isArray(articles) ? articles : [articles];
 }
 
+async function fetchWindowPapers(windowStart, windowEnd, aliasToLabel, query, email, apiKey, tool) {
+  const papers = [];
+  const esearchUrl = "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi";
+  const sliceQuery = `(${query}) AND ("${toNcbiDate(windowStart)}"[Date - Publication] : "${toNcbiDate(windowEnd)}"[Date - Publication])`;
+
+  const esearchBody = new URLSearchParams({
+    db: "pubmed",
+    term: sliceQuery,
+    retmode: "json",
+    retmax: "0",
+    usehistory: "y",
+    sort: "pub+date",
+    tool,
+    email
+  });
+
+  if (apiKey) esearchBody.set("api_key", apiKey);
+
+  const search = await fetchJson(esearchUrl, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/x-www-form-urlencoded"
+    },
+    body: esearchBody.toString()
+  });
+
+  const count = Number(search?.esearchresult?.count || 0);
+  const webenv = search?.esearchresult?.webenv;
+  const queryKey = search?.esearchresult?.querykey;
+
+  if (!count) return papers;
+
+  if (!webenv || !queryKey) {
+    throw new Error(`PubMed search did not return WebEnv/query key for ${toNcbiDate(windowStart)} to ${toNcbiDate(windowEnd)}.`);
+  }
+
+  for (let start = 0; start < count; start += BATCH_SIZE) {
+    const efetchUrl = new URL("https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi");
+    efetchUrl.searchParams.set("db", "pubmed");
+    efetchUrl.searchParams.set("query_key", String(queryKey));
+    efetchUrl.searchParams.set("WebEnv", String(webenv));
+    efetchUrl.searchParams.set("retstart", String(start));
+    efetchUrl.searchParams.set("retmax", String(BATCH_SIZE));
+    efetchUrl.searchParams.set("retmode", "xml");
+    efetchUrl.searchParams.set("tool", tool);
+    efetchUrl.searchParams.set("email", email);
+    if (apiKey) efetchUrl.searchParams.set("api_key", apiKey);
+
+    const xml = await fetchText(efetchUrl.toString());
+    const articles = parseArticles(xml);
+
+    for (const rec of articles) {
+      const pmid = flattenText(rec?.MedlineCitation?.PMID).trim();
+      const article = rec?.MedlineCitation?.Article;
+      if (!pmid || !article) continue;
+
+      const title = flattenText(article.ArticleTitle).trim();
+      const abstract = flattenText(article?.Abstract?.AbstractText).trim();
+      const pubDate = extractPubDate(article);
+      const pubYear = Number((pubDate || "").slice(0, 4));
+      if (!Number.isInteger(pubYear) || pubYear < START_YEAR) continue;
+
+      const journal = flattenText(article?.Journal?.Title || "").trim();
+      const language = flattenText(firstArray(article?.Language) || "").trim();
+      const doi = extractDoi(article);
+      const firstAuthor = extractFirstAuthor(article);
+      const termsMatched = detectTerms(title, abstract, aliasToLabel);
+      if (!termsMatched.length) continue;
+
+      papers.push({
+        pmid,
+        title,
+        abstract,
+        journal,
+        pubDate,
+        year: pubYear,
+        doi,
+        url: `https://pubmed.ncbi.nlm.nih.gov/${pmid}/`,
+        firstAuthor: firstAuthor.name,
+        firstAffiliation: firstAuthor.affiliation,
+        country: extractCountry(firstAuthor.affiliation),
+        language,
+        termsMatched
+      });
+    }
+
+    await sleep(REQUEST_PAUSE_MS);
+  }
+
+  return papers;
+}
+
 async function pullPubMedData() {
   const email = process.env.NCBI_EMAIL || "scienceofasbestos@example.org";
   const apiKey = process.env.NCBI_API_KEY || "";
   const tool = "scienceofasbestos-dashboard";
+  const forceFull = String(process.env.FORCE_FULL_REBUILD || "").toLowerCase() === "true";
 
   const { aliasToLabel, query } = buildTermQueryAndMatchers();
-  const fullQuery = `(${query})`;
+  const existing = await readExistingData();
 
-  const esearchUrl = "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi";
-  const papers = [];
-  const now = new Date();
-  const endYear = now.getUTCFullYear();
-  const endMonth = now.getUTCMonth() + 1;
+  const windows = (!existing.papers.length || forceFull)
+    ? buildMonthlyWindows(START_YEAR)
+    : buildIncrementalWindows(existing.meta);
 
-  for (let year = START_YEAR; year <= endYear; year++) {
-    const lastMonth = year === endYear ? endMonth : 12;
+  console.log(
+    !existing.papers.length || forceFull
+      ? `Running full rebuild across ${windows.length} monthly windows`
+      : `Running incremental refresh across ${windows.length} window(s)`
+  );
 
-    for (let month = 1; month <= lastMonth; month++) {
-      const startDate = `${year}/${String(month).padStart(2, "0")}/01`;
-      const monthEnd = new Date(Date.UTC(year, month, 0)).getUTCDate();
-      const endDate = `${year}/${String(month).padStart(2, "0")}/${String(monthEnd).padStart(2, "0")}`;
-      const sliceQuery = `(${fullQuery}) AND ("${startDate}"[Date - Publication] : "${endDate}"[Date - Publication])`;
+  const fetchedPapers = [];
 
-      const esearchBody = new URLSearchParams({
-        db: "pubmed",
-        term: sliceQuery,
-        retmode: "json",
-        retmax: "0",
-        usehistory: "y",
-        sort: "pub+date",
-        tool,
-        email
-      });
-
-      if (apiKey) esearchBody.set("api_key", apiKey);
-
-      const search = await fetchJson(esearchUrl, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/x-www-form-urlencoded"
-        },
-        body: esearchBody.toString()
-      });
-
-      const count = Number(search?.esearchresult?.count || 0);
-      const webenv = search?.esearchresult?.webenv;
-      const queryKey = search?.esearchresult?.querykey;
-
-      if (!count) continue;
-
-      if (!webenv || !queryKey) {
-        throw new Error(`PubMed search did not return WebEnv/query key for ${year}-${String(month).padStart(2, "0")}.`);
-      }
-
-      for (let start = 0; start < count; start += BATCH_SIZE) {
-        const efetchUrl = new URL("https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi");
-        efetchUrl.searchParams.set("db", "pubmed");
-        efetchUrl.searchParams.set("query_key", String(queryKey));
-        efetchUrl.searchParams.set("WebEnv", String(webenv));
-        efetchUrl.searchParams.set("retstart", String(start));
-        efetchUrl.searchParams.set("retmax", String(BATCH_SIZE));
-        efetchUrl.searchParams.set("retmode", "xml");
-        efetchUrl.searchParams.set("tool", tool);
-        efetchUrl.searchParams.set("email", email);
-        if (apiKey) efetchUrl.searchParams.set("api_key", apiKey);
-
-        const xml = await fetchText(efetchUrl.toString());
-        const articles = parseArticles(xml);
-
-        for (const rec of articles) {
-          const pmid = flattenText(rec?.MedlineCitation?.PMID).trim();
-          const article = rec?.MedlineCitation?.Article;
-          if (!pmid || !article) continue;
-
-          const title = flattenText(article.ArticleTitle).trim();
-          const abstract = flattenText(article?.Abstract?.AbstractText).trim();
-          const pubDate = extractPubDate(article);
-          const pubYear = Number((pubDate || "").slice(0, 4));
-          if (!Number.isInteger(pubYear) || pubYear < START_YEAR) continue;
-
-          const journal = flattenText(article?.Journal?.Title || "").trim();
-          const language = flattenText(firstArray(article?.Language) || "").trim();
-          const doi = extractDoi(article);
-          const firstAuthor = extractFirstAuthor(article);
-          const termsMatched = detectTerms(title, abstract, aliasToLabel);
-          if (!termsMatched.length) continue;
-
-          papers.push({
-            pmid,
-            title,
-            abstract,
-            journal,
-            pubDate,
-            year: pubYear,
-            doi,
-            url: `https://pubmed.ncbi.nlm.nih.gov/${pmid}/`,
-            firstAuthor: firstAuthor.name,
-            firstAffiliation: firstAuthor.affiliation,
-            country: extractCountry(firstAuthor.affiliation),
-            language,
-            termsMatched
-          });
-        }
-
-        await sleep(REQUEST_PAUSE_MS);
-      }
-    }
+  for (const window of windows) {
+    console.log(`Fetching ${toNcbiDate(window.start)} to ${toNcbiDate(window.end)}`);
+    const batch = await fetchWindowPapers(window.start, window.end, aliasToLabel, query, email, apiKey, tool);
+    fetchedPapers.push(...batch);
   }
 
-  const dedup = new Map();
-  for (const p of papers) dedup.set(p.pmid, p);
+  const merged = new Map();
+  for (const paper of existing.papers) merged.set(paper.pmid, paper);
+  for (const paper of fetchedPapers) merged.set(paper.pmid, paper);
 
-  const rows = [...dedup.values()].sort((a, b) => {
-    const ad = new Date(a.pubDate || `${a.year}-01-01`).getTime();
-    const bd = new Date(b.pubDate || `${b.year}-01-01`).getTime();
-    return bd - ad;
-  });
+  const rows = [...merged.values()]
+    .filter((p) => Number.isInteger(p.year) && p.year >= START_YEAR)
+    .sort((a, b) => {
+      const ad = new Date(a.pubDate || `${a.year}-01-01`).getTime();
+      const bd = new Date(b.pubDate || `${b.year}-01-01`).getTime();
+      return bd - ad;
+    });
 
   return {
     meta: {
       generatedAt: new Date().toISOString(),
       source: "NCBI E-utilities (PubMed)",
       terms: TERM_GROUPS.map((g) => g.label),
-      query: fullQuery,
+      query: `(${query})`,
       startYear: START_YEAR,
+      mode: (!existing.papers.length || forceFull) ? "full-rebuild" : "incremental-refresh",
+      incrementalLookbackDays: INCREMENTAL_LOOKBACK_DAYS,
       notes: "Keyword matching includes multilingual aliases. Expand TERM_GROUPS in scripts/update_pubmed_data.mjs to add more translations."
     },
     papers: rows
