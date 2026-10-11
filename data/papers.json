@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-10-10T08:30:03.230Z",
+    "generatedAt": "2026-10-11T08:51:54.276Z",
     "source": "NCBI E-utilities (PubMed)",
     "terms": [
       "asbestos",
@@ -19,6 +19,23 @@
     "notes": "Keyword matching includes multilingual aliases. Expand TERM_GROUPS in scripts/update_pubmed_data.mjs to add more translations."
   },
   "papers": [
+    {
+      "pmid": "42855739",
+      "title": "First-in-human phase Ia study of the covalent TEAD palmitoylation inhibitor BPI-460372 in patients with advanced solid tumors: pharmacokinetics, exposure-limited dosing, and early antitumor activity.",
+      "abstract": "The Hippo pathway is a critical regulator of tumor development and progression, dysregulation of the Hippo pathway drives tumorigenesis in multiple malignancies. BPI-460,372 is a first&#x2011;in&#x2011;class covalent irreversible inhibitor of transcriptional enhanced associated domain (TEAD) palmitoylation. This first-in-human study evaluated the safety, tolerability, pharmacokinetics (PK), and preliminary antitumor activity of BPI-460,372 in patients with advanced solid tumors. This open-label, multicenter, single-arm phase Ia dose-escalation study enrolled patients with advanced solid tumors who had progressed after standard therapies or lacked available standard treatment options. A modified 3&#x2009;+&#x2009;3 design with accelerated titration was used. BPI-460,372 was administered orally once daily under fasting conditions, with dose escalation from 10&#xa0;mg to 240&#xa0;mg daily. Additional cohorts evaluated twice-daily dosing (80&#xa0;mg and 120&#xa0;mg) and postprandial administration (80&#xa0;mg and 160&#xa0;mg) to characterize exposure optimization strategies. Primary endpoints were safety, tolerability, dose-limiting toxicities (DLTs), and the maximum tolerated dose (MTD). Secondary endpoints included pharmacokinetics (PK) and preliminary antitumor efficacy. Tumor response was assessed according to Response Evaluation Criteria in Solid Tumors (RECIST) version 1.1; modified criteria were applied for malignant pleural mesothelioma. Between April 2023 and December 2024, 36 patients were screened, and 28 patients were enrolled and treated. No DLTs were observed, and the MTD was not reached. All patients experienced at least one treatment-emergent adverse event (TEAE). Treatment-related adverse events (TRAEs) occurred in 89.3% of patients, with grade&#x2009;&#x2265;&#x2009;3 events occurring in 39.3%. Proteinuria was the most common TRAE (46.4%, including 10.7% grade&#x2009;&#x2265;&#x2009;3). Three deaths occurred during the study, including one treatment-related death due to abdominal infection. Pharmacokinetic analyses demonstrated rapid absorption, dose-dependent increases in exposure, achievement of steady-state exposure after repeated dosing, and limited drug accumulation. Among 28 evaluable patients, one confirmed partial response (PR) was observed in the 120&#xa0;mg twice-daily cohort. The objective response rate (ORR) and disease control rate (DCR) were 3.6% (95% CI: 0.1-18.4) and 64.3% (95% CI: 44.1-81.4), respectively. Median progression-free survival (PFS) was 5.6 months (95% CI: 2.4-7.0), and median overall survival (OS) was 13.2 months (95% CI: 7.4-15.1). BPI-460,372 demonstrated a distinct pharmacokinetic profile and showed preliminary antitumor activity in patients with advanced solid tumors. However, treatment-emergent toxicities and exposure limitations constrained further dose escalation and prevented definition of an optimal biologically active dose. These findings support further clinical evaluation of BPI-460,372 using optimized dosing strategies, particularly in tumors with Hippo pathway dependency. ClinicalTrials.gov NCT05789602. Registered on 29 March 2023.",
+      "journal": "Biomarker research",
+      "pubDate": "2026-10-09",
+      "year": 2026,
+      "doi": "10.1186/s40364-026-01012-z",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42855739/",
+      "firstAuthor": "Hongge Liang",
+      "firstAffiliation": "Department of Respiratory and Critical Care Medicine, Peking Union Medical College Hospital, Chinese Academy of Medical Sciences and Peking Union Medical College, Beijing, 100730, P.R. China.",
+      "country": "China",
+      "language": "eng",
+      "termsMatched": [
+        "mesothelioma"
+      ]
+    },
     {
       "pmid": "42850314",
       "title": "Correction: Hypomethylation reduced the aggressive potential of human malignant mesothelioma cells.",
