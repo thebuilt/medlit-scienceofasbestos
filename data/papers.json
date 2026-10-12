@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-10-11T08:51:54.276Z",
+    "generatedAt": "2026-10-12T09:13:26.335Z",
     "source": "NCBI E-utilities (PubMed)",
     "terms": [
       "asbestos",
@@ -787,6 +787,23 @@
       "firstAuthor": "Bruce Lippy",
       "firstAffiliation": "Director of Special Projects, Operating Engineers National Hazmat Program, Beaver, WV, USA.",
       "country": "United States",
+      "language": "eng",
+      "termsMatched": [
+        "asbestos"
+      ]
+    },
+    {
+      "pmid": "42856995",
+      "title": "Trends in lung cancer burden, risk factors, and disease projections in China and the United States, 1990-2023.",
+      "abstract": "Lung cancer is among the most burdensome malignancies worldwide, with marked disparities between China and the United States in terms of its epidemiological characteristics, risk factors, and prevention outcomes. In this study, the long-term trends in lung cancer burden and risk factors in China and the United States from 1990 to 2023 were systematically analyzed using Global Burden of Disease (GBD) Study 2023 data, and disease burden was projected through 2050, aiming to provide evidence for optimizing lung cancer prevention and control strategies in both countries. Data, including incident cases, deaths, prevalence cases, disability-adjusted life years (DALYs), age-standardized incidence rates (ASIRs), age-standardized mortality rates (ASMRs), age-standardized prevalence rates (ASPRs), and age-standardized DALY rates (ASDRs) for lung cancer in China and the United States, along with data on smoking, air pollution, occupational exposure, and metabolic and dietary risk factors, were extracted from the GBD 2023 database. Joinpoint regression was used to calculate annual percentage changes (APCs) and average annual percentage changes (AAPCs). The three-factor Das-Gupta decomposition analysis was used to quantify independent contributions of population size, population aging, and epidemiological change to variations in the absolute case burden of lung cancer in China and the United States, and Bayesian age-period-cohort models were used to project disease burden trends from 2024 to 2050. From 1990 to 2023, the numbers of lung cancer incident cases, deaths, prevalent cases and DALYs in China increased substantially and were far greater than those in the United States by 2023; the ASIR remained relatively stable (36.9137.28 per 100,000), while ASMR decreased from 36.95 to 32.86 per 100,000, the ASPR increased from 40.04 to 53.03 per 100,000, and ASDR decreased from 935.08 to 742.26 per 100,000. In the United States, the ASIR, ASMR, and ASDR declined continuously and substantially, with a significant reduction in disease burden. With respect to risk factors, China experienced a continuous increase in the burden attributable to smoking (DALYs increased by 109.97%), ambient particulate matter pollution (DALYs increased by 414.84%), secondhand smoke (DALYs increased by 79.99%), high fasting plasma glucose (DALYs increased by 102.05%), and occupational exposure (including asbestos, diesel engine exhaust, and silica, with attributable DALY increasing by 219.97%, 164.39% and 110.59%, respectively), with only household air pollution from solid fuels declining (DALYs decreased by 85.58%). In the United States, the DALY burden attributable to all major risk factors decreased significantly. Sex-specific analyses revealed that the DALY burden was consistently higher in males than in females in both countries; the sex disparity remained stable in China but narrowed substantially in the United States. Projections through 2050 indicate that the absolute case burden of lung cancer in China will continue to increase, whereas that in the United States will continue to decrease, further widening the disparity between the two countries. From 1990 to 2023, China and the United States exhibited diametrically opposite lung cancer burden trajectories. China remains in a phase of increasing risk factors and rising absolute case burden, whereas the United States has entered a phase of comprehensive risk factor control and sustained burden reduction. China should implement long-term stringent tobacco control, strengthen ambient PMmanagement, target middle-aged and elderly populations for focused interventions, and promote universal low-dose computed tomography (LDCT) screening. The United States should consolidate tobacco control achievements and enhance screening among high-risk persons. The experiences of both countries provide stratified references for countries at different stages of development.",
+      "journal": "Chinese medical journal pulmonary and critical care medicine",
+      "pubDate": "2026-09-09",
+      "year": 2026,
+      "doi": "10.1016/j.pccm.2026.08.006",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42856995/",
+      "firstAuthor": "Lanwei Guo",
+      "firstAffiliation": "Department of Clinical Research Management, The Affiliated Cancer Hospital of Zhengzhou University and Henan Cancer Hospital, Zhengzhou, Henan 450008, China.",
+      "country": "China",
       "language": "eng",
       "termsMatched": [
         "asbestos"
