@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-10-13T09:25:45.062Z",
+    "generatedAt": "2026-10-14T07:38:34.836Z",
     "source": "NCBI E-utilities (PubMed)",
     "terms": [
       "asbestos",
@@ -19,6 +19,23 @@
     "notes": "Keyword matching includes multilingual aliases. Expand TERM_GROUPS in scripts/update_pubmed_data.mjs to add more translations."
   },
   "papers": [
+    {
+      "pmid": "42864641",
+      "title": "Who participates in LDCT screening for the early detection of lung cancer after long-term occupational exposure to asbestos dust? Results of the analysis of administrative and medical routine data from the German Social Accident Insurance.",
+      "abstract": "Lung cancer is one of the most common cancers in Germany and is predominantly detected at an advanced stage. To ensure early detection, the German Social Accident Insurance (DGUV) offers lung cancer screening including a low-dose computed tomography (LDCT) for individuals with long-term occupational exposure to asbestos dust and a smoking history of at least 30 pack years. However, evidence remains scarce about what encourages this group of people to participate in LDCT screening after medical consultation. A secondary data analysis using routinely collected medical and administrative data between 2014 and 2024 was conducted in a cross-sectional design. This study aimed to investigate factors that could be used to predict the uptake of LDCT screening following a medical consultation. Exploratory logistic regression analysis was used to identify and assess possible predictors. The sample included n&#x2009;=&#x2009;14,491 individuals (97% male; average age 67 years; average asbestos dust exposure 21 years; average cigarette consumption 43 pack years). 74% of individuals underwent LDCT screening after medical consultation. 13 predictors were included in the regression model. The model demonstrated a low level of variance explanation (Nagelkerkes R&#x2009;=&#x2009;0.026). Younger individuals (OR: 0.96, p&#x2009;<&#x2009;0.001), individuals with prolonged exposure to asbestos dust (OR: 1.01, p&#x2009;=&#x2009;0.011) and with a history of pneumonia (OR: 1.16, p&#x2009;=&#x2009;0.011) were more likely to undergo LDCT screening. The predictors showed only a low explanatory power. Further research should include non-participants and expand the exploratory model to include theoretically grounded predictors.",
+      "journal": "BMC pulmonary medicine",
+      "pubDate": "2026-10-12",
+      "year": 2026,
+      "doi": "10.1186/s12890-026-04780-4",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42864641/",
+      "firstAuthor": "Nikolas Oubaid",
+      "firstAffiliation": "Institute for Occupational and Maritime Medicine (ZfAM), University Medical Center Hamburg-Eppendorf, Hamburg, Germany.",
+      "country": "Germany",
+      "language": "eng",
+      "termsMatched": [
+        "asbestos"
+      ]
+    },
     {
       "pmid": "42855739",
       "title": "First-in-human phase Ia study of the covalent TEAD palmitoylation inhibitor BPI-460372 in patients with advanced solid tumors: pharmacokinetics, exposure-limited dosing, and early antitumor activity.",
@@ -1237,6 +1254,23 @@
       ]
     },
     {
+      "pmid": "42866208",
+      "title": "Predictors of pleurodesis success after combined outpatient thoracoscopic talc poudrage and tunneled indwelling pleural catheter placement.",
+      "abstract": "Combined ambulatory thoracoscopic talc poudrage and tunneled indwelling pleural catheter (TIPC) placement may facilitate early pleurodesis while preserving outpatient management for malignant pleural effusion (MPE). Predictors of pleurodesis success after this combined approach remain incompletely defined. In this study, we aimed to identify the predictors of successful pleurodesis after this combined approach among patients with expandable and non-expandable lung subgroups. We performed a retrospective cohort study of 100 patients who underwent outpatient thoracoscopic talc poudrage with TIPC placement for MPE. Pleurodesis success was assessed at 3 and 6 months. Multivariable logistic regression was used to identify predictors of success among 97 evaluable patients. Additional analyses were performed in the non-expandable lung subgroup. Among 97 patients, 77 (79.4%) had expandable lungs. In multivariable analysis, lung expandability was independently associated with pleurodesis success at 3 months [odds ratio (OR), 15.2; 95% confidence interval (CI): 4.22-71.0; P<0.001] and 6 months (OR, 7.97; 95% CI: 2.07-33.9; P=0.003). Cancer group was associated with 3-month success in adjusted analysis (global P=0.046): compared with the lung/mesothelioma group, the other-malignancy group had lower odds of success (OR, 0.19; 95% CI: 0.04-0.73), whereas breast cancer did not differ significantly. No group difference persisted at 6 months (global P=0.46). Lung/mesothelioma-associated MPE had higher early pleurodesis success than other malignancy groups, but not at 6 months. In the non-expandable lung subgroup, complete visceral restriction, airway obstruction and adhesions were associated with lower 6-month pleurodesis success on univariate analysis. Lung expandability was the strongest independent predictor of pleurodesis success after combined outpatient thoracoscopic talc poudrage and TIPC placement. Selected patients with non-expandable lung may still achieve successful pleurodesis.",
+      "journal": "Journal of thoracic disease",
+      "pubDate": "2026-08-31",
+      "year": 2026,
+      "doi": "10.21037/jtd-2026-1845",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42866208/",
+      "firstAuthor": "Moath Bani Salem",
+      "firstAffiliation": "Department of Medicine, UF Health Shands Hospital, University of Florida, Gainesville, FL, USA.",
+      "country": "United States",
+      "language": "eng",
+      "termsMatched": [
+        "mesothelioma"
+      ]
+    },
+    {
       "pmid": "42675076",
       "title": "Asbestos mineral fibre exposure significantly affects volatile organic compound profiles of mesothelial cell lines in vitro.",
       "abstract": "Malignant mesothelioma (MM) is a rare cancer caused by exposure to asbestos, this condition continues to represent a significant diagnostic and therapeutic challenge. Due to the long disease latency, non-invasive diagnostic modalities such as breath analysis may enhance MM early detection by identifying the disease specific pattern of volatile organic compounds (VOCs) in exhaled breath. In this study, solid phase microextraction (SPME) and gas chromatography-mass spectrometry (GC-MS) was used to extract VOCs from the headspace of two mesothelioma cell lines: MSTO-211&#xa0;H (biphasic mesothelioma) and NCI-H28 (epithelioid mesothelioma) in addition to MET-5a (non-malignant mesothelial cell line), following exposure to asbestos mineral fibers (actinolite, amosite, crocidolite and chrysotile) and a non-asbestos fiber control (wollastonite). Multivariate statistical analysis was applied to identify VOC-based biomarkers associated with asbestos exposure within the cell lines. Data confirms that exposure to mineral fibers (including the non-asbestos fiber control) induces significant alterations in the levels of as many as 24 VOCs in each cell line. This is the first study to investigate the impact of asbestos mineral fiber exposure on the VOC profile of MM cell lines. This may be relevant to studies involving mesothelioma patients, as these VOCs could also serve as indicators of asbestos exposure in individuals who have been exposed to asbestos.",
@@ -1483,6 +1517,23 @@
       "termsMatched": [
         "asbestos",
         "mesothelioma"
+      ]
+    },
+    {
+      "pmid": "42866278",
+      "title": "Occupational asbestos exposure and lung cancer: contemporary research trends, exploratory genetic evidence, and global burden from 1990 to 2021.",
+      "abstract": "Asbestos exposure is a confirmed risk factor for lung cancer, but its causal relationship with different subtypes and its global disease burden remain poorly characterized. This study aims to comprehensively evaluate the association between occupational asbestos exposure and lung cancer through multidimensional analysis, integrating bibliometric analysis, mendelian randomization, and Global Burden of Disease data to identify research trends, explore potential subtype-specific associations, and characterize global disease burden patterns. This study included a bibliometric analysis of publications from the Web of Science Core Collection on asbestos-related lung cancer. Mendelian randomization was performed using OpenGWAS data to investigate whether asbestos exposure is differentially associated with specific lung cancer subtypes. Global Burden of Disease 2021 data were analyzed to estimate the asbestos-related lung cancer burden by age and sex. Future burden was projected using the Bayesian age-period-cohort model. Bibliometrics revealed fluctuating publication trends, with a thematic shift toward molecular mechanisms. Mendelian randomization analysis identified a suggestive causal relationship between asbestos exposure and lung adenocarcinoma [odds ratio (OR) =4.901, 95% confidence interval (CI): 1.150-20.881, P=0.03], but no significant causal links were observed with overall lung cancer or other subtypes. None of the instrumental variables demonstrated horizontal pleiotropy or heterogeneity. Global Burden of Disease analysis showed a higher asbestos-related lung cancer burden in males and older populations, with the greatest attributable burden in high socio-demographic index regions. Projections indicate a continued decline in global burden by 2036. The mendelian randomization results offer genetic evidence supporting a specific causal role of asbestos in lung adenocarcinoma development. Despite a decline in burden due to control policies, ongoing exposure in developing countries and legacy asbestos in buildings remain serious challenges. Future research should focus on larger genetic studies and analysis tailored to subtypes, while global efforts need to prioritize a comprehensive asbestos ban, improved screening for high-risk groups, and enhanced international cooperation to eliminate asbestos-related diseases.",
+      "journal": "Journal of thoracic disease",
+      "pubDate": "2026-08-21",
+      "year": 2026,
+      "doi": "10.21037/jtd-2026-0975",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42866278/",
+      "firstAuthor": "Yufan Chen",
+      "firstAffiliation": "Department of Radiology, The First Affiliated Hospital of Zhejiang Chinese Medical University (Zhejiang Provincial Hospital of Chinese Medicine), Hangzhou, China.",
+      "country": "China",
+      "language": "eng",
+      "termsMatched": [
+        "asbestos"
       ]
     },
     {
