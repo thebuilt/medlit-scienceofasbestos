@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-10-14T07:38:34.836Z",
+    "generatedAt": "2026-10-15T07:27:05.929Z",
     "source": "NCBI E-utilities (PubMed)",
     "terms": [
       "asbestos",
@@ -19,6 +19,24 @@
     "notes": "Keyword matching includes multilingual aliases. Expand TERM_GROUPS in scripts/update_pubmed_data.mjs to add more translations."
   },
   "papers": [
+    {
+      "pmid": "42870270",
+      "title": "Banned here, sold elsewhere: globalization, e-commerce and the continuing circulation of asbestos-containing products.",
+      "abstract": "Despite widespread recognition of its carcinogenicity and bans in many countries, asbestos remains a persistent global public health challenge. Regulatory fragmentation, transnational trade, and the rapid expansion of digital marketplaces continue to facilitate the circulation of asbestos-containing materials (ACM) across national borders. While all forms of asbestos, including chrysotile are prohibited in several jurisdictions, chrysotile is still mined, manufactured, and extensively used in major economies, including Russia and China, and remains incorporated into construction materials throughout large parts of Asia, the Middle East, and other regions. This regulatory asymmetry undermines national bans and compromises efforts to achieve zero exposure. In this Comment, we examine the consequences of the absence of a global asbestos ban and the continued failure to include chrysotile in Annex III of the Rotterdam Convention. We discuss how these regulatory gaps contribute to unrecognized exposure among the general population, create legal and economic liabilities for industries, and exacerbate environmental health risks in conflict zones and during large-scale construction and demolition activities. To illustrate the practical implications of these shortcomings, we present a case study demonstrating the ease with which asbestos-containing consumer products can be purchased through international e-commerce platforms. Laboratory analyses confirmed the presence of regulated chrysotile fibres in heat-resistant gloves purchased online, highlighting substantial deficiencies in product disclosure, regulatory enforcement, and cross-border accountability. This finding demonstrates how digital trade can bypass existing regulatory safeguards and expose unsuspecting consumers to carcinogenic materials. Asbestos should no longer be viewed as a legacy hazard but as an evolving global risk sustained by economic globalization, regulatory inconsistency, and technological change. Addressing this challenge will require coordinated international action, greater supply-chain transparency, and regulatory frameworks capable of responding to the realities of twenty-first century commerce.",
+      "journal": "Environmental health : a global access science source",
+      "pubDate": "2026-10-14",
+      "year": 2026,
+      "doi": "10.1186/s12940-026-01348-x",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42870270/",
+      "firstAuthor": "Alessandro Francesco Gualtieri",
+      "firstAffiliation": "Department of Chemical and Geological Sciences, University of Modena and Reggio Emilia, Via G. Campi 103, I-41125, Modena, Italy. alessandro.gualtieri@unimore.it.",
+      "country": "Italy",
+      "language": "eng",
+      "termsMatched": [
+        "asbestos",
+        "chrysotile"
+      ]
+    },
     {
       "pmid": "42864641",
       "title": "Who participates in LDCT screening for the early detection of lung cancer after long-term occupational exposure to asbestos dust? Results of the analysis of administrative and medical routine data from the German Social Accident Insurance.",
@@ -7871,7 +7889,7 @@
     },
     {
       "pmid": "41813168",
-      "title": "Pleural mesothelioma with net-like structures.",
+      "title": "Pleural Mesothelioma with Net-like Structures.",
       "abstract": "",
       "journal": "Internal medicine (Tokyo, Japan)",
       "pubDate": "2026-03-10",
