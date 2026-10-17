@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-10-16T07:10:04.081Z",
+    "generatedAt": "2026-10-17T06:57:35.450Z",
     "source": "NCBI E-utilities (PubMed)",
     "terms": [
       "asbestos",
@@ -141,6 +141,23 @@
       ]
     },
     {
+      "pmid": "42884727",
+      "title": "Hexokinase II as a Potential Target of Apigenin Through the Induction of Apoptosis and Necroptosis in Malignant Mesothelioma.",
+      "abstract": ": Lactate-acclimated MSTO-211HAcT and H2452AcT malignant mesothelioma (MM) cells were previously found to tolerate gemcitabine more readily than their parental cells while remaining sensitive to apigenin. We examined whether changes in glucose metabolism and HKII contribute to the apigenin response.: Apigenin was evaluated in monolayer and spheroid cultures and in a xenograft model; HKII was also silenced in the acclimated cells.: Apigenin reduced cell viability, p-AKT (Ser473), glycolysis-associated proteins including HKII, and mitochondrial electron transport chain proteins, while increasing p53 and markers of cell death. Tumor growth and selected metabolic proteins were reduced in the xenograft model. HKII silencing reduced cell viability and glucose utilization, lowered cellular ATP, altered mitochondrial membrane potential, and increased markers of apoptosis and necroptosis.: HKII-associated metabolism contributes to survival of lactate-acclimated MM cells, and apigenin affects this metabolic phenotype. Direct targeting of HKII by apigenin and the complete mitochondrial apoptotic pathway require further study.",
+      "journal": "Nutrients",
+      "pubDate": "2026-10-05",
+      "year": 2026,
+      "doi": "10.3390/nu18193276",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42884727/",
+      "firstAuthor": "Moon-Kyun Cho",
+      "firstAffiliation": "Department of Dermatology, Soonchunhyang University Hospital, Seoul 04401, Republic of Korea.",
+      "country": "South Korea",
+      "language": "eng",
+      "termsMatched": [
+        "mesothelioma"
+      ]
+    },
+    {
       "pmid": "41773493",
       "title": "JNJ-79032421, a Novel Membrane-Restricted Mesothelin-Targeting T Cell-Engaging Bispecific Antibody for the Treatment of Mesothelin-Positive Cancers.",
       "abstract": "Mesothelin (MSLN) is a cell membrane-anchored glycoprotein overexpressed in several cancers, including pancreatic cancer, ovarian cancer, and mesothelioma. MSLN is protease-cleaved at the membrane proximal region, releasing shed MSLN (sMSLN) into the tumor microenvironment, leaving behind a membrane-bound stub. sMSLN in the tumor microenvironment is hypothesized to create a \"sink\" that could limit tumor binding of MSLN-targeted anticancer therapies. We describe JNJ-79032421, a bispecific antibody (BsAb) targeting cluster of differentiation (CD) 3 on T cells and the membrane-restricted, non-shed region of full-length MSLN on cancer cells. Crystal structure analysis confirmed JNJ-79032421 binding to the membrane-restricted, non-shed C-terminal region of MSLN. Using Western blotting, enzyme-linked immunosorbent assay (ELISA), fluorescence-activated cell sorting (FACS), and immunohistochemistry (IHC), elevated levels of sMSLN were detected in blood, serosal fluids, and tumor tissue of patients and tended to increase with MSLN tumor expression. Binding and cytotoxicity of JNJ-79032421 against cancer cell lines were unaffected by the presence of sMSLN. In cancer cell lines and cell line-derived and patient-derived xenograft mouse models, increasing levels of MSLN expression led to increased JNJ-79032421 potency. In contrast, MSLNxCD3 BsAbs, binding of which is non-membrane-restricted, demonstrated a loss of cytotoxicity in the presence of sMSLN. This \"sink\" effect was most pronounced for high-affinity non-membrane-restricted BsAbs. Increases in CD45+ and CD8+ T-cell infiltration, as well as CD8+ T-cell activation, observed in xenograft tumor tissues were time-dependent and JNJ-79032421 dose-dependent. Overall, these data suggest that JNJ-79032421 may offer meaningful clinical activity by avoiding binding to sMSLN.",
@@ -155,6 +172,23 @@
       "language": "eng",
       "termsMatched": [
         "mesothelioma"
+      ]
+    },
+    {
+      "pmid": "42882357",
+      "title": "Two-Phase Occupational Screening in Coal-Fired Power Plant Workers: Anamnestic Risk Stratification and Targeted Low-Dose CT Findings.",
+      "abstract": "Employees at coal-fired power plants experience cumulative occupational exposure to respirable particulates alongside a high prevalence of smoking, both contributing to chronic respiratory disease and elevated lung cancer risk, and organized-screening implementation data remain scarce in this specific industrial setting outside asbestos-exposed cohorts. We evaluated a two-step occupational screening strategy integrating an anamnestic questionnaire with targeted low-dose CT (LDCT) imaging, assessing risk distribution, structured imaging findings, and the discriminative value of questionnaire-based triage relative to its underlying continuous predictors.In this cross-sectional study, all workers at a coal-fired power plant completed a structured questionnaire (F1) and were classified as high-risk or non-high-risk using a predefined eligibility rule (respiratory symptoms, or age &#x2265; 50 years with current/former smoking). All workers were invited to voluntary LDCT (F2), interpreted using Lung-RADS v2022 with structured emphysema and coronary artery calcium (CAC) assessment. Associations were assessed using Fisher's exact tests, multivariable logistic regression, and ROC analysis with DeLong's test; voluntary LDCT uptake was characterized with a multivariable propensity model.Among 870 screened workers, 364 (41.8%) were high-risk. LDCT uptake was higher among high-risk workers (130/364, 35.7%) than non-high-risk workers (56/506, 11.1%), yielding 186 examinations. Only 14/186 (7.5%) had Lung-RADS &#x2265; 3. High-risk status was associated with higher prevalence of any nodule (80.8% vs. 62.5%; OR 2.52) and CAC (46.9% vs. 14.3%; OR 5.30); a composite abnormality outcome was present in 92.3% vs. 69.6% (OR 5.23). Only age (OR 1.11/year) and ever-smoking status (OR 4.38) independently predicted abnormalities on multivariable analysis; dichotomized risk classification showed reduced discrimination for CAC versus a continuous age-smoking model (AUC 0.647 vs. 0.779).Questionnaire-based triage effectively enriched the LDCT-screened population for smoking-related and cardiometabolic risk. Age and smoking history, rather than the full questionnaire, principally drove imaging abnormalities, supporting an integrated occupational model combining lung cancer screening with COPD and cardiovascular risk management.",
+      "journal": "Diagnostics (Basel, Switzerland)",
+      "pubDate": "2026-10-02",
+      "year": 2026,
+      "doi": "10.3390/diagnostics16193202",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42882357/",
+      "firstAuthor": "Adrian Cranta",
+      "firstAffiliation": "Biophysics Department, University of Medicine and Pharmacy of Craiova, 2 Petru Rare&#x219; Street, 200349 Craiova, Romania.",
+      "country": "Romania",
+      "language": "eng",
+      "termsMatched": [
+        "asbestos"
       ]
     },
     {
@@ -240,6 +274,23 @@
       "language": "eng",
       "termsMatched": [
         "asbestos",
+        "mesothelioma"
+      ]
+    },
+    {
+      "pmid": "42885816",
+      "title": "Awareness of Partial Loss is Essential in Interpreting Merlin Immunohistochemistry When Diagnosing Pleural Mesothelioma.",
+      "abstract": "Ancillary assays, including BAP1 (BRCA-1-associated protein 1), MTAP (methylthioadenosine phosphorylase), and Merlin immunohistochemistry (IHC), are effective in discriminating pleural mesothelioma (PM) from reactive mesothelial proliferations (RMP). IHC of Merlin, a protein product of the neurofibromin 2 gene, was most recently developed. Our previous study suggested uneven occurrence of Merlin loss within PM tissues. This was further investigated here in a total of 41 tissues of PM obtained from seven institutions. Partial or diffuse Merlin loss was detected with excellent interobserver agreement (kappa: 0.82). Of the 34 PM cases with interobserver consensus, partial and diffuse loss of Merlin expression were each observed in 13 cases (38%). PM with partial Merlin loss exhibited either discrete or intermingled spatial distribution of Merlin-lost cells. BAP1 or MTAP showed partial loss in none or only 5% of PM cases, respectively. The diagnostic sensitivity for PM was enhanced to 91% with addition of diffuse and partial Merlin loss to a combination of BAP1 and MTAP loss while maintaining 100% specificity. Although detection of Merlin loss as well as BAP1 and MTAP losses is effective for distinguishing PM from RMP, pathologists should be familiar with partial Merlin loss when interpreting Merlin IHC results.",
+      "journal": "Pathology international",
+      "pubDate": "2026-10-01",
+      "year": 2026,
+      "doi": "10.1111/pin.70195",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42885816/",
+      "firstAuthor": "Kazuki Nabeshima",
+      "firstAffiliation": "Fukuoka Tokushukai Hospital, Department of Diagnostic Pathology, Pathological Diagnosis Center, Fukuoka, Japan.",
+      "country": "Japan",
+      "language": "eng",
+      "termsMatched": [
         "mesothelioma"
       ]
     },
@@ -427,6 +478,23 @@
       "firstAuthor": "Thibaut Wolf",
       "firstAffiliation": "Pathology department, University Hospitals of Strasbourg, Strasbourg, France. thibaut.wolf@chru-strasbourg.fr.",
       "country": "France",
+      "language": "eng",
+      "termsMatched": [
+        "mesothelioma"
+      ]
+    },
+    {
+      "pmid": "42882772",
+      "title": "Expression of Annexin A4 in Cancer: A Tissue Microarray Study Involving More than 17,600 Cancers from 148 Tumor Entities.",
+      "abstract": "Annexin A4 (ANXA4) is one of twelve members of the annexin superfamily that bind membrane phospholipids in a calcium-dependent manner, and which are involved in several processes related to the membrane.To learn more about the role of ANXA4 in cancer, the ANXA4 expression was analyzed by immunohistochemistry (IHC) on tissue microarrays (TMAs) containing 17,654 tumors and precursor lesions from 148 tumor types.ANXA4 immunostaining was found in 10,858 (83.4%) of 13,017 analyzable tumors, and was considered weak in 10.1%, moderate in 16.6%, and strong in 61.8% of cases. Of 148 tumor categories, 144 showed ANXA4 staining in at least one case and 133 included at least one case with strong staining. Among tumor entities with at least 10 evaluable samples, strong ANXA4 staining in >50.0% of cases was seen in 56 of 120 entities, while absence of staining in >50.0% of cases was seen in 13. Clinically important tumor entities where ANXA4 staining was always positive (>99.5%) included gallbladder adenocarcinoma, cholangiocarcinoma, pancreatic/ampullary, various subtypes of salivary gland tumors, papillary renal cell carcinoma, urothelial carcinoma, squamous and basal cell carcinoma of the skin, and epithelioid mesothelioma. A reduced ANXA4 expression was linked to features of cancer aggressiveness in breast cancer, clear cell renal cell carcinoma, urothelial carcinoma, pancreatic ductal adenocarcinoma, hepatocellular carcinoma, colorectal adenocarcinoma, and follicular thyroid carcinoma.It is concluded that ANXA4 is abundantly expressed in human malignancies and that a reduced expression may be linked to unfavorable disease characteristics in many important tumor entities.",
+      "journal": "Cancers",
+      "pubDate": "2026-09-22",
+      "year": 2026,
+      "doi": "10.3390/cancers18193077",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42882772/",
+      "firstAuthor": "Cosima V&#xf6;lkel",
+      "firstAffiliation": "Institute of Pathology, University Medical Center Hamburg-Eppendorf, Martinistr. 52, 20246 Hamburg, Germany.",
+      "country": "Germany",
       "language": "eng",
       "termsMatched": [
         "mesothelioma"
