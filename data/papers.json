@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-10-17T06:57:35.450Z",
+    "generatedAt": "2026-10-18T07:13:48.483Z",
     "source": "NCBI E-utilities (PubMed)",
     "terms": [
       "asbestos",
@@ -19,6 +19,24 @@
     "notes": "Keyword matching includes multilingual aliases. Expand TERM_GROUPS in scripts/update_pubmed_data.mjs to add more translations."
   },
   "papers": [
+    {
+      "pmid": "42888622",
+      "title": "Contributions of smoking behaviour to lung cancer subtypes: A two-sample Mendelian randomization study.",
+      "abstract": "Smoking is an established cause of lung cancer (LC), but the relative causal contributions of whether a person ever smokes and how heavily they smoke across histological subtypes remain uncertain. This study investigated the causal effects of smoking status and smoking intensity on major LC subtypes. Two-sample Mendelian randomization (MR) was performed. Genetic instruments were drawn from the GWAS and Sequencing Consortium of Alcohol and Nicotine Use: 85 variants for smoking status, a binary trait contrasting ever with never smokers, and 23 variants for smoking intensity, a continuous trait measuring cigarettes smoked per day. Outcomes were 5 LC phenotypes from FinnGen: non-small cell LC (1627 cases), adenocarcinoma (571), squamous cell carcinoma (365), small cell LC (179), and mesothelioma (133). Inverse-variance weighted regression with multiplicative random effects was the primary estimator, with weighted median, weighted mode, and MR-Egger as sensitivity analyses. Benjamini-Hochberg correction was applied across all ten tests. Analyses used R 4.2.3 with TwoSampleMR 0.7.9. Smoking intensity was causally associated with all 4 smoking-related subtypes: squamous cell carcinoma (odds ratio [OR]: 5.95 per standard deviation increase, 95% confidence interval [CI]: 3.12-11.37), small cell LC (OR: 4.43, 95% CI: 1.60-12.32), non-small cell LC (OR: 3.45, 95% CI: 2.30-5.18), and adenocarcinoma (OR: 2.66, 95% CI: 1.40-5.06). All 4 survived correction for multiple testing and were reproduced by the weighted median and weighted mode estimators. Smoking status showed positive point estimates for all 4 subtypes (OR: 1.40-1.61) but reached only nominal significance for non-small cell LC (OR: 1.51, 95% CI: 1.04-2.19, P&#x2005;=&#x2005;.030), which did not survive correction and was not reproduced by other estimators. Neither exposure was associated with mesothelioma. Smoking intensity shows robust causal effects on all smoking-related LC subtypes, whereas the evidence for smoking status is directionally consistent but considerably weaker. The null finding for mesothelioma, a cancer principally caused by asbestos, supports the specificity of the instruments. These results indicate that reducing consumption among established smokers warrants emphasis alongside preventing uptake.",
+      "journal": "Medicine",
+      "pubDate": "2026-10-16",
+      "year": 2026,
+      "doi": "10.1097/MD.0000000000051170",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42888622/",
+      "firstAuthor": "Mohammad A Jareebi",
+      "firstAffiliation": "Department of Family & Community Medicine, College of Medicine, Jazan University, Jazan, Saudi Arabia.",
+      "country": "Saudi Arabia",
+      "language": "eng",
+      "termsMatched": [
+        "asbestos",
+        "mesothelioma"
+      ]
+    },
     {
       "pmid": "42870270",
       "title": "Banned here, sold elsewhere: globalization, e-commerce and the continuing circulation of asbestos-containing products.",
