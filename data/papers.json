@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-10-20T07:34:50.740Z",
+    "generatedAt": "2026-10-21T07:39:42.355Z",
     "source": "NCBI E-utilities (PubMed)",
     "terms": [
       "asbestos",
@@ -19,6 +19,41 @@
     "notes": "Keyword matching includes multilingual aliases. Expand TERM_GROUPS in scripts/update_pubmed_data.mjs to add more translations."
   },
   "papers": [
+    {
+      "pmid": "42901803",
+      "title": "Randomised pilot and feasibility study comparing video-assisted thoracoscopic partial pleurectomy-decortication with indwelling pleural catheter for trapped lung in pleural mesothelioma.",
+      "abstract": "",
+      "journal": "Thorax",
+      "pubDate": "2026-10-20",
+      "year": 2026,
+      "doi": "10.1136/thorax-2026-224731",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42901803/",
+      "firstAuthor": "Robert Campbell Rintoul",
+      "firstAffiliation": "Oncology, University of Cambridge School of Clinical Medicine, Cambridge, UK robert.rintoul@nhs.net.",
+      "country": "United Kingdom",
+      "language": "eng",
+      "termsMatched": [
+        "mesothelioma"
+      ]
+    },
+    {
+      "pmid": "42901775",
+      "title": "When art anticipates disease: asbestos, conceptual painting and mesothelioma.",
+      "abstract": "",
+      "journal": "Medical humanities",
+      "pubDate": "2026-10-20",
+      "year": 2026,
+      "doi": "10.1136/medhum-2026-013854",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42901775/",
+      "firstAuthor": "Giuseppe Mangiameli",
+      "firstAffiliation": "Division of Thoracic Surgery, IRCCS Humanitas Research Hospital, Rozzano, Italy giuseppe.mangiameli@hunimed.eu.",
+      "country": "Italy",
+      "language": "eng",
+      "termsMatched": [
+        "asbestos",
+        "mesothelioma"
+      ]
+    },
     {
       "pmid": "42892147",
       "title": "Beyond the pleura: National trends in mesothelioma mortality by anatomical site in Spain, 1999-2024.",
