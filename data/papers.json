@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-10-22T07:40:08.521Z",
+    "generatedAt": "2026-10-23T07:32:45.911Z",
     "source": "NCBI E-utilities (PubMed)",
     "terms": [
       "asbestos",
@@ -19,6 +19,23 @@
     "notes": "Keyword matching includes multilingual aliases. Expand TERM_GROUPS in scripts/update_pubmed_data.mjs to add more translations."
   },
   "papers": [
+    {
+      "pmid": "42906939",
+      "title": "Carcinoids of the lung caused by exogenous noxious agents: a scoping review.",
+      "abstract": "Approximately 2% of lung tumours are pulmonary carcinoids (PCs), divided into typical (90%) and atypical (AC) (10%). The link with external exposure to carcinogens remains controversial. To investigate the association between occupational exposure to carcinogens and PC tumours. A PRISMA-ScR-guided scoping review was performed. A systematic search was conducted in PubMed and Embase (January 2025). Studies were reviewed, data extracted, analysed and summarised narratively. 1302 studies were reviewed. 27 original studies and seven conference papers on topics including exposure to cigarette smoke (n=23) and asbestos (n=6), or mechanistic information, were included. Following the collapse of the World Trade Center in 2001, carcinoids accounted for 6% of lung cancer cases in people exposed to the resulting dust (9% in women, 3% in men). The proportion of ACs among carcinoids rose from 9.3% (controls) to 16.3% (smokers) and from &#x223c;25% to 45% (probabledefinite asbestos exposure). Basic research has identified biological pathways linking harmful exposures (such as asbestos and cigarette smoke) to neuroendocrine cell proliferation and the potential progression of PCs to higher-grade lung tumours. The significance these of findings is limited due to 1) the limited number of studies, 2) the small number of tumours within those studies and 3) the lack of rigid diagnostic (morphological and molecular) criteria for PCs in most studies. Nevertheless, a consistent finding is a higher proportion of AC among carcinoids, particularly following asbestos exposure. Based on these findings, a link between carcinogenic substances (especially asbestos and cigarette smoke) and carcinoids seems plausible. More stringent analyses in epidemiological surveys are needed to further clarify the pathogenesis of PCs.",
+      "journal": "European respiratory review : an official journal of the European Respiratory Society",
+      "pubDate": "2026-10-21",
+      "year": 2026,
+      "doi": "10.1183/16000617.0145-2026",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42906939/",
+      "firstAuthor": "Sonja Kilo",
+      "firstAffiliation": "Federal Institute for Occupational Safety and Health, BAuA, Berlin, Germany kilo.sonja@baua.bund.de.",
+      "country": "Germany",
+      "language": "eng",
+      "termsMatched": [
+        "asbestos"
+      ]
+    },
     {
       "pmid": "42901803",
       "title": "Randomised pilot and feasibility study comparing video-assisted thoracoscopic partial pleurectomy-decortication with indwelling pleural catheter for trapped lung in pleural mesothelioma.",
@@ -91,6 +108,23 @@
       ]
     },
     {
+      "pmid": "42906937",
+      "title": "A three-stage conceptual framework for post-fire recovery in operating rooms: an evidence-informed opinion based on clinical experience and international guidelines.",
+      "abstract": "Operating-room fires, though rare, present unique risks to patient safety, staff health, and institutional resilience. Korean regulations (Medical Service Act, Framework Act on Fire Services, and Occupational Safety and Health Act) emphasize fire prevention and immediate response but lack systematic guidance for post-fire recovery, leading to inconsistent practices, delays in recovery, and compromises in safety. This article proposes a structured, evidence-informed conceptual framework for post-fire recovery in operating rooms. The framework was developed through the integration of relevant international guidelines, toxicological and indoor air quality literature, and clinical experience. The model integrates environmental and surface-contamination assessments; heating, ventilation, and air conditioning (HVAC) and negative-pressure remediation; phased personal protective equipment (PPE) deployment; and considerations for healthcare personnel safety. The proposed framework comprises a three-stage recovery model stratified by fire severity: Stage 1 (minor fire) focuses on rapid assessment of core air quality parameters and basic safety confirmation; Stage 2 (moderate fire) expands assessment to include volatile organic compounds, formaldehyde, hydrogen cyanide, and polycyclic aromatic hydrocarbons, with continuous monitoring and environmental verification before reoccupation; Stage 3 (severe fire) requires laboratory-grade analysis, additional monitoring of asbestos and persistent pollutants, and strict criteria for reoccupation. Complementary protocols address surface-contamination assessment, HVAC remediation, and staged PPE-supported deployment, with additional considerations for healthcare personnel safety and well-being. In summary, we present a conceptual reference to support clinical judgment and interdisciplinary coordination following operating-room fires, informed by the Korean regulatory context but applicable to other healthcare systems in settings with limited post-fire recovery guidance.",
+      "journal": "Anesthesia and pain medicine",
+      "pubDate": "2026-10-16",
+      "year": 2026,
+      "doi": "10.17085/apm.26507",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42906937/",
+      "firstAuthor": "Yoon Ji Choi",
+      "firstAffiliation": "Department of Anesthesiology and Pain Medicine, Korea University Ansan Hospital, Korea University College of Medicine, Ansan, Korea.",
+      "country": "South Korea",
+      "language": "eng",
+      "termsMatched": [
+        "asbestos"
+      ]
+    },
+    {
       "pmid": "42870270",
       "title": "Banned here, sold elsewhere: globalization, e-commerce and the continuing circulation of asbestos-containing products.",
       "abstract": "Despite widespread recognition of its carcinogenicity and bans in many countries, asbestos remains a persistent global public health challenge. Regulatory fragmentation, transnational trade, and the rapid expansion of digital marketplaces continue to facilitate the circulation of asbestos-containing materials (ACM) across national borders. While all forms of asbestos, including chrysotile are prohibited in several jurisdictions, chrysotile is still mined, manufactured, and extensively used in major economies, including Russia and China, and remains incorporated into construction materials throughout large parts of Asia, the Middle East, and other regions. This regulatory asymmetry undermines national bans and compromises efforts to achieve zero exposure. In this Comment, we examine the consequences of the absence of a global asbestos ban and the continued failure to include chrysotile in Annex III of the Rotterdam Convention. We discuss how these regulatory gaps contribute to unrecognized exposure among the general population, create legal and economic liabilities for industries, and exacerbate environmental health risks in conflict zones and during large-scale construction and demolition activities. To illustrate the practical implications of these shortcomings, we present a case study demonstrating the ease with which asbestos-containing consumer products can be purchased through international e-commerce platforms. Laboratory analyses confirmed the presence of regulated chrysotile fibres in heat-resistant gloves purchased online, highlighting substantial deficiencies in product disclosure, regulatory enforcement, and cross-border accountability. This finding demonstrates how digital trade can bypass existing regulatory safeguards and expose unsuspecting consumers to carcinogenic materials. Asbestos should no longer be viewed as a legacy hazard but as an evolving global risk sustained by economic globalization, regulatory inconsistency, and technological change. Addressing this challenge will require coordinated international action, greater supply-chain transparency, and regulatory frameworks capable of responding to the realities of twenty-first century commerce.",
@@ -154,6 +188,40 @@
       "firstAuthor": "N-Y Kim",
       "firstAffiliation": "Laboratory of Veterinary Clinical Pathology, College of Veterinary Medicine, Seoul National University, Seoul, Republic of Korea.",
       "country": "South Korea",
+      "language": "eng",
+      "termsMatched": [
+        "mesothelioma"
+      ]
+    },
+    {
+      "pmid": "42903807",
+      "title": "Reprogramming the tumor microenvironment in mesothelioma: from immune suppression to therapeutic opportunity.",
+      "abstract": "Pleural mesothelioma (PM) is a rare and aggressive cancer with limited treatment options and poor prognosis. Unlike other thoracic cancers responding well to immunotherapy, PM typically lacks key predictive biomarkers such as Programmed Death-Ligand 1 (PD-L1) tumor expression. Nonetheless, immune checkpoint inhibitors (ICIs) have shown clinical activity in PM, particularly in non-epithelioid subtypes. However, only a subset of patients benefits from this approach, and resistance remains a major challenge. A growing body of evidence suggests that tumor microenvironment (TME) plays a central role in shaping this resistance. In PM, the TME is notably immunosuppressive, dominated by regulatory T cells, myeloid-derived suppressor cells, and tumor-associated macrophages. These elements act as a shield against immune activation, limiting the efficacy of ICIs. Novel therapeutic strategies aimed at depleting or modulating suppressive immune populations within the TME are emerging as promising avenues to overcome resistance and enhance the effectiveness of ICIs. In this narrative review, we examine the unique features of the TME in PM, its role in immunotherapy resistance, and emerging strategies aimed at harnessing or remodeling the TME to improve patient outcomes.",
+      "journal": "Frontiers in immunology",
+      "pubDate": "2026-10-06",
+      "year": 2026,
+      "doi": "10.3389/fimmu.2026.1814514",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42903807/",
+      "firstAuthor": "Luigi Cerbone",
+      "firstAffiliation": "SSD Mesotelioma, Melanoma e Tumori Rari, IRCCS AOU SS Antonio e Biagio e Cesare Arrigo, Alessandria, Italy.",
+      "country": "Italy",
+      "language": "eng",
+      "termsMatched": [
+        "mesothelioma"
+      ]
+    },
+    {
+      "pmid": "42903210",
+      "title": "Ultrasonic manifestations of diffuse pericardial mesothelioma masquerading as pericardial effusion: a case report.",
+      "abstract": "Primary pericardial mesothelioma (PPM) is an exceedingly rare, highly invasive cardiac neoplasm with insidious onset and non-specific clinical symptoms. Due to the lack of typical early manifestations and effective routine diagnostic methods, PPM is often misdiagnosed and missed, resulting in delayed treatment and poor prognosis. A 42-year-old male presented with 6 months of recurrent chest tightness and pain, worsening over 2 months, and two prior admissions for unexplained pericardial effusion. On admission, he had tachycardia, distant heart sounds, bilateral lower extremity edema, and a 3&#xd7;2 cm hard, fixed left supraclavicular lymph node. Imaging confirmed pericardial effusion with abnormal pericardial lesions. Ultrasound-guided pericardiocentesis yielded only a small amount of red jelly-like material, with cytology suggesting epithelioid neoplastic cells. Supraclavicular lymph node biopsy confirmed metastatic malignant mesothelioma. Nivolumab immunotherapy showed no improvement. Pericardial tumor resection revealed diffuse, fish-flesh-like tumor invading the myocardium and great vessels. Final pathology confirmed epithelioid-type PPM. Patients with recurrent unexplained pericardial effusion and atypical sonographic features, such as flocculent echoes and irregular pericardial thickening, should raise suspicion for PPM. Early recognition of these signs and timely pathological confirmation are critical to avoid diagnostic delays and may improve outcomes.",
+      "journal": "Frontiers in oncology",
+      "pubDate": "2026-10-06",
+      "year": 2026,
+      "doi": "10.3389/fonc.2026.1921935",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42903210/",
+      "firstAuthor": "Shuxu Zhu",
+      "firstAffiliation": "Department of Ultrasound, Affiliated Jinhua Hospital, Zhejiang University School of Medicine, Jinhua, Zhejiang,&#xa0;China.",
+      "country": "China",
       "language": "eng",
       "termsMatched": [
         "mesothelioma"
