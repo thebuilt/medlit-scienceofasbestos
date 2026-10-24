@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-10-23T07:32:45.911Z",
+    "generatedAt": "2026-10-24T07:17:39.322Z",
     "source": "NCBI E-utilities (PubMed)",
     "terms": [
       "asbestos",
@@ -688,6 +688,23 @@
       "language": "eng",
       "termsMatched": [
         "mesothelioma"
+      ]
+    },
+    {
+      "pmid": "42915733",
+      "title": "Kinetics of H2O2-Induced Hydroxyl Radical Release by Carcinogenic Mineral Fibers Crocidolite, Chrysotile, and Erionite.",
+      "abstract": "Hydroxyl radicals (&#x2022;OH) display cyto- and genotoxicity and the ability to induce oxidative stress and chronic inflammation in vivo. In this work, we have monitored the kinetic profile of &#x2022;OH radical release from the carcinogenic mineral fibers crocidolite, chrysotile, and erionite at physiological pH (7.4). This was achieved via fluorescence spectroscopy, using coumarin-3-carboxylic acid as a semiquantitative probe. A kinetic model was developed to interpret the data. The formation of &#x2022;OH radicals is initiated by the binding of hydrogen peroxide (H2O2) to Fe2+ sites on the fibers, leading to oxidation to Fe3+ and release of &#x2022;OH through the Fenton reaction. &#x2022;OH release was also detected at acidic pH (4.1) under conditions that mimic the intracellular environment during fiber phagocytosis. Although the experiments were conducted in a simplified chemical system, some hypotheses on the activity of the investigated fibers in the extracellular alveolar environment can be done. The results suggest that &#x2022;OH generation is governed by a multistep mechanism that depends on the specific crystal-chemical nature of the fiber. At pH 7.4, crocidolite exhibits a radical production process which consists of a transition from a rapid oxidation of pristine surface Fe2+ to a continuous, long-term redox cycling of Fe3+. A similar long-term activity was observed for chrysotile, although masked at longer time scales by probe adsorption. In contrast, erionite, which lacks structural iron, releases &#x2022;OH at a slower rate but with a long-lasting process, likely driven by the reduction of Fe3+ present in nanoparticulate surface impurities. At long incubation times and also at acidic pH 4.1, the kinetic model and experimental evidence address the overlapping contribution of iron dissolution, indicating that homogeneous Fenton reactions complement the heterogeneous surface activity. These findings highlight distinct, time-dependent oxidative pathways for these mineral fibers, providing deeper insights into their specific biochemical mechanisms.",
+      "journal": "Chemical research in toxicology",
+      "pubDate": "2026-09-21",
+      "year": 2026,
+      "doi": "10.1021/acs.chemrestox.6c00003",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42915733/",
+      "firstAuthor": "Elena Castellini",
+      "firstAffiliation": "Department of Chemical and Geological Sciences, University of Modena and Reggio Emilia, Via Campi 103, Modena41125, Italy.",
+      "country": "Italy",
+      "language": "eng",
+      "termsMatched": [
+        "chrysotile"
       ]
     },
     {
