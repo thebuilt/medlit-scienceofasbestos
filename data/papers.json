@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-10-24T07:17:39.322Z",
+    "generatedAt": "2026-10-25T07:35:22.101Z",
     "source": "NCBI E-utilities (PubMed)",
     "terms": [
       "asbestos",
@@ -19,6 +19,23 @@
     "notes": "Keyword matching includes multilingual aliases. Expand TERM_GROUPS in scripts/update_pubmed_data.mjs to add more translations."
   },
   "papers": [
+    {
+      "pmid": "42919859",
+      "title": "HMGB1 directly activates BAP1 transcription to sustain tumor growth in mesothelioma.",
+      "abstract": "BAP1 and HMGB1 alterations are implicated in the pathogenesis of mesothelioma, an aggressive cancer of the membranes covering the thoracic and abdominal cavities. Genetic inactivating mutations of BAP1 cause cancer in ~100% of carriers. The mechanism/s that regulate BAP1 expression were unknown. We discovered that HMGB1 directly modulates BAP1 expression. Studying our Hmgb1 knock-out mouse mesothelioma models, primary fibroblasts obtained from carriers of pathogenic heterozygous germline BAP1 mutations, and mesothelioma cell lines, we discovered that HMGB1 loss caused a significant reduction in BAP1 expression and protein levels, whereas HMGB1 overexpression increased BAP1 mRNA and protein levels. We demonstrated that HMGB1 binds to the BAP1 promoter and activates its transcription, leading to BAP1 overexpression, which in turn promoted the proliferation, migration, and invasion of mesothelioma cells. These findings were confirmed in lung, colon, and cholangiocarcinoma cell lines. These findings indicate that while BAP1 inactivating mutations promote cancer development, cancer cells that do not express BAP1 are less aggressive, pointing to the HMGB1-BAP1 axis as a novel attractive target for therapy. Furthermore, our discovery that HMGB1-driven BAP1 overexpression supports cancer growth provides a mechanistic rationale for the improved survival observed in mesothelioma patients with somatic BAP1 inactivating mutations.",
+      "journal": "Cell death and differentiation",
+      "pubDate": "2026-10-23",
+      "year": 2026,
+      "doi": "10.1038/s41418-026-01892-6",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42919859/",
+      "firstAuthor": "Flavia Novelli",
+      "firstAffiliation": "Thoracic Oncology, University of Hawaii Cancer Center, Honolulu, HI, USA.",
+      "country": "United States",
+      "language": "eng",
+      "termsMatched": [
+        "mesothelioma"
+      ]
+    },
     {
       "pmid": "42906939",
       "title": "Carcinoids of the lung caused by exogenous noxious agents: a scoping review.",
