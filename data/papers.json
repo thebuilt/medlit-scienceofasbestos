@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-10-25T07:35:22.101Z",
+    "generatedAt": "2026-10-26T07:48:00.477Z",
     "source": "NCBI E-utilities (PubMed)",
     "terms": [
       "asbestos",
@@ -34,6 +34,23 @@
       "language": "eng",
       "termsMatched": [
         "mesothelioma"
+      ]
+    },
+    {
+      "pmid": "42925707",
+      "title": "Modelling hazardous mineral fibres - Do we just need more data?",
+      "abstract": "Spatial exposure modelling for hazardous mineral fibres is constrained by sparse, biased datasets and poorly understood exposure pathways. This study applies six regression frameworks (OLS, ridge, LASSO, geographically weighted regression (GWR), random forest, and XGBoost) to two contrasting datasets: airborne asbestos in El Dorado Hills, California (n&#x202f;=&#x202f;238) and mordenite in Ngakuru, New Zealand (n&#x202f;=&#x202f;22). Performance was assessed using cross-validated R&#xb2; and RMSE, with predictor importance scored across methods. In El Dorado Hills, cross-validated performance was moderate (R&#xb2; = 0.25-0.36), with tree-based ensembles performing best; activity surfaces, canopy cover, and disturbance proximity were dominant predictors. In Ngakuru, penalised linear models performed strongest (R&#xb2; = 0.83-0.87), driven by rock sample concentration and soil type, though high in-sample fit indicates overfitting risk given the small sample size. GWR was unstable, producing negative cross-validated R&#xb2; in El Dorado Hills and in Ngakuru fixed-predictor models. Model complexity did not improve predictive performance at either site; source geology, land use, and land cover formed a transferable predictor framework, though dominant predictors differed by site. These findings indicate that targeted sampling and in-situ predictor measurement will advance exposure modelling for hazardous mineral fibres more than increased model complexity.",
+      "journal": "Journal of hazardous materials",
+      "pubDate": "2026-10-23",
+      "year": 2026,
+      "doi": "10.1016/j.jhazmat.2026.143975",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42925707/",
+      "firstAuthor": "Dacey Zelman-Fahm",
+      "firstAffiliation": "University of Auckland, New Zealand. Electronic address: dacey.zelman-fahm@auckland.ac.nz.",
+      "country": "New Zealand",
+      "language": "eng",
+      "termsMatched": [
+        "asbestos"
       ]
     },
     {
