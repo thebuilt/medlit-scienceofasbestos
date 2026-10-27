@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-10-26T07:48:00.477Z",
+    "generatedAt": "2026-10-27T07:52:32.561Z",
     "source": "NCBI E-utilities (PubMed)",
     "terms": [
       "asbestos",
@@ -19,6 +19,23 @@
     "notes": "Keyword matching includes multilingual aliases. Expand TERM_GROUPS in scripts/update_pubmed_data.mjs to add more translations."
   },
   "papers": [
+    {
+      "pmid": "42932297",
+      "title": "Correction: Strategic selection of MDM2 inhibitors enhances the efficacy of FAK inhibition in mesothelioma based on TP53 genotype.",
+      "abstract": "[This corrects the article DOI: 10.1371/journal.pone.0343551.].",
+      "journal": "PloS one",
+      "pubDate": "2026-10-26",
+      "year": 2026,
+      "doi": "10.1371/journal.pone.0361362",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42932297/",
+      "firstAuthor": "PLOS One Editors",
+      "firstAffiliation": "",
+      "country": "",
+      "language": "eng",
+      "termsMatched": [
+        "mesothelioma"
+      ]
+    },
     {
       "pmid": "42919859",
       "title": "HMGB1 directly activates BAP1 transcription to sustain tumor growth in mesothelioma.",
@@ -462,6 +479,23 @@
       "firstAuthor": "Kazuki Nabeshima",
       "firstAffiliation": "Fukuoka Tokushukai Hospital, Department of Diagnostic Pathology, Pathological Diagnosis Center, Fukuoka, Japan.",
       "country": "Japan",
+      "language": "eng",
+      "termsMatched": [
+        "mesothelioma"
+      ]
+    },
+    {
+      "pmid": "42929161",
+      "title": "Integrative Bioinformatics and Machine Learning Approaches for Biomarker and Pathway Discovery in Malignant Pleural Mesothelioma.",
+      "abstract": "Malignant pleural mesothelioma (MPM) is a highly aggressive thoracic cancer with limited treatment options and poor prognosis. This study employed an integrative transcriptomic and computational approach to uncover potential biomarkers for MPM. Gene expression data from the GSE51024 dataset, comprising 41 normal and 55 MPM tumor samples, were preprocessed using the robust multiarray average (RMA) method. Differentially expressed genes (DEGs) were identified using the Limma package and Wilcoxon rank tests. Weighted gene co-expression network analysis (WGCNA) revealed significant gene modules using topological overlap and preservation statistics, followed by functional annotation through Gene Ontology (GO) and KEGG pathway analyses. Hub genes within conserved modules (MM&#x2009;>&#x2009;0.8) were identified, including ZNF638, RAB18, SOS1, TTC17, RANBP2, FNDC3B, QSER1, CLDN15, PSTPIP1, SEPTIN6, ADAP2, and PVRIG. Survival analysis validated their prognostic relevance using public databases. Furthermore, high classification accuracy was achieved using various machine learning algorithms (SVM, PLDA, XGB, K-NN, and logistic regression), confirming the discriminative potential of the hub genes. The results highlighted several physiologically significant hub genes and pathways associated with cell cycle regulation, immune modulation, and cancer progression. Overall, this exploratory study demonstrated that potential biomarkers in MPM can be effectively identified using an integrative systems biology and machine learning framework. The identified hub genes may support future diagnostic, prognostic, and personalized treatment strategies for patients with MPM.",
+      "journal": "Cancer reports (Hoboken, N.J.)",
+      "pubDate": "2026-10-01",
+      "year": 2026,
+      "doi": "10.1002/cnr2.70731",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42929161/",
+      "firstAuthor": "Md Lotifur Rohman",
+      "firstAffiliation": "Department of Statistics and Data Science, Islamic University, Kushtia, Bangladesh.",
+      "country": "Bangladesh",
       "language": "eng",
       "termsMatched": [
         "mesothelioma"
