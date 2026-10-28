@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-10-27T07:52:32.561Z",
+    "generatedAt": "2026-10-28T08:33:07.094Z",
     "source": "NCBI E-utilities (PubMed)",
     "terms": [
       "asbestos",
@@ -20,6 +20,23 @@
   },
   "papers": [
     {
+      "pmid": "42944824",
+      "title": "Optimising radiotherapy and immunotherapy timing: a mechanistic model of the tumour microenvironment.",
+      "abstract": "This study aimed to determine the optimal scheduling of radiotherapy (RT) and anti-PD-1/CTLA-4 immune checkpoint inhibitors (ICIs) in a murine model of mesothelioma. BALB/c mice inoculated with a syngeneic mesothelioma tumour on the flank were treated with combination RT and ICI, and tumour growth was measured. An extension of an existing mechanistic model of the tumour microenvironment was fitted to the data, estimating growth, clearing of RT-damaged tumour cells, release of antigens, and activation of T-cells. This model was further extended to investigate the effects of tumour hypoxia on treatment efficacy. Each treatment schedule was analysed to calculate the highest tumour control probability (TCP). Combining ICIs with RT increases the TCP, consistent with other pre- clinical studies. Anti-PD-1 was more effective than anti-CTLA-4 at enhancing tumour control in our model. However, administering anti-PD-1 alone was less effective compared to combined anti-CTLA-4 and anti-PD-1. The TCP was robust to changes in the interval between ICI treatment days and delaying anti-CTLA-4 treatment. However, TCP was sensitive to delays in RT treatment and increases in the interval between RT treatment days. This study supports the synergistic effect between RT and ICIs. Further validation of the model on an external dataset is required before the model can be used to inform optimal treatment scheduling for future human clinical trials.",
+      "journal": "Physical and engineering sciences in medicine",
+      "pubDate": "2026-10-27",
+      "year": 2026,
+      "doi": "10.1007/s13246-026-01822-3",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42944824/",
+      "firstAuthor": "Allison M Ng",
+      "firstAffiliation": "School of Physics, Mathematics and Computing, University of Western Australia, Crawley, WA, 6009, Australia. allison.ng@uwa.edu.au.",
+      "country": "Australia",
+      "language": "eng",
+      "termsMatched": [
+        "mesothelioma"
+      ]
+    },
+    {
       "pmid": "42932297",
       "title": "Correction: Strategic selection of MDM2 inhibitors enhances the efficacy of FAK inhibition in mesothelioma based on TP53 genotype.",
       "abstract": "[This corrects the article DOI: 10.1371/journal.pone.0343551.].",
@@ -31,6 +48,23 @@
       "firstAuthor": "PLOS One Editors",
       "firstAffiliation": "",
       "country": "",
+      "language": "eng",
+      "termsMatched": [
+        "mesothelioma"
+      ]
+    },
+    {
+      "pmid": "42934446",
+      "title": "Primum Non Nocere: Ethical Considerations of Cytoreductive Surgery and Hyperthermic Intraperitoneal Chemotherapy (CRS/HIPEC) in Peritoneal Malignancies.",
+      "abstract": "Cytoreductive surgery with hyperthermic intraperitoneal chemotherapy (CRS/HIPEC) offers survival benefit for select patients with peritoneal surface malignancies (PSMs), yet the ethical dimensions of patient selection, informed consent, and multidisciplinary care remain underexplored. In a field still evolving, where patients with comparable profiles may exhibit vastly different prognoses, a structured ethical framework can serve as a compass for surgical decision-making. A narrative review of the literature examined the ethical considerations surrounding CRS/HIPEC for PSM. Topics include patient selection, the biological spectrum from indolent to aggressive disease, technical feasibility of complete cytoreduction, shared decision-making, surgical morbidity, palliative care integration, and special populations. The strength of evidence supporting CRS/HIPEC varies substantially by tumor biology, from near-curative outcomes in low-grade appendiceal neoplasms to marginal benefit in aggressive histologies such as sarcomatoid mesothelioma and signet ring cell carcinoma. When complete cytoreduction cannot be achieved, the procedure is unlikely to confer meaningful survival benefit and may cause significant harm. Traditional informed consent often omits the elements of informed decision-making; structured frameworks such as Best Case/Worst Case and REMAP (Reframe, Expect emotion, Map values, Align, Propose a plan) can bridge this gap. Decision regret data suggest that inadequate preoperative expectation setting contributes to patient dissatisfaction independent of surgical outcomes. Early palliative care and multidisciplinary collaboration improve prognostic understanding and alignment of treatment with patient goals. The ethical principles presented here are not rigid boundaries but flexible guides to help surgeons navigate clinical uncertainty. Although they focus on the surgical decision, they extend to every member of the multidisciplinary team caring for patients with PSM.",
+      "journal": "Annals of surgical oncology",
+      "pubDate": "2026-10-26",
+      "year": 2026,
+      "doi": "10.1245/s10434-026-20771-5",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42934446/",
+      "firstAuthor": "Jelani K Williams",
+      "firstAffiliation": "Wexner Medical Center Department of Surgery, Section of Surgical Oncology, The Ohio State University, Columbus, OH, USA.",
+      "country": "United States",
       "language": "eng",
       "termsMatched": [
         "mesothelioma"
@@ -123,6 +157,23 @@
       ]
     },
     {
+      "pmid": "42941649",
+      "title": "Post-Recurrence Treatment Patterns and Outcomes After Curative-Intent Multimodality Strategy in Patients with Pleural Mesothelioma: A Retrospective Cohort Study.",
+      "abstract": ": Disease recurrence is common after surgery for pleural mesothelioma (PM), and the evidence guiding post-recurrence management remains limited.: We conducted a retrospective, single-center cohort study including patients with PM treated within a curative-intent multimodality treatment pathway including surgery aiming for a macroscopic complete resection when feasible between 2001 and 2024. Post-recurrence treatments were categorized as best supportive care only (BSC), systemic therapy alone, or local with or without systemic therapy. Survival and disease-free outcomes were analyzed in relation to treatment patterns and clinical prognostic factors.: Among 67 patients with a median follow-up time of 107 months from surgery, 58 (86.6%) developed disease recurrence. At first recurrence, 21 patients (36%) received local with or without systemic therapy, 26 (45%) systemic therapy alone, and 11 (19%) BSC. The median post-recurrence survival was 21.7 months for patients receiving local with or without systemic therapy, 10.8 months for systemic therapy alone, and 1.6 months for BSC. Lung-sparing surgery and a disease-free interval of at least 12 months were associated with improved post-recurrence survival and post-recurrence progression-free survival.: In this real-world cohort of patients with PM and extended follow-up, active post-recurrence treatment was associated with longer post-recurrence survival in selected patients. However, conclusions regarding their comparative effectiveness are limited by the retrospective design, incomplete recurrence-related data, and patient selection at recurrence.",
+      "journal": "Journal of clinical medicine",
+      "pubDate": "2026-10-20",
+      "year": 2026,
+      "doi": "10.3390/jcm15208137",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42941649/",
+      "firstAuthor": "Oliver Illini",
+      "firstAffiliation": "Department of Respiratory and Critical Care Medicine, Klinik Floridsdorf, Vienna Healthcare Group, 1210 Vienna, Austria.",
+      "country": "Austria",
+      "language": "eng",
+      "termsMatched": [
+        "mesothelioma"
+      ]
+    },
+    {
       "pmid": "42892147",
       "title": "Beyond the pleura: National trends in mesothelioma mortality by anatomical site in Spain, 1999-2024.",
       "abstract": "Mesothelioma mortality continues to reflect asbestos exposure because of its long latency. While previous Spanish studies focused primarily on pleural disease, this study assessed mesothelioma mortality across the ICD-10 C45 category in Spain from 1999 to 2024. A population-based time-trend study was conducted using mortality data (ICD-10 C45) from the Spanish National Statistics Institute. Age-standardised mortality rates (ASMRs) were calculated using the 2013 European Standard Population. Temporal trends and sex-specific parallelism were evaluated using Joinpoint regression. Among 9733 recorded mesothelioma deaths (7311 men, 2422 women), ASMRs were consistently higher in men, although temporal trends were parallel by sex. Overall mortality increased until 2016 (annual percentage change [APC] 2.3%, 95% CI 1.5-3.0) and subsequently declined non-significantly, yielding an average annual percentage change (AAPC) of 1.0% (95% CI 0.2-1.7) for 1999-2024. Pleural mortality increased until 2011 before declining non-significantly, whereas recorded peritoneal mortality increased throughout the study period (AAPC 2.0%, 95% CI 0.7-3.2). Deaths coded as unspecified site (C45.9) showed the largest increase in ASMR (AAPC 2.1%, 95% CI 1.1-3.1) and accounted for 43.5% of male and 31.8% of female mesothelioma deaths in 2024. Absolute mesothelioma deaths increased in Spain while age-standardised rates attenuated after 2016. The continued increase in recorded peritoneal mortality and the substantial contribution of unspecified-site deaths indicate that surveillance should not rely solely on pleural mesothelioma, highlighting the need for comprehensive monitoring of the complete ICD-10 C45 category and improved anatomical classification.",
@@ -133,6 +184,24 @@
       "url": "https://pubmed.ncbi.nlm.nih.gov/42892147/",
       "firstAuthor": "Luc&#xed;a Cayuela",
       "firstAffiliation": "Department of Internal Medicine, Hospital Severo Ochoa, Legan&#xe9;s, Spain. Electronic address: lucia.cayuela@salud.madrid.org.",
+      "country": "Spain",
+      "language": "eng",
+      "termsMatched": [
+        "asbestos",
+        "mesothelioma"
+      ]
+    },
+    {
+      "pmid": "42938892",
+      "title": "MTAP Loss and Pleural Mesothelioma (PM): Current Treatment Strategies and Emerging Therapeutic Approaches.",
+      "abstract": "PM is a locally aggressive tumor associated with asbestos exposure. Despite legislative efforts to regulate asbestos use, its incidence continues to rise in some parts of the world. Chemotherapy and immunotherapy have improved survival in PM patients, but overall survival remains poor. MTAP loss is frequent in PM and may influence tumor behavior, resulting in a poorer prognosis. MTAP-deficient tumors exhibit unique metabolic vulnerabilities that have stimulated the development of targeted therapeutic strategies in recent years with promising results. The aim of this review is to analyze the prognostic and predictive value of MTAP in PM patients, as well as the outcomes of drugs with potential activity against this target.",
+      "journal": "Cancers",
+      "pubDate": "2026-10-17",
+      "year": 2026,
+      "doi": "10.3390/cancers18203360",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42938892/",
+      "firstAuthor": "Susana Cedres",
+      "firstAffiliation": "Medical Oncology Department, Vall d'Hebron Institute of Oncology (VHIO), Vall d'Hebron Hospital Universitari, 08035 Barcelona, Spain.",
       "country": "Spain",
       "language": "eng",
       "termsMatched": [
@@ -170,6 +239,41 @@
       "firstAuthor": "Yoon Ji Choi",
       "firstAffiliation": "Department of Anesthesiology and Pain Medicine, Korea University Ansan Hospital, Korea University College of Medicine, Ansan, Korea.",
       "country": "South Korea",
+      "language": "eng",
+      "termsMatched": [
+        "asbestos"
+      ]
+    },
+    {
+      "pmid": "42941511",
+      "title": "Prognostic Significance of B7-H3, TROP2, and p16 Expression in Pleural Mesothelioma: Clinicopathological Correlations and Survival Outcomes.",
+      "abstract": "Pleural mesothelioma (PM) is an aggressive malignancy with considerable biological heterogeneity and few established prognostic biomarkers. We evaluated the clinicopathological and prognostic relevance of B7-H3, TROP2, and p16 expression in PM.This retrospective study included 50 patients with histologically confirmed PM diagnosed between 2016 and 2025. Immunohistochemical expression of B7-H3, TROP2, and p16 was evaluated using an immunoreactivity scoring system. Associations with clinicopathological features were examined, and overall survival (OS) and progression-free survival (PFS) were analyzed using Kaplan-Meier and Cox proportional hazards methods.High B7-H3, TROP2, and p16 expression was observed in 78%, 18%, and 20% of tumors, respectively. High B7-H3 expression was significantly associated with asbestos exposure, chemotherapy, and tumor stage. Patients with high B7-H3 expression had shorter median OS (11.0 vs. 42.0 months;< 0.001) and PFS (11.0 vs. 40.0 months;= 0.004) than those with negative/low expression. Neither TROP2 nor p16 expression was significantly associated with survival. In a parsimonious multivariable Cox model, high B7-H3 expression remained significantly associated with poorer OS after adjustment for disease stage (HR = 4.42, 95% CI: 1.29-15.21,= 0.018).B7-H3 is frequently expressed in PM and was associated with poorer survival, including after adjustment for disease stage. These findings support further investigation of B7-H3 as a potential prognostic biomarker and therapeutic target in PM.",
+      "journal": "Journal of clinical medicine",
+      "pubDate": "2026-10-15",
+      "year": 2026,
+      "doi": "10.3390/jcm15207998",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42941511/",
+      "firstAuthor": "Neslihan Tas",
+      "firstAffiliation": "Department of Pulmonology, Faculty of Medicine, Sivas Cumhuriyet University, 58140 Sivas, Turkey.",
+      "country": "Turkey",
+      "language": "eng",
+      "termsMatched": [
+        "asbestos",
+        "mesothelioma"
+      ]
+    },
+    {
+      "pmid": "42941071",
+      "title": "Synthesis of \"Yellow Cobblestones\" of Sofia Using Asbestos Waste.",
+      "abstract": "The \"yellow cobblestones\" of Sofia are considered one of the city's symbols. This high-quality clinker was developed in Budapest in the late 19th century by using a local marl. Since this paving was declared part of Sofia's cultural heritage, studies to synthesize similar materials were carried out. Unfortunately, the Bulgarian clays used are characterized by a lower MgO amount, which results in a very narrow sintering range. However, an increase in MgO in the parent batch, bringing the composition closer to that of the original, has a positive effect on sintering, phase composition and structure. This work discusses the possibility of obtaining similar clinker by adding asbestos waste containing a high percentage of MgO to a selected Bulgarian marl. The process involves pre-calcination of part of the marl together with the asbestos waste, followed by mixing the resulting grog with the remaining clay, homogenization, pressing and final firing. Studies with Hot Stage Microscopy and optical dilatometry demonstrate that the asbestos addition has a positive effect on the widening of the sintering interval, while XRD, SEM and pycnometric results elucidate that the samples obtained in this way are characterized by a phase composition and structure comparable to those of the original material.",
+      "journal": "Materials (Basel, Switzerland)",
+      "pubDate": "2026-10-15",
+      "year": 2026,
+      "doi": "10.3390/ma19204330",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42941071/",
+      "firstAuthor": "Alexander Karamanov",
+      "firstAffiliation": "Institute for Physical Chemistry, Bulgarian Academy of Sciences, IPC-BAS, Bl. 11, Acad. G. Bonchev Str., 1113 Sofia, Bulgaria.",
+      "country": "Bulgaria",
       "language": "eng",
       "termsMatched": [
         "asbestos"
@@ -499,6 +603,23 @@
       "language": "eng",
       "termsMatched": [
         "mesothelioma"
+      ]
+    },
+    {
+      "pmid": "42935059",
+      "title": "Environmental Exposure to Carcinogens and Cancer Incidence in Kazakhstan: Opportunities for Cancer Prevention.",
+      "abstract": "Kazakhstan is a large country in Central Asia with long history of uranium and asbestos mining and nuclear testing, whose health effects have not been fully analyzed. To study the geographical distribution of cancer rates in relation to toxic sites. We conducted an extensive review of publicly available datasets, administrative documents, and publications to assess past and active sources of exposure to carcinogens, and the geographic distribution of cancer incidence. Several past and ongoing sources of environmental exposures were identified. Cancer incidence is unevenly distributed, with the highest rates in the areas where nuclear testing was performed. The most frequently observed cancers are those of the lung, stomach, colorectum, and hematopoietic system. Among males, prostate cancer entered the list of the top cancers, while among females, breast, uterine, and cervical cancer were the most represented. There are relatively small, densely populated areas that are heavily impacted by reactors, previous nuclear testing, uranium mines, chemical plants, and nuclear waste facilities. The geographic distribution of cancer rates reflects, in part, the location of the polluting sites, as well as personal exposure to behavioral risk factors, such as smoking and dietary habits. Aggressive preventive measures should be put in place for those cancers that are preventable through either screening or vaccination. Because of the many radon and uranium sites, lung cancer screening should be routinely offered to high-risk populations.",
+      "journal": "Asian Pacific journal of cancer prevention : APJCP",
+      "pubDate": "2026-10-01",
+      "year": 2026,
+      "doi": "10.31557/APJCP.2026.27.10.3679",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42935059/",
+      "firstAuthor": "Emanuela Taioli",
+      "firstAffiliation": "Institute for Translational Epidemiology, Icahn School of Medicine at Mount Sinai, United States.",
+      "country": "United States",
+      "language": "eng",
+      "termsMatched": [
+        "asbestos"
       ]
     },
     {
