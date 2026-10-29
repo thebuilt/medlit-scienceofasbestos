@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-10-28T08:33:07.094Z",
+    "generatedAt": "2026-10-29T08:29:01.297Z",
     "source": "NCBI E-utilities (PubMed)",
     "terms": [
       "asbestos",
@@ -19,6 +19,23 @@
     "notes": "Keyword matching includes multilingual aliases. Expand TERM_GROUPS in scripts/update_pubmed_data.mjs to add more translations."
   },
   "papers": [
+    {
+      "pmid": "42951316",
+      "title": "Multimodality imaging in the diagnosis and staging of malignant pleural mesothelioma.",
+      "abstract": "",
+      "journal": "BMJ case reports",
+      "pubDate": "2026-10-28",
+      "year": 2026,
+      "doi": "10.1136/bcr-2026-276852",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42951316/",
+      "firstAuthor": "Nor Safiqah Sharil",
+      "firstAffiliation": "Department of Medicine, Faculty of Medicine, Hospital Canselor Tuanku Muhriz UKM, Cheras, Federal Territory of Kuala Lumpur, Malaysia n.safiqah@gmail.com.",
+      "country": "Malaysia",
+      "language": "eng",
+      "termsMatched": [
+        "mesothelioma"
+      ]
+    },
     {
       "pmid": "42944824",
       "title": "Optimising radiotherapy and immunotherapy timing: a mechanistic model of the tumour microenvironment.",
@@ -102,6 +119,40 @@
       "language": "eng",
       "termsMatched": [
         "asbestos"
+      ]
+    },
+    {
+      "pmid": "42948344",
+      "title": "Burden, Risk Factors, and Temporal Trends of Ovarian Cancer in Postmenopausal Women Aged 55 Years and Older: A Comparative Analysis in India, China, and the United States Based on the Global Burden of Disease Study 2023.",
+      "abstract": "Evidence remains limited on the ovarian cancer (OC) burden among women aged 55 years and older, used here as an operational proxy for the postmenopausal population, across India, China, and the United States. We extracted data on OC-related incidence, mortality, disability-adjusted life years (DALYs), and relevant risk factors from the Global Burden of Disease (GBD) 2023 for the period 1990-2023. We assessed age-specific patterns; temporal trends using the estimated annual percentage change and Joinpoint regression; age-period-cohort (APC) patterns and estimable functions; demographic decomposition; and DALY burdens attributable to high body-mass index (BMI) and occupational asbestos exposure. The Autoregressive Integrated Moving Average (ARIMA) model and Bayesian age-period-cohort (BAPC) model were applied to predict age-standardized DALY rates of OC through 2040. Absolute incident cases, deaths, and DALYs increased in all three countries, whereas age-standardized rates increased in India and generally declined in China and the United States. India had a comparatively greater burden in younger age groups within the study population, whereas the United States had the highest burden at older ages. In China, despite an overall negative net drift, local-drift point estimates were positive among women aged 85 years and older (0.03%-0.82% per year), although the 95% confidence intervals included zero. The proportion of DALYs attributable to high BMI increased in all three countries, and population growth was the principal positive driver of the rising absolute burden. Projections suggested a continued increase in India's age-standardized DALY rate and further declines in China and the United States through 2040. Age-standardized OC burden increased in India but declined in China and the United States, whereas the absolute burden rose in all three countries; the non-significant positive local-drift point estimates among the oldest-old in China warrant monitoring. These ecological findings do not establish causality and support country-specific hereditary risk management and strengthened pathways for timely diagnosis and specialist referral.",
+      "journal": "International journal of women's health",
+      "pubDate": "2026-10-23",
+      "year": 2026,
+      "doi": "10.2147/IJWH.S634548",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42948344/",
+      "firstAuthor": "Ting Wei",
+      "firstAffiliation": "Department of Pharmacy, Fujian Maternity and Child Health Hospital, College of Clinical Medicine for Obstetrics & Gynecology and Pediatrics, Fujian Medical University, Fuzhou, Fujian, People's Republic of China.",
+      "country": "China",
+      "language": "eng",
+      "termsMatched": [
+        "asbestos"
+      ]
+    },
+    {
+      "pmid": "42948236",
+      "title": "Anti-Ma1/Ma2 paraneoplastic neurological syndrome associated with malignant mesothelioma: a case study.",
+      "abstract": "Anti-Ma1/Ma2 paraneoplastic neurological syndromes (PNS) are rare immune-mediated disorders classically associated with testicular germ cell tumours but increasingly recognised in a broader range of malignancies. We report a 74-year-old left-handed man who presented with progressive gait ataxia. MRI of the brain showed T2 hyperintensity in the right amygdala and hippocampus, as well as in the left caudate head. Serum and cerebrospinal fluid tested positive for anti-Ma1/Ma2 antibodies. Despite extensive screening, no malignancy was identified. Neurological deficits worsened over 2 months, including worsening gait, ataxia, opsoclonus and left arm weakness. High-dose corticosteroids, intravenous immunoglobulin, mycophenolate and rituximab led to modest clinical improvement. 4 months later, the patient re-presented with insidious respiratory distress due to a right pleural effusion. Pleural biopsy confirmed mesothelioma. Anti-Ma1/Ma2 PNS linked to mesothelioma are rare but have been reported. For this rare association, previous few cases described neurological symptoms emerging months to years after a mesothelioma diagnosis, while ours is the first to report symptoms preceding diagnosis. Early immunosuppression can provide temporary clinical benefit. A more sustained benefit requires identification and treatment of the underlying malignancy. This case underscores the importance of ongoing surveillance for malignancy in patients with PNS.",
+      "journal": "BMJ neurology open",
+      "pubDate": "2026-10-23",
+      "year": 2026,
+      "doi": "10.1136/bmjno-2025-001323",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42948236/",
+      "firstAuthor": "Amir Mousapasandi",
+      "firstAffiliation": "Neurology Department, Nepean Hospital, Penrith, New South Wales, Australia.",
+      "country": "Australia",
+      "language": "eng",
+      "termsMatched": [
+        "mesothelioma"
       ]
     },
     {
@@ -295,6 +346,40 @@
       "termsMatched": [
         "asbestos",
         "chrysotile"
+      ]
+    },
+    {
+      "pmid": "42948525",
+      "title": "Machine learning, molecular docking, and experimental validation identify shared molecular signatures between idiopathic pulmonary arterial hypertension and malignant pleural mesothelioma: a retrospective study.",
+      "abstract": "Idiopathic pulmonary arterial hypertension (IPAH) exhibits cancer-like features, yet its pathogenesis remains unclear. Given molecular similarities between IPAH and malignant pleural mesothelioma (MPM), this study aimed to uncover shared transcriptomic patterns. GEO datasets for IPAH and MPM were analyzed. Overlapping DEGs and WGCNA modules were identified. PPI network analysis combined with LASSO, random forest, and SVM-RFE was used to identify candidate biomarker genes. A classification model was constructed and evaluated using leave-one-out cross-validation and bootstrap optimism correction. Immune infiltration was evaluated by ssGSEA. Molecular docking and MD simulations assessed drug binding to candidate target proteins. qRT-PCR validated candidate biomarker gene expression. Six concordantly upregulated and eleven concordantly downregulated DEGs were shared between IPAH and MPM. Upregulated genes were enriched in cell cycle regulation, while downregulated genes were enriched in neutrophil chemotaxis. WGCNA identified 58 overlapping genes. CXCR2, S100A9, and LCN2 were identified as candidate biomarker genes. A ROTS sensitivity analysis confirmed that all 1710 MPM DEGs were reproducible and directionally concordant at the matching FDR <0.05 threshold despite the imbalanced case-control ratio. The classification model achieved AUCs of 0.909 and 0.875 in training and external validation sets, with a LOOCV AUC of 0.879 and an optimism-corrected AUC of 0.896. Immune infiltration revealed increased Th17 cells but decreased neutrophils in IPAH. CXCR2 and S100A9 expression correlated with neutrophil infiltration; LCN2 expression correlated with metabolic reprogramming. Navarixin showed the strongest binding affinity to CXCR2 (-10.1&#xa0;kcal/mol). MD simulations confirmed stable binding of the CXCR2-Navarixin complex. qRT-PCR confirmed significant downregulation of all three genes in IPAH patients. This hypothesis-generating study identifies shared transcriptomic signatures between IPAH and MPM, highlighting CXCR2, S100A9, and LCN2 as candidate biomarkers linked to immune dysregulation and metabolic reprogramming. The computational and correlative nature of these findings, together with the limited size of the external validation cohort, requires confirmation through functional experiments and validation in larger, independent, and multicentre cohorts before clinical translation can be considered.",
+      "journal": "Frontiers in genetics",
+      "pubDate": "2026-10-14",
+      "year": 2026,
+      "doi": "10.3389/fgene.2026.1894027",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42948525/",
+      "firstAuthor": "Neng Zhang",
+      "firstAffiliation": "Department of General Medicine, The First Affiliated Hospital of Xinjiang Medical University, Urumqi, China.",
+      "country": "China",
+      "language": "eng",
+      "termsMatched": [
+        "mesothelioma"
+      ]
+    },
+    {
+      "pmid": "42947688",
+      "title": "GlycoRNA-related cellular program scoring identifies Siglec- and myeloid-associated tumor microenvironments for glycoRNA validation.",
+      "abstract": "Glycosylated RNAs (glycoRNAs) represent a recently recognized connection between RNA biology and cell-surface glycobiology. However, whether glycoRNA-related processes are relevant to human tumors remains unclear, partly because direct glycoRNA measurements are not yet available across large cancer cohorts. We therefore used transcriptomic data to identify tumor settings in which glycoRNA-related programs may be most suitable for further experimental validation. We curated a glycoRNA-focused literature evidence base and manually reviewed the top extracted relations to define gene modules related to RNA identity, N-glycan and sialylation pathways, RNA trafficking, and lectin/Siglec recognition. The glycoRNA-related cellular program score is an expression-based composite score representing coordinated glycoRNA-related cellular programs, including RNA processing, glycan biosynthesis, trafficking, and lectin/Siglec recognition. It is designed to prioritize tumor contexts for experimental glycoRNA validation. The score was applied to 9,186 TCGA tumors from 32 cancer types and analyzed together with clinical variables, leukocyte fraction, immune signatures, Siglec/checkpoint/myeloid-axis scores, and non-overlapping sensitivity models. Glioblastoma single-cell and spatial transcriptomic datasets were used for additional context-level validation. Higher glycoRNA-related cellular program scores were observed in several tumor types, including stomach adenocarcinoma, glioblastoma, lung adenocarcinoma, esophageal carcinoma, mesothelioma, pancreatic adenocarcinoma, breast cancer, and lung squamous carcinoma. Survival analyses did not show robust FDR-significant associations after adjustment for age, sex, stage, and tumor type, suggesting that the score should not be interpreted as a general prognostic biomarker. In sensitivity analyses that removed immune and Siglec-related genes from the predictor, the score remained associated with Siglec-decoder, myeloid, checkpoint, and integrated niche features after adjustment for leukocyte fraction and cancer-type effects. Within-cancer meta-analysis supported these associations across cancer types, although effect sizes varied. In glioblastoma, higher scores were found in tumor, myeloid, mesenchymal, and niche-associated compartments in single-cell and spatial analyses. This study presents an expression-based map of glycoRNA-related cellular program across human cancers. The results suggest that glycoRNA-related transcriptional programs tend to occur in immune- and myeloid-enriched tumor microenvironments, particularly those involving Siglec-associated features. These findings prioritize tumor contexts for biochemical, imaging, spatial, and perturbation-based glycoRNA validation.",
+      "journal": "Frontiers in immunology",
+      "pubDate": "2026-10-13",
+      "year": 2026,
+      "doi": "10.3389/fimmu.2026.1928501",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42947688/",
+      "firstAuthor": "Mowei Kong",
+      "firstAffiliation": "Department of Cardiology, The Affiliated Hospital of Southwest Medical University, Luzhou, Sichuan,&#xa0;China.",
+      "country": "China",
+      "language": "eng",
+      "termsMatched": [
+        "mesothelioma"
       ]
     },
     {
