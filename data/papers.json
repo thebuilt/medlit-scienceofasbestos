@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-10-29T08:29:01.297Z",
+    "generatedAt": "2026-10-30T08:39:12.028Z",
     "source": "NCBI E-utilities (PubMed)",
     "terms": [
       "asbestos",
@@ -360,6 +360,23 @@
       "firstAuthor": "Neng Zhang",
       "firstAffiliation": "Department of General Medicine, The First Affiliated Hospital of Xinjiang Medical University, Urumqi, China.",
       "country": "China",
+      "language": "eng",
+      "termsMatched": [
+        "mesothelioma"
+      ]
+    },
+    {
+      "pmid": "42952559",
+      "title": "Prognostic associations of PD-L1 expression and BAP1 loss in pleural mesothelioma: a retrospective single-center cohort from Colombia.",
+      "abstract": "Evidence on the prognostic associations of programmed death-ligand 1 (PD-L1) and BRCA1-associated protein 1 (BAP1) in pleural mesothelioma (PM) remains inconsistent, and joint data from Latin American cohorts are limited. We evaluated these biomarkers in a Colombian cohort. This retrospective single-center cohort included adults with histologically confirmed PM treated at the Instituto Nacional de Cancerolog&#xed;a, Bogot&#xe1;, from January 2011 through December 2023. PD-L1 was quantified using tumor proportion score (TPS), with &#x2265;1% as the primary threshold; BAP1 was classified as retained or lost by nuclear immunoreactivity. Overall survival (OS) was measured from pathologic diagnosis to death. Event-free survival (EFS) was measured from diagnosis to first documented progression or death; patients without an event were censored at last contact. Kaplan-Meier methods and separate multivariable Cox models were used. Sixty-seven patients were included; 60/67 (89.6%) had locally advanced or metastatic disease. PD-L1 TPS &#x2265;1% was present in 26/67 (38.8%), and BAP1 loss in 47/61 evaluable tumors (77.0%). All 67 patients died. Median OS was 9.20 months (95% CI, 6.11-14.13), and median EFS was 6.51 months (95% CI, 5.49-9.13). PD-L1 TPS &#x2265;1% was not clearly associated with OS (adjusted HR, 1.03; 95% CI, 0.57-1.86) or EFS (adjusted HR, 1.11; 95% CI, 0.62-2.00). BAP1 loss also showed no clear adjusted association with OS (HR, 1.57; 95% CI, 0.78-3.16) or EFS (HR, 1.65; 95% CI, 0.82-3.33). Neither PD-L1 TPS &#x2265;1% nor BAP1 loss showed a clear adjusted association with survival. These jointly measured estimates extend the evidence from an underrepresented Latin American population but require external validation; the exploratory &#x2265;5% and &#x2265;10% analyses were based on only 14 and 7 patients, respectively.",
+      "journal": "Frontiers in oncology",
+      "pubDate": "2026-10-14",
+      "year": 2026,
+      "doi": "10.3389/fonc.2026.1920798",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42952559/",
+      "firstAuthor": "Ricardo Brug&#xe9;s",
+      "firstAffiliation": "Departamento de Oncolog&#xed;a, Instituto Nacional de Cancerolog&#xed;a, Bogot&#xe1;,&#xa0;Colombia.",
+      "country": "Colombia",
       "language": "eng",
       "termsMatched": [
         "mesothelioma"
