@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-10-31T08:26:08.612Z",
+    "generatedAt": "2026-11-01T09:15:57.223Z",
     "source": "NCBI E-utilities (PubMed)",
     "terms": [
       "asbestos",
@@ -19,6 +19,40 @@
     "notes": "Keyword matching includes multilingual aliases. Expand TERM_GROUPS in scripts/update_pubmed_data.mjs to add more translations."
   },
   "papers": [
+    {
+      "pmid": "42850314",
+      "title": "Correction: Hypomethylation reduced the aggressive potential of human malignant mesothelioma cells.",
+      "abstract": "",
+      "journal": "Oncogene",
+      "pubDate": "2026-11-01",
+      "year": 2026,
+      "doi": "10.1038/s41388-026-04004-3",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42850314/",
+      "firstAuthor": "N-Y Kim",
+      "firstAffiliation": "Laboratory of Veterinary Clinical Pathology, College of Veterinary Medicine, Seoul National University, Seoul, Republic of Korea.",
+      "country": "South Korea",
+      "language": "eng",
+      "termsMatched": [
+        "mesothelioma"
+      ]
+    },
+    {
+      "pmid": "42946431",
+      "title": "Treatment-specific Association of H&E-based Stromal Tumor-infiltrating Lymphocytes With Survival in Pleural Mesothelioma Treated With Ipilimumab/Nivolumab or Chemotherapy.",
+      "abstract": "Pleural mesothelioma lacks robust biomarkers to guide personalized treatment selection. Although stromal tumor-infiltrating lymphocytes (sTILs) on hematoxylin and eosin (H&E)-stained sections represent a cost-effective biomarker in various cancers, their clinical significance in pleural mesothelioma remains unclear. This study evaluated the prognostic impact of sTILs in pleural mesothelioma patients treated with platinum-pemetrexed chemotherapy or dual immune checkpoint inhibition (ICI) using ipilimumab plus nivolumab (Ipi/Nivo). We retrospectively analyzed 179 patients with unresectable pleural mesothelioma who received either platinum-pemetrexed chemotherapy (n=127) or Ipi/Nivo (n=52). sTILs were assessed according to the International TILs Working Group guidelines and categorized as high (>10%) or low (&#x2264;10%). Overall survival (OS) and associations between sTIL status and clinicopathological characteristics were evaluated. High and low sTIL status was observed in 82 (45.8%) and 97 (54.2%) patients, respectively. Within each treatment cohort, baseline clinicopathological characteristics were generally well-balanced according to sTIL status. In the entire cohort, sTIL status was not significantly associated with OS (=0.559). Subgroup analyses according to treatment modality showed no significant association between sTIL status and OS in the platinum-pemetrexed cohort (=0.664). In contrast, in the Ipi/Nivo cohort, OS was significantly longer in the low sTIL group than in the high sTIL group (=0.027). sTILs may have treatment-specific prognostic significance in pleural mesothelioma. Notably, low sTIL status was associated with longer survival among patients treated with dual ICI but not chemotherapy. Standardized H&E-based sTIL assessment may provide a simple and accessible approach for refining treatment selection in pleural mesothelioma.",
+      "journal": "Anticancer research",
+      "pubDate": "2026-11-01",
+      "year": 2026,
+      "doi": "10.21873/anticanres.18449",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42946431/",
+      "firstAuthor": "Takashi Yamasaki",
+      "firstAffiliation": "Department of Diagnostic Pathology, Department of Surgery, Hyogo Medical University, Hyogo, Japan.",
+      "country": "Japan",
+      "language": "eng",
+      "termsMatched": [
+        "mesothelioma"
+      ]
+    },
     {
       "pmid": "42951316",
       "title": "Multimodality imaging in the diagnosis and staging of malignant pleural mesothelioma.",
@@ -428,23 +462,6 @@
       "firstAuthor": "Hongge Liang",
       "firstAffiliation": "Department of Respiratory and Critical Care Medicine, Peking Union Medical College Hospital, Chinese Academy of Medical Sciences and Peking Union Medical College, Beijing, 100730, P.R. China.",
       "country": "China",
-      "language": "eng",
-      "termsMatched": [
-        "mesothelioma"
-      ]
-    },
-    {
-      "pmid": "42850314",
-      "title": "Correction: Hypomethylation reduced the aggressive potential of human malignant mesothelioma cells.",
-      "abstract": "",
-      "journal": "Oncogene",
-      "pubDate": "2026-10-08",
-      "year": 2026,
-      "doi": "10.1038/s41388-026-04004-3",
-      "url": "https://pubmed.ncbi.nlm.nih.gov/42850314/",
-      "firstAuthor": "N-Y Kim",
-      "firstAffiliation": "Laboratory of Veterinary Clinical Pathology, College of Veterinary Medicine, Seoul National University, Seoul, Republic of Korea.",
-      "country": "South Korea",
       "language": "eng",
       "termsMatched": [
         "mesothelioma"
@@ -5212,15 +5229,15 @@
     },
     {
       "pmid": "42213479",
-      "title": "Temporal trends in mortality and disability from occupational asbestos exposure in Southeast Asia, 1990-2023.",
-      "abstract": "Occupational asbestos exposure remains a major public health concern in Southeast Asia (SEA), where use persists and comprehensive assessments are limited. GBD 2023 data were used to estimate deaths and DALYs attributable to occupational asbestos exposure in SEA and 13 countries. Trends were analyzed by EAPC and Joinpoint, stratified by sex, age, and cause. Deaths increased markedly from 1990 to 2023, with rising ASMR. Males had substantially higher rates than females. Trends showed periods of increase, with continuous rises among females. Most countries showed increasing burden. Tracheal, bronchus, and lung cancer was the leading cause, followed by mesothelioma, with highest burden in older adults. Occupational asbestos exposure burden in SEA has increased with clear sex, age, and regional disparities, highlighting the need for strengthened control and prevention strategies.",
+      "title": "Temporal Trends in Mortality and Disability from Occupational Asbestos Exposure in Southeast Asia, 1990-2023.",
+      "abstract": "Occupational asbestos exposure remains a major public health concern in Southeast Asia (SEA), where use persists and comprehensive assessments are limited. Global Burden of Disease 2023 data were used to estimate deaths and disability-adjusted life years attributable to occupational asbestos exposure in SEA and 13 countries. Trends were analyzed by estimated annual percentage changes and Joinpoint, stratified by sex, age, and cause. Deaths increased markedly from 1990 to 2023, with rising age-standardized mortality rates. Males had substantially higher rates than females. Trends showed periods of increase, with continuous rises among females. Most countries showed increasing burden. Tracheal, bronchus, and lung cancer was the leading cause, followed by mesothelioma, with highest burden in older adults. Occupational asbestos exposure burden in SEA has increased with clear sex, age, and regional disparities, highlighting the need for strengthened control and prevention strategies.",
       "journal": "Journal of occupational and environmental medicine",
       "pubDate": "2026-05-29",
       "year": 2026,
       "doi": "10.1097/JOM.0000000000003768",
       "url": "https://pubmed.ncbi.nlm.nih.gov/42213479/",
       "firstAuthor": "Xiao-Ling Liu",
-      "firstAffiliation": "Department of Doctor-Patient Relations, The Seventh Affiliated Hospital, Sun Yat-sen University, Shenzhen, Guangdong Province, China.",
+      "firstAffiliation": "From the Department of Doctor-Patient Relations, The Seventh Affiliated Hospital, Sun Yat-sen University, Shenzhen, Guangdong Province, China (X.-L.L.); and Department of Thoracic Surgery, The Seventh Affiliated Hospital, Sun Yat-sen University, Shenzhen, Guangdong Province, China (Q.-W.Z., L.W., D.-L.S., Z.-J.W.).",
       "country": "China",
       "language": "eng",
       "termsMatched": [
@@ -17139,7 +17156,7 @@
     {
       "pmid": "40717398",
       "title": "BAP1 Tumor Predisposition Syndrome.",
-      "abstract": "BRCA1-associated protein-1 (BAP1) tumor predisposition syndrome is due to germline mutation of BAP1, a tumor suppressor gene. Patients with this syndrome has an increased susceptibility to the development of uveal melanomas, cutaneous melanomas, cutaneous atypical melanocytic lesions, mesotheliomas, clear cell renal cell carcinoma, and other tumors. These syndromic tumors exhibit an aggressive growth and earlier onset in comparison to sporadic tumors. In this review we outline the history, epidemiology, and genetics of this syndrome. The clinical presentation and histopathology of commonly developed tumors in syndromic patients, namely uveal melanomas, cutaneous atypical melanocytic lesions, mesotheliomas, and clear cell renal cell carcinoma are discussed.",
+      "abstract": "BRCA1-associated protein-1 (BAP1) tumor predisposition syndrome is due to germline mutation of BAP1 , a tumor suppressor gene. Patients with this syndrome has an increased susceptibility to the development of uveal melanomas, cutaneous melanomas, cutaneous atypical melanocytic lesions, mesotheliomas, clear cell renal cell carcinoma, and other tumors. These syndromic tumors exhibit an aggressive growth and earlier onset in comparison to sporadic tumors. In this review we outline the history, epidemiology, and genetics of this syndrome. The clinical presentation and histopathology of commonly developed tumors in syndromic patients, namely uveal melanomas, cutaneous atypical melanocytic lesions, mesotheliomas, and clear cell renal cell carcinoma are discussed.",
       "journal": "Advances in anatomic pathology",
       "pubDate": "2025-07-28",
       "year": 2025,
