@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-11-02T09:30:45.063Z",
+    "generatedAt": "2026-11-03T09:33:02.413Z",
     "source": "NCBI E-utilities (PubMed)",
     "terms": [
       "asbestos",
@@ -19,6 +19,40 @@
     "notes": "Keyword matching includes multilingual aliases. Expand TERM_GROUPS in scripts/update_pubmed_data.mjs to add more translations."
   },
   "papers": [
+    {
+      "pmid": "42578967",
+      "title": "Personal Talc Use and Incident Lung Cancer.",
+      "abstract": "Talc is a known risk factor for some lung diseases because of its small particle size, commonly aerosolized form, and possible contamination with asbestos, a known lung carcinogen. Personal talc-based body powder use is common among US women, but the association between talc use and lung cancer has not been studied in nonoccupational settings. At enrollment (2003-2009), Sister Study participants reported talc use in the last year and at ages 10 to 13 years. We used Cox proportional hazards models to estimate covariate-adjusted hazard ratios (HR) and 95% confidence intervals (CI) for the associations between talc use and incident lung cancer. Among 49,592 eligible women, 41% reported using talc in the last year and 641 reported a new lung cancer diagnosis. Self-reported talc use was not consistently associated with incident lung cancer: HR = 0.91 (95% CI, 0.78-1.07) for talc use in the last year; HR = 0.94 (95% CI, 0.80-1.10) for talc use at ages 10 to 13 years. No consistent associations were observed between talc use and lung cancer overall, although some suggestive positive associations observed among never-smokers and for lung adenocarcinomas may warrant further investigation. Population-based research on personal care product use is critical to improving our understanding of the impacts of potentially harmful substances, and their known or unknown contaminants, on human health.",
+      "journal": "Cancer epidemiology, biomarkers & prevention : a publication of the American Association for Cancer Research, cosponsored by the American Society of Preventive Oncology",
+      "pubDate": "2026-11-02",
+      "year": 2026,
+      "doi": "10.1158/1055-9965.EPI-26-0751",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42578967/",
+      "firstAuthor": "Maya S Deshmukh",
+      "firstAffiliation": "Department of Epidemiology, Emory University Rollins School of Public Health, Atlanta, Georgia.",
+      "country": "Georgia",
+      "language": "eng",
+      "termsMatched": [
+        "asbestos"
+      ]
+    },
+    {
+      "pmid": "42969395",
+      "title": "Prognostic factors after multimodality treatment for pleural mesothelioma.",
+      "abstract": "To investigate prognostic factors associated with overall survival (OS) in patients with pleural mesothelioma (PM) undergoing curative-intent surgery as part of multimodality treatment (MMT). This retrospective two-centre cohort included 255 patients treated between 2006 and 2019. OS was measured from the date of histological diagnosis and analyzed using Cox proportional hazards regression as the primary analysis. A secondary logistic regression analysis evaluated 5-year survival among patients with ascertainable 5-year vital status. A sensitivity Cox analysis used the date of surgery as the time origin. Among 255 patients, 77 (30.2%) survived &#x2265;5 years after diagnosis. All 255 patients and 192 deaths were included in the primary Cox analysis. Age &#x2265;70 years (HR 1.49, 95% CI 1.04-2.14; P=.029), non-epithelioid histology (HR 2.22, 95% CI 1.33-3.72; P=.002), preoperative T2-4 disease according to the 9th edition TNM classification (HR 2.47, 95% CI 1.78-3.43; P<.001), severe postoperative complications (HR 2.62, 95% CI 1.85-3.70; P<.001), and blood loss >1465&#x2009;mL (HR 1.39, 95% CI 1.03-1.87; P=.030) were independently associated with poorer OS. Fifteen patients alive at last contact but censored before 5 years were excluded from the secondary 5-year analysis, leaving 240 patients (77 surviving &#x2265;5 years and 163 dying before 5 years). Results were materially unchanged when OS was measured from surgery. Advanced age, non-epithelioid histology, higher preoperative T category according to the 9th edition TNM classification, severe postoperative complications, and greater intraoperative blood loss were independently associated with poorer OS in this highly selected surgically treated cohort.",
+      "journal": "Interdisciplinary cardiovascular and thoracic surgery",
+      "pubDate": "2026-11-02",
+      "year": 2026,
+      "doi": "10.1093/icvts/ivag296",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42969395/",
+      "firstAuthor": "Masaki Hashimoto",
+      "firstAffiliation": "Department of Thoracic Surgery, Hyogo Medical University, Nishinomiya, Japan.",
+      "country": "Japan",
+      "language": "eng",
+      "termsMatched": [
+        "mesothelioma"
+      ]
+    },
     {
       "pmid": "42850314",
       "title": "Correction: Hypomethylation reduced the aggressive potential of human malignant mesothelioma cells.",
@@ -2345,23 +2379,6 @@
       "language": "eng",
       "termsMatched": [
         "mesothelioma"
-      ]
-    },
-    {
-      "pmid": "42578967",
-      "title": "Personal Talc Use and Incident Lung Cancer.",
-      "abstract": "Talc is a known risk factor for some lung diseases due to its small particle size, commonly aerosolized form, and possible contamination with asbestos, a known lung carcinogen. Personal talc-based body powder (talc) use is common among U.S. women, but the association of talc use and lung cancer has not been studied in non-occupational settings. At enrollment (2003-2009), Sister Study participants reported talc use in the last year and ages 10-13. We used Cox proportional hazards models to estimate covariate-adjusted hazards ratios (HRs) and 95% confidence intervals (CIs) for the associations between talc use and incident lung cancer. Among 49,592 eligible women, 41% reported using talc in the last year and 641 reported a new lung cancer diagnosis. Self-reported talc use was not consistently associated with incident lung cancer: HR=0.91 (95% CI: 0.78-1.07) for talc use in the last year; HR=0.94 (0.80, 1.10) for talc use ages 10-13. No consistent associations were observed between talc use and lung cancer overall, though some suggestive positive associations observed among never-smokers and for lung adenocarcinomas may warrant further investigation. Population-based research on personal care product use is critical to improving our understanding of the impacts of potentially harmful substances, and their known or unknown contaminants, on human health.",
-      "journal": "Cancer epidemiology, biomarkers & prevention : a publication of the American Association for Cancer Research, cosponsored by the American Society of Preventive Oncology",
-      "pubDate": "2026-08-11",
-      "year": 2026,
-      "doi": "10.1158/1055-9965.EPI-26-0751",
-      "url": "https://pubmed.ncbi.nlm.nih.gov/42578967/",
-      "firstAuthor": "Maya S Deshmukh",
-      "firstAffiliation": "Emory University Atlanta, Georgia United States.",
-      "country": "United States",
-      "language": "eng",
-      "termsMatched": [
-        "asbestos"
       ]
     },
     {
