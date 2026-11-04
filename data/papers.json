@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-11-03T09:33:02.413Z",
+    "generatedAt": "2026-11-04T09:12:39.793Z",
     "source": "NCBI E-utilities (PubMed)",
     "terms": [
       "asbestos",
@@ -51,6 +51,23 @@
       "language": "eng",
       "termsMatched": [
         "mesothelioma"
+      ]
+    },
+    {
+      "pmid": "42976653",
+      "title": "Mechanical and thermal controls on brake-wear particle emissions and physicochemical properties in a plug-in hybrid vehicle: A comparison of two brake-pad formulations.",
+      "abstract": "Vehicle electrification alters friction-brake use, but how mechanical engagement and thermal history shape brake-wear aerosol remains unresolved. We tested a plug-in hybrid vehicle sequentially equipped with low-metallic and non-asbestos organic pads using source-isolated wheel-end sampling during whole-vehicle testing. Event-resolved hydraulic pressure was combined with measurements of particulate matter (PM) mass, number-size distributions, 630&#x202f;nm optical properties, composition, and morphology. Events with effective or high mechanical input comprised 36% of decelerations but contributed 80.3-92.7% of the PMmass response. Sustained heating increased ultrafine particle (<100&#x202f;nm) number concentrations by 48.3-98.1-fold; emissions remained elevated during cooling while the micrometer-scale mass mode persisted, revealing number-mass decoupling and thermal-history dependence. Single-scattering albedo and mass absorption efficiency ranged from 0.606 to 0.766 and from 0.364 to 0.747&#x202f;mg, respectively, and evolved differently between the two tested pad materials. High-temperature carbonaceous enrichment did not increase mass-normalized absorption. Thus, for the two tested formulations, mechanical engagement governed event-scale PM mass release, whereas thermal history and pad material shaped ultrafine-particle formation and optical and physicochemical properties. Evaluating electrified braking therefore requires resolving friction-brake engagement and thermal history and complementing PM mass with particle number, size, and physicochemical metrics.",
+      "journal": "Journal of hazardous materials",
+      "pubDate": "2026-11-02",
+      "year": 2026,
+      "doi": "10.1016/j.jhazmat.2026.144101",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42976653/",
+      "firstAuthor": "Jiawei Yin",
+      "firstAffiliation": "Tianjin Key Laboratory of Urban Transport Emission Research, College of Environmental Science and Engineering, Nankai University, Tianjin 300071, China.",
+      "country": "China",
+      "language": "eng",
+      "termsMatched": [
+        "asbestos"
       ]
     },
     {
@@ -496,6 +513,23 @@
       "firstAuthor": "Hongge Liang",
       "firstAffiliation": "Department of Respiratory and Critical Care Medicine, Peking Union Medical College Hospital, Chinese Academy of Medical Sciences and Peking Union Medical College, Beijing, 100730, P.R. China.",
       "country": "China",
+      "language": "eng",
+      "termsMatched": [
+        "mesothelioma"
+      ]
+    },
+    {
+      "pmid": "42976718",
+      "title": "PIPAC practice in Spain: a national benchmark defining evidence-driven restraint and a three-phase hypothesis of PIPAC implementation.",
+      "abstract": "Pressurized intraperitoneal aerosol chemotherapy (PIPAC) has expanded internationally, yet its role remains uncertain due to the lack of high-level evidence and heterogeneous clinical adoption. In this context, national benchmarking is relevant not only for technical standardization but also for governance and patient protection in predominantly palliative settings. We conducted a national, cross-sectional, web-based survey (51 items) among 43 GECOP-affiliated centers (December 2025-March 2026). A total of 32 valid center-level responses were analyzed. Results were summarized descriptively. Most responding centers were tertiary-level hospitals (78.1%) and public institutions (87.5%), all with established HIPEC programs and extensive experience in peritoneal disease management (81.3%&#x202f;>&#x202f;10 years). An active PIPAC program was reported by 11/32 centers (34.4%), while 21/32 (65.6%) were not currently performing PIPAC. Among the 14/21 non-adopting centers that provided a reason, the main barrier was insufficient or inconclusive evidence (9/14, 64.3%), followed by organizational and resource constraints and clinical or implementation-related concerns (both 5/14, 35.7%). Only 5/21 centers (23.8%) explicitly reported referral of selected patients to active centers. Among active centers, procedural aspects were highly standardized, including universal adoption of a two-trocar approach (100%), balloon trocars (100%), and systematic safety checklists (90.9%). However, substantial heterogeneity was observed in oncological management, including chemotherapy regimens, dosing strategies, and integration with systemic therapy. The most commonly used regimen was cisplatin-doxorubicin (81.8%), with additional use of oxaliplatin (45.5%), taxanes (18.2%), or mitomycin C (9.1%). Response assessment consistently included peritoneal biopsies and PRGS (100%), frequently combined with PCI (90.9%), but remained heterogeneous in sampling strategies and adjunctive methods. At least one severe complication (Clavien-Dindo &#x2265;3) was reported by 3/11 active centers (27.3%), this represents a center-level report rather than a procedure-level complication rate. Within Spanish specialized peritoneal oncology units, PIPAC is implemented in a moderate proportion of centers with insufficient or inconclusive evidence being the most frequently reported barrier among centers providing a reason for non-adoption. Its current use is predominantly palliative, with gastric and colorectal cancer and peritoneal mesothelioma being the most frequently reported indications. It is characterized by marked heterogeneity in indications, treatment strategies, and response evaluation. This variability likely reflects the underlying evidence gap. Rather than discouraging its use, these findings support the need for structured development through prospective clinical trials, centralized data collection, and governance within experienced multidisciplinary teams. These findings allow us to propose a three-phase hypothesis of PIPAC implementation, characterized by initial standardization, subsequent diversification, and current uncertainty-driven practice.",
+      "journal": "European journal of surgical oncology : the journal of the European Society of Surgical Oncology and the British Association of Surgical Oncology",
+      "pubDate": "2026-10-08",
+      "year": 2026,
+      "doi": "10.1016/j.ejso.2026.112176",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42976718/",
+      "firstAuthor": "Juan Jos&#xe9; Segura-Sampedro",
+      "firstAffiliation": "General & Digestive Surgery Service, Hospital Universitario La Paz, IdiPAZ, Madrid, 28046, Spain; School of Medicine, Universidad San Pablo-CEU, CEU Universities, Madrid, 28660, Spain. Electronic address: segusamjj@hotmail.com.",
+      "country": "Spain",
       "language": "eng",
       "termsMatched": [
         "mesothelioma"
