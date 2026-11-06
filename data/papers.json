@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-11-04T09:12:39.793Z",
+    "generatedAt": "2026-11-06T09:24:40.237Z",
     "source": "NCBI E-utilities (PubMed)",
     "terms": [
       "asbestos",
@@ -19,6 +19,74 @@
     "notes": "Keyword matching includes multilingual aliases. Expand TERM_GROUPS in scripts/update_pubmed_data.mjs to add more translations."
   },
   "papers": [
+    {
+      "pmid": "42985853",
+      "title": "Risk estimates in BAP1 tumor predisposition syndrome using the Genotype-Restricted Likelihood (GRL) method.",
+      "abstract": "Germline BAP1 (likely) pathogenic variants ((L)PV) confer predisposition to uveal melanoma (UM), cutaneous melanoma (CM), renal cell carcinoma (RCC), and malignant mesothelioma (MM). Higher risks of lung cancer (LC) and breast cancer (BC) have been hypothesized with risk estimates using bias-correcting methods. We included 26 families with 90 heterozygotes for a germline BAP1 (L)PV. Cumulative risk (CR) and relative risk (RR) were estimated using the Genotype-Restricted Likelihood (GRL) method to correct for ascertainment bias. The CR at 80 years are 7.3% (95% CI: 1.3-37.9) for UM, 16.1% (2.9-74.4) for CM, 49.4% (6-83.9) for RCC, 8.5% (2.5-73.8) for MM, 9.8% (6.5-55.9) for LC and 58.6 (19-91.8) for BC. Corresponding RR to population incidence at 50 and 80 years are respectively 383.4 (72.4-779.1) and 95.9 (17.3-501) for UM, 5.7 (1-24.4) and 8.2 (1.5-37.9) for CM, 61.1 (11.7-157) and 29.9 (3.7-50.8) for RCC, 7.5 (1.1-1530.7) and 55.7 (16.5-482) for MM, 1.4 (1-26.4) and 1.7 (1.1-9.6) for LC and 7.4 (1-17.2) and 4.7 (1.5-7.4) for BC. These GRL-based tumor risk estimates for individuals with heterozygous BAP1 (L)PV will help guide clinical management and surveillance strategies. Further studies are needed to refine these values.",
+      "journal": "Genetics in medicine : official journal of the American College of Medical Genetics",
+      "pubDate": "2026-11-05",
+      "year": 2026,
+      "doi": "10.1016/j.gim.2026.102780",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42985853/",
+      "firstAuthor": "Victoria Lamure",
+      "firstAffiliation": "Service de G&#xe9;n&#xe9;tique, Institut Curie, Paris, Ile de France, 75248 France.",
+      "country": "France",
+      "language": "eng",
+      "termsMatched": [
+        "mesothelioma"
+      ]
+    },
+    {
+      "pmid": "42983797",
+      "title": "Composite Hemangioendothelioma with Concurrent Pyoderma Gangrenosum Treated with Pazopanib: A Case Report.",
+      "abstract": "A 40-year-old man with an eight-year history of a cutaneous mass complicated by subsequent pyoderma gangrenosum developed systemic disease. Pleural fluid cytology initially suggested pleural mesothelioma (PM), whereas a subsequent subcutaneous biopsy was interpreted as epithelioid hemangioendothelioma (EHE). Through a retrospective re-evaluation of previous skin specimens and comparison with current pathological findings, a final diagnosis of composite hemangioendothelioma (CHE) was established. Pazopanib (PAZ) achieved radiologically stable disease for five months; however, he died of progressive respiratory failure. This case highlights the diagnostic challenges of extremely rare CHE and suggests that PAZ may have a limited therapeutic impact on advanced CHE with malignant pleural effusions.",
+      "journal": "Internal medicine (Tokyo, Japan)",
+      "pubDate": "2026-11-05",
+      "year": 2026,
+      "doi": "10.2169/internalmedicine.7485-26",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42983797/",
+      "firstAuthor": "Taichi Ishida",
+      "firstAffiliation": "Department of Respiratory Medicine, Faculty of Medical Sciences, University of Fukui, Japan.",
+      "country": "Japan",
+      "language": "eng",
+      "termsMatched": [
+        "mesothelioma"
+      ]
+    },
+    {
+      "pmid": "42980909",
+      "title": "USP14 promotes malignant pleural mesothelioma progression and suppresses autophagy by stabilizing the YAP1-TEAD4 axis.",
+      "abstract": "Malignant pleural mesothelioma (MPM) is an aggressive malignancy with limited therapeutic options and poor prognosis. Deubiquitinating enzymes (DUBs) modulate protein turnover and participate in tumor progression, yet the biological function of ubiquitin&#x2011;specific protease 14 (USP14) in MPM remains poorly defined. We examined USP14 expression in public datasets and MPM cell lines. Lentiviral&#x2011;mediated short hairpin RNA (shRNA) was used to knock down USP14. Functional assays including colony&#x2011;formation, Transwell, flow cytometry, xenograft model, autophagic flux detection, co&#x2011;immunoprecipitation, ubiquitination and rescue overexpression experiments were performed to explore biological roles and molecular mechanisms of USP14 in MPM. In this study, USP14 was significantly up&#x2011;regulated in MPM cell lines. USP14 silencing inhibited cell proliferation, clonogenicity, migration and invasion, promoted apoptosis in vitro, and suppressed xenograft tumor growth. USP14 depletion induced autophagy activation. Mechanistically, USP14 bound to YAP1, removed its poly&#x2011;ubiquitin modification and stabilized YAP1 protein to sustain TEAD4 activation. Overexpression of YAP1 or TEAD4 reversed the malignant phenotypes and autophagy triggered by USP14 knockdown. Our findings identify USP14 as one of the major oncogenic DUBs that drives MPM progression through maintenance of YAP1-TEAD4 signaling while inhibiting autophagy. Targeting USP14 may represent a promising therapeutic strategy for MPM.",
+      "journal": "Molecular biology reports",
+      "pubDate": "2026-11-04",
+      "year": 2026,
+      "doi": "10.1007/s11033-026-13059-0",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42980909/",
+      "firstAuthor": "Yiyang Bai",
+      "firstAffiliation": "Department of Dermatology, The First Affiliated Hospital of Xi'an Jiaotong University, Xi'an, 710061, Shaanxi, P.R. China.",
+      "country": "China",
+      "language": "eng",
+      "termsMatched": [
+        "mesothelioma"
+      ]
+    },
+    {
+      "pmid": "42980853",
+      "title": "Cross-lineage mesenchymal transition in mesothelioma.",
+      "abstract": "Mesothelioma is characterized by extreme cellular plasticity, profound stromal remodeling, and near-universal resistance to therapy. While epithelial-mesenchymal transition (EMT) has long been implicated in disease progression, mesothelioma arises within a uniquely heterogeneous cellular ecosystem in which multiple non-epithelial lineages contribute to mesenchymal states. Here, we introduce cross-lineage mesenchymal transition (XMT) as a unifying framework describing the convergence of epithelial, mesothelial, endothelial, immune, hematopoietic, adipocytic, neural, and stem-like cells toward fibroblast-like, extracellular-matrix-producing phenotypes. Mesothelioma is presented as a conceptual framework for studying convergent mesenchymal programming and XMT-related processes, rather than as a definitively proven example of XMT. XMT is driven by shared signaling axes, including TGF-&#x3b2;, Wnt/&#x3b2;-catenin, Notch, hypoxia, and mechanotransduction pathways that erase lineage identity and reinforce mesenchymal programs. Recurrent mesothelioma-associated genomic alterations, particularly loss of BAP1 and CDKN2A, further potentiate XMT by reshaping chromatin accessibility, cell cycle control, metabolic state, and inflammatory signaling, thereby lowering barriers to lineage plasticity. Integrative bulk and single-cell transcriptomic analyses reveal that XMT-associated gene signatures correlate with stromal enrichment, immunosuppressive myeloid and regulatory T cell infiltration, and poor survival in patients with pleural mesothelioma. XMT underlies mesothelioma desmoplasia, immune evasion, and therapy resistance, and represents a tractable vulnerability for stromal, immune, and plasticity-directed therapeutic strategies. Framing mesothelioma through the lens of XMT provides a unifying biological rationale for stromal evolution and identifies actionable pathways-genetic, epigenetic, and microenvironmental mechanisms that may be targeted to overcome plasticity-driven disease progression. This review highlights specific therapeutic strategies, including stromal-targeted approaches aimed at TGF-&#x3b2; signaling and extracellular matrix remodeling, immune-targeted approaches that address myeloid-driven immunosuppression and inflammatory signaling, and plasticity-directed strategies targeting EMT/stemness programs and cellular state transitions.",
+      "journal": "Cancer metastasis reviews",
+      "pubDate": "2026-11-04",
+      "year": 2026,
+      "doi": "10.1007/s10555-026-10394-3",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42980853/",
+      "firstAuthor": "Licun Wu",
+      "firstAffiliation": "Latner Thoracic Surgery Research Laboratories, Division of Thoracic Surgery, Toronto General Hospital, Toronto General Hospital Research Institute, University Health Network, University of Toronto, Toronto, ON, M5G 1L7, Canada.",
+      "country": "Canada",
+      "language": "eng",
+      "termsMatched": [
+        "mesothelioma"
+      ]
+    },
     {
       "pmid": "42578967",
       "title": "Personal Talc Use and Incident Lung Cancer.",
@@ -100,6 +168,23 @@
       "firstAffiliation": "Department of Diagnostic Pathology, Department of Surgery, Hyogo Medical University, Hyogo, Japan.",
       "country": "Japan",
       "language": "eng",
+      "termsMatched": [
+        "mesothelioma"
+      ]
+    },
+    {
+      "pmid": "42987906",
+      "title": "[Surgical Case of Primary Malignant Pericardial Mesothelioma].",
+      "abstract": "A 58-year-old male presented with floating sensation and hypotention during hemodialysis. Imaging studies demonstrated a tumor compressing the right ventricle resulting in cardiac tamponade. He underwent surgical tumor resection and partial pericardiectomy. The tumor was not completely resected because of tight adhesion between tumor and cardiac tissue around the right atrial appendage. The tumor was diagnosed with primary malignant pericardial mesothelioma (PMPM) by pathological studies. After surgery, he was free from cardiac tamponade. Three months after surgery, fluorodeoxyglucose-positron emission tomography (FDG-PET) did not detect abnormal accumulation to be suspected as the residual tumor and/or recurrence of PMPM. He remained alive and asymptomatic for 3.7 year after surgery. The effectiveness of surgery for PMPM is not clearly demonstrated because of its rarity, usually late presentation, and progressive nature of PMPM. In this case report we discussed about the characteristics and surgical results for PMPM in Japan.",
+      "journal": "Kyobu geka. The Japanese journal of thoracic surgery",
+      "pubDate": "2026-11-01",
+      "year": 2026,
+      "doi": "",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42987906/",
+      "firstAuthor": "Shigetoshi Mieno",
+      "firstAffiliation": "Department of Cardiovascular Surgery, Takeda General Hospital, Kyoto, Japan.",
+      "country": "Japan",
+      "language": "jpn",
       "termsMatched": [
         "mesothelioma"
       ]
@@ -807,6 +892,24 @@
       "language": "eng",
       "termsMatched": [
         "asbestos"
+      ]
+    },
+    {
+      "pmid": "42987927",
+      "title": "[Current State of the Asbestos Outpatient Clinic and an Evaluation of Asbestos Bodies].",
+      "abstract": "A total of 46 cases visited our hospital's asbestos outpatient clinic over 12-year period from May 2013 to April 2025. The reasons for referral were as follows:15 cases were referred by the Labor Bureau, 15 by other departments within our hospital, 10 by other medical institutions, and six were self-referred. A history of asbestos exposure was identified in 40 cases (87%). Nine patients underwent surgery for asbestos-related malignancies (five primary lung cancers and four pleural mesotheliomas). In two lung cancer patients who underwent lobectomy, high concentrations of asbestos bodies were detected in non-cancerous lung tissue using a tissue digestion method, whereas none were identified by Berlin blue staining of routine sections. The diagnosis of asbestos-related lung cancer in general hospitals remains challenging.",
+      "journal": "Kyobu geka. The Japanese journal of thoracic surgery",
+      "pubDate": "2026-10-01",
+      "year": 2026,
+      "doi": "",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42987927/",
+      "firstAuthor": "Yasuhiko Ohta",
+      "firstAffiliation": "Department of General Thoracic Surgery, Kanazawa Medical Center, Kanazawa, Japan.",
+      "country": "Japan",
+      "language": "jpn",
+      "termsMatched": [
+        "asbestos",
+        "mesothelioma"
       ]
     },
     {
