@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-11-06T09:24:40.237Z",
+    "generatedAt": "2026-11-07T08:47:32.164Z",
     "source": "NCBI E-utilities (PubMed)",
     "terms": [
       "asbestos",
@@ -19,6 +19,23 @@
     "notes": "Keyword matching includes multilingual aliases. Expand TERM_GROUPS in scripts/update_pubmed_data.mjs to add more translations."
   },
   "papers": [
+    {
+      "pmid": "42993171",
+      "title": "Multiomics Analysis of Malignant Pleural Mesothelioma Reveals the Immunological Microenvironment Associated with MTAP Loss and Immunotherapy Outcomes.",
+      "abstract": "Nivolumab plus ipilimumab is a standard first-line therapy for unresectable malignant pleural mesothelioma (MPM), yet biomarkers predicting immune checkpoint inhibitor (ICI) efficacy remain undefined. We aimed to identify genomic and tumor immune microenvironmental features associated with ICI response in MPM. We analyzed two independent MPM cohorts. The discovery cohort included patients at the National Cancer Center Hospital (2012-2022) with frozen tumor tissues available for whole-genome sequencing (WGS) and RNA sequencing. Genomic alterations, transcriptomic profiles, immune cell composition, and T-cell receptor repertoire were analyzed, and key findings were validated in a nationwide Center for Cancer Genomics and Advanced Therapeutics (C-CAT) cohort. The WGS cohort comprised 52 patients. Among ICI-treated patients, overall response rates were 30% in the WGS cohort and 29.4% in the C-CAT cohort. Genomic analyses identified frequent alterations in BAP1 and NF2, across both cohorts. ICI responders showed higher T-cell receptor diversity, increased CD8&#x207a; T-cell infiltration, and enrichment of M1 macrophages compared with non-responders. MTAP loss was associated with higher CD8&#x207a; T-cell infiltration and T-cell receptor diversity, and was linked to a higher ICI response rate in the C-CAT cohort. In contrast, BAP1 and NF2 alterations showed no consistent association with immune features or ICI efficacy. An immune-active tumor microenvironment characterized by high T-cell receptor diversity, CD8&#x207a; T-cell infiltration, and M1 macrophage enrichment was associated with favorable ICI responses in MPM. MTAP loss was linked to immune-related features and a higher ICI response, supporting further investigation of MTAP loss as a candidate biomarker.",
+      "journal": "Clinical cancer research : an official journal of the American Association for Cancer Research",
+      "pubDate": "2026-11-06",
+      "year": 2026,
+      "doi": "10.1158/1078-0432.CCR-26-1855",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42993171/",
+      "firstAuthor": "Akiko Tateishi",
+      "firstAffiliation": "National Cancer Centre Japan Tokyo Japan.",
+      "country": "Japan",
+      "language": "eng",
+      "termsMatched": [
+        "mesothelioma"
+      ]
+    },
     {
       "pmid": "42985853",
       "title": "Risk estimates in BAP1 tumor predisposition syndrome using the Genotype-Restricted Likelihood (GRL) method.",
@@ -82,6 +99,23 @@
       "firstAuthor": "Licun Wu",
       "firstAffiliation": "Latner Thoracic Surgery Research Laboratories, Division of Thoracic Surgery, Toronto General Hospital, Toronto General Hospital Research Institute, University Health Network, University of Toronto, Toronto, ON, M5G 1L7, Canada.",
       "country": "Canada",
+      "language": "eng",
+      "termsMatched": [
+        "mesothelioma"
+      ]
+    },
+    {
+      "pmid": "42990323",
+      "title": "Agentic Discovery Transfer Enables Cross-Cancer Discovery at Scale.",
+      "abstract": "Cancer research generates tens of thousands of studies each year, yet whether a published finding holds in another cancer type or patient population is rarely tested as doing so is labor-intensive and difficult to scale. We define this task as discovery transfer and present SMART, a multi-agent large language model framework for discovery transfer in single-cell RNA-sequencing studies. Given a source manuscript and a target dataset, SMART extracts major clinical and mechanistic findings, generates and executes analyses for the testable findings, reports which findings transfer, and suggests follow-up. Applied to 121 studies across six cancer types, SMART identified findings that transfer across cancers, including a lung cancer prognostic signature that we confirmed to be associated with survival in liver cancer, pancreatic cancer and pleural mesothelioma. SMART also generated new mechanistic hypotheses, demonstrating how agentic discovery transfer can extend published findings beyond their original setting.",
+      "journal": "bioRxiv : the preprint server for biology",
+      "pubDate": "2026-11-03",
+      "year": 2026,
+      "doi": "10.64898/2026.10.28.762506",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42990323/",
+      "firstAuthor": "Lingxin Cheng",
+      "firstAffiliation": "",
+      "country": "",
       "language": "eng",
       "termsMatched": [
         "mesothelioma"
@@ -721,6 +755,23 @@
       "language": "eng",
       "termsMatched": [
         "mesothelioma"
+      ]
+    },
+    {
+      "pmid": "42993578",
+      "title": "Design and validation of instruments of working conditions associated with silica and asbestos exposure.",
+      "abstract": "The objective of this study is to design and validate two instruments for characterizing on- and off-the-job working conditions associated with exposure to silica and asbestos in the construction sector. The approach involved four phases: (1) literature review to identify key variables related to exposure, (2) development of the survey instruments, (3) content validation by a panel of experts; and (4) pilot testing with workers and occupational health and safety leaders. Two instruments were constructed. Instrument A, aimed at leaders, had 42 items and instrument B, aimed at workers, had 31 items. Instrument A had a content validity coefficient greater than 0.9 for the 100% of the items in the criteria of relevance, adequacy, pertinence, and coherence, and greater than 0.9 in the criterion of clarity for the 95% of the items. Instrument B had greater variability in the content validity coefficient for the criteria of relevance, adequacy, pertinence, coherence, and clarity, with scores greater than 0.9 for the 71%, 42%, 58%, 48%, and 25% of the items, respectively. The pilot test demonstrated participant understanding of 90% of the items in instrument A and 97% in instrument B. The instruments developed can be used to identify working conditions associated with occupational exposure to silica and asbestos in the sector, thereby facilitating evaluation of working conditions.",
+      "journal": "Annals of work exposures and health",
+      "pubDate": "2026-10-05",
+      "year": 2026,
+      "doi": "10.1093/annweh/wxag087",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42993578/",
+      "firstAuthor": "Carolina Antolinez-Figueroa",
+      "firstAffiliation": "Grupo de investigaci&#xf3;n TORCAZA, Consejo Colombiano de Seguridad, Carrera 20 #39-5, Bogot&#xe1; 111311, Colombia.",
+      "country": "Colombia",
+      "language": "eng",
+      "termsMatched": [
+        "asbestos"
       ]
     },
     {
