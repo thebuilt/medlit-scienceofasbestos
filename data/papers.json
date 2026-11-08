@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-11-07T08:47:32.164Z",
+    "generatedAt": "2026-11-08T08:59:34.381Z",
     "source": "NCBI E-utilities (PubMed)",
     "terms": [
       "asbestos",
@@ -119,6 +119,23 @@
       "language": "eng",
       "termsMatched": [
         "mesothelioma"
+      ]
+    },
+    {
+      "pmid": "42998388",
+      "title": "Environmental asbestos exposure and lung cancer burden: Considerations of the dose-response.",
+      "abstract": "",
+      "journal": "Lung cancer (Amsterdam, Netherlands)",
+      "pubDate": "2026-11-03",
+      "year": 2026,
+      "doi": "10.1016/j.lungcan.2026.109679",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42998388/",
+      "firstAuthor": "Andrew J Ghio",
+      "firstAffiliation": "US Environmental Protection Agency, Chapel Hill, NC, United States. Electronic address: ghio.andy@epa.gov.",
+      "country": "United States",
+      "language": "eng",
+      "termsMatched": [
+        "asbestos"
       ]
     },
     {
@@ -716,7 +733,7 @@
       "doi": "10.1016/j.athoracsur.2026.09.036",
       "url": "https://pubmed.ncbi.nlm.nih.gov/42833388/",
       "firstAuthor": "Andrea S Wolf",
-      "firstAffiliation": "Department of Thoracic Surgery, The Icahn School of Medicine at Mount Sinai, 1190 Fifth Avenue, New York, NY 10029. Electronic address: andrea.wolf@mountsinai.org.",
+      "firstAffiliation": "Department of Thoracic Surgery, The Icahn School of Medicine at Mount Sinai, 1190 Fifth Ave, New York, NY 10029. Electronic address: andrea.wolf@mountsinai.org.",
       "country": "",
       "language": "eng",
       "termsMatched": [
@@ -2037,6 +2054,23 @@
       "firstAuthor": "Moath Bani Salem",
       "firstAffiliation": "Department of Medicine, UF Health Shands Hospital, University of Florida, Gainesville, FL, USA.",
       "country": "United States",
+      "language": "eng",
+      "termsMatched": [
+        "mesothelioma"
+      ]
+    },
+    {
+      "pmid": "42997725",
+      "title": "Outcomes of Platinum plus /Pemetrexed Rechallenge in Pleural Mesothelioma: The Role of Platinum-Free Interval in a Multicenter Real-World Analysis.",
+      "abstract": "Real-world (rw) practice of rechallenge with platinum plus pemetrexed (PP) in pleural mesothelioma (PM) has been recommended in international guidelines, but the evidence is scarce and based on a few very small retrospective studies. In total, 612 patients with PM treated with first-line PP between 2010 and 2023 across 12 centers were retrospectively identified. Outcomes and treatment patterns were analyzed across second-line regimens, with a particular focus on PP rechallenge. The platinum-free interval (PFI) was evaluated using a two-tier classification (platinum-sensitive &#x2265;6 mo and platinum-resistant <6 mo) as a selection criterion. Among 375 patients (61%) receiving second-line therapy, the rw median overall survival (rw-mOS) and rw median progression-free survival (rw-mPFS) were 11.6 months and 4.7 months, respectively. Patients with PP rechallenge (n = 78) had a median OS of 20.5 months, a median rwPFS of 6.8 months, and a disease control rate of 88%. Patients with platinum sensitivity derived greater benefit from rechallenge, with rw-mOS differing across PFI categories (platinum-sensitive: 21.4 mo versus platinum-resistant: 11.9 mo;0.007). Outcomes with nivolumab plus ipilimumab (n = 29) were comparable to those observed with PP rechallenge (rw-mOS = 22.8 mo, rw-mPFS = 8.0 mo), with treatment-free interval (TFI) associated with improved median OS in the platinum-sensitive group compared with the platinum-resistant group (32 mo versus 18.1 mo,0.03). Single-agent pemetrexed (n = 32) and single-agent chemotherapy were associated with substantially shorter rw-mOS of 11.6 and 8.0 months, respectively. In conclusion, PP rechallenge has favorable outcomes and remains a viable alternative in patients with platinum sensitivity with PM, whereas nivolumab plus ipilimumab may be considered in both TFI categories, particularly in platinum-resistant disease, in which PP rechallenge offers limited benefit. A PFI or TFI-guided approach to second-line treatment selection is supported, although prospective validation is warranted.",
+      "journal": "JTO clinical and research reports",
+      "pubDate": "2026-08-31",
+      "year": 2026,
+      "doi": "10.1016/j.jtocrr.2026.101073",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42997725/",
+      "firstAuthor": "Rajiv Shah",
+      "firstAffiliation": "Department of Thoracic Oncology, Thoraxklinik, Heidelberg University Hospital and National Center for Tumor Diseases (NCT), NCT Heidelberg, a partnership between DKFZ and Heidelberg University Hospital, Germany; Translational Lung Research Center Heidelber, Member of the German Center for Lung Research, Heidelberg, Germany.",
+      "country": "Germany",
       "language": "eng",
       "termsMatched": [
         "mesothelioma"
