@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-11-09T09:48:26.110Z",
+    "generatedAt": "2026-11-10T09:51:12.269Z",
     "source": "NCBI E-utilities (PubMed)",
     "terms": [
       "asbestos",
@@ -19,6 +19,40 @@
     "notes": "Keyword matching includes multilingual aliases. Expand TERM_GROUPS in scripts/update_pubmed_data.mjs to add more translations."
   },
   "papers": [
+    {
+      "pmid": "43001492",
+      "title": "Evolution and distribution of malignant pleural mesothelioma mortality in Spain: 2016-2022.",
+      "abstract": "",
+      "journal": "Pulmonology",
+      "pubDate": "2026-11-09",
+      "year": 2026,
+      "doi": "10.1080/25310429.2026.2758948",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/43001492/",
+      "firstAuthor": "Carla Guerra-Tort",
+      "firstAffiliation": "CRETUS, Department of Preventive Medicine and Public Health, Universidade de Santiago de Compostela, Santiago de Compostela, Spain.",
+      "country": "Spain",
+      "language": "eng",
+      "termsMatched": [
+        "mesothelioma"
+      ]
+    },
+    {
+      "pmid": "43000614",
+      "title": "Mesothelial Proliferations Involving the Gynecologic Tract.",
+      "abstract": "Mesothelial proliferations, both benign and malignant, can involve the gynecologic tract, usually as processes on the serosal surfaces. While most gynecologic tumors morphologically differ from mesothelial tumors, borderline and low-grade and high-grade serous carcinomas, and to a lesser extent clear cell carcinomas, can be mistaken for mesothelial processes. Mesothelial and gynecologic tumors can overlap in their immunophenotypes; expression of \"traditional\" mesothelial markers (calretinin, WT1, CK5/6, D2-40) and m&#xfc;llerian markers (PAX8, SOX17) is noted in a subset of both tumor types. While highly specific in the thorax, HEG1 is less specific for mesothelial proliferations in the peritoneal cavity, because gynecologic tumors can be HEG1-positive; however, this problem can be resolved by the addition of claudin-4, which is consistently negative in mesothelial processes and positive in many gynecologic carcinomas. BAP1, MTAP, NF2/merlin, and p53, originally identified by genetic analysis of mesotheliomas, can be useful surrogate immunohistochemical markers to separate benign from malignant mesothelial proliferations. BAP1 immunohistochemistry also allows separation of flat mesothelioma in situ from benign single-layered mesothelial reactions. Lesions with the morphology of well-differentiated papillary mesothelial tumor should be stained for BAP1, as some mesotheliomas in situ can be close morphologic mimics. A variety of translocation-associated mesotheliomas have been described and should be suspected with peritoneal tumors in young patients; in particular, ALK fusion-positive mesotheliomas can be detected by immunohistochemistry and may respond to ALK inhibitors. We summarize the pathologic features of various benign and malignant mesothelial proliferations involving the gynecologic tract with their differential diagnosis and pitfalls.",
+      "journal": "Advances in anatomic pathology",
+      "pubDate": "2026-11-09",
+      "year": 2026,
+      "doi": "10.1097/PAP.0000000000000560",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/43000614/",
+      "firstAuthor": "Andrew Churg",
+      "firstAffiliation": "Department of Pathology, Vancouver General Hospital and University of British Columbia, Vancouver, BC, Canada.",
+      "country": "Canada",
+      "language": "eng",
+      "termsMatched": [
+        "mesothelioma"
+      ]
+    },
     {
       "pmid": "42993171",
       "title": "Multiomics Analysis of Malignant Pleural Mesothelioma Reveals the Immunological Microenvironment Associated with MTAP Loss and Immunotherapy Outcomes.",
