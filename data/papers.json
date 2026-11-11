@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-11-10T09:51:12.269Z",
+    "generatedAt": "2026-11-11T09:26:19.531Z",
     "source": "NCBI E-utilities (PubMed)",
     "terms": [
       "asbestos",
@@ -19,6 +19,24 @@
     "notes": "Keyword matching includes multilingual aliases. Expand TERM_GROUPS in scripts/update_pubmed_data.mjs to add more translations."
   },
   "papers": [
+    {
+      "pmid": "43007715",
+      "title": "Assessing the suitability of Australian regulatory asbestos monitoring methods for naturally occurring asbestos in high-dust mining environments.",
+      "abstract": "This review provides an integrated evaluation of current asbestos sampling and analytical methodologies to determine if these are appropriate for assessing exposure to naturally occurring asbestos (NOA), particularly in the high-dust environments associated with Western Australian mining operations. Asbestos exposure remains a significant occupational health concern globally, with strong evidence linking fiber inhalation to serious diseases including mesothelioma and lung cancer. Although the commercial use of asbestos has been banned in Australia since 2003, mining activities continue to intersect with geological formations that may contain NOA minerals, creating ongoing potential for occupational exposure. For occupational hygienists working in these settings, this raises a practical question: when a worker's personal air sample is collected and analyzed using standard regulatory methods, does the result reliably reflect their actual exposure to potentially hazardous fibers? The answer to this question has direct implications for risk assessment, exposure controls, and health surveillance decisions made at the operational level. Current regulatory monitoring in Australia relies primarily on the Membrane Filter Method (MFM), a morphology-based analytical approach originally developed for environments dominated by asbestos fibers, rather than the complex mixed dust conditions typical of mining operations. Known limitations of this method include reduced fiber visibility under high particulate loading and delays between sample collection and reporting of results. Critically, samples collected during the highest-dust activities, and therefore the periods of greatest potential worker exposure, are precisely those most likely to be voided due to particulate overload. This review critically evaluates the scientific, regulatory, and geological factors relevant to NOA exposure assessment in mining settings, including the relationship between fiber characteristics and disease, international developments in monitoring methodologies, and the geological occurrence of NOA in Western Australia. The findings highlight the need to reassess current monitoring practices and may inform occupational hygiene practice, regulatory decision-making, and future research directions in industries where NOA may be encountered.",
+      "journal": "Journal of occupational and environmental hygiene",
+      "pubDate": "2026-11-10",
+      "year": 2026,
+      "doi": "10.1080/15459624.2026.2737093",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/43007715/",
+      "firstAuthor": "Venessa Thelan",
+      "firstAffiliation": "School of Medical & Health Sciences, Edith Cowan University, Joondalup, Western Australia, Australia.",
+      "country": "Australia",
+      "language": "eng",
+      "termsMatched": [
+        "asbestos",
+        "mesothelioma"
+      ]
+    },
     {
       "pmid": "43001492",
       "title": "Evolution and distribution of malignant pleural mesothelioma mortality in Spain: 2016-2022.",
@@ -148,8 +166,8 @@
       "doi": "10.64898/2026.10.28.762506",
       "url": "https://pubmed.ncbi.nlm.nih.gov/42990323/",
       "firstAuthor": "Lingxin Cheng",
-      "firstAffiliation": "",
-      "country": "",
+      "firstAffiliation": "Department of Biostatistics and Medical Informatics, University of Wisconsin-Madison, Madison, WI, USA.",
+      "country": "United States",
       "language": "eng",
       "termsMatched": [
         "mesothelioma"
