@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-11-12T09:50:33.713Z",
+    "generatedAt": "2026-11-13T09:31:05.829Z",
     "source": "NCBI E-utilities (PubMed)",
     "terms": [
       "asbestos",
@@ -19,6 +19,40 @@
     "notes": "Keyword matching includes multilingual aliases. Expand TERM_GROUPS in scripts/update_pubmed_data.mjs to add more translations."
   },
   "papers": [
+    {
+      "pmid": "43020316",
+      "title": "Targeting the CCL5-CCR5 axis protects against chemoresistant mesothelioma development through macrophage reprogramming.",
+      "abstract": "Treatment resistance in pleural mesothelioma (PM) is a clinical challenge. Cisplatin-based chemotherapy remains a cornerstone of treatment, but responses are transient as resistant tumor cells drive disease progression. The contribution of the tumor immune microenvironment to chemoresistance is poorly understood so far. Using cisplatin-resistant murine (AB12, PM27) and human (MSTO-211H) PM models combined with transcriptomics, immune profiling and functional assays, we identify a key role for the CCL5-CCR5 axis in shaping an immunosuppressive niche that supports tumor progression. Resistant cells upregulate and secrete high levels of CCL5, leading to enhanced tumor growth in vivo. Immune profiling of tumor microenvironment reveals a marked recruitment of CCR5macrophages displaying an immunosuppressive phenotype characterized by reduced inflammatory activity. Mechanistically, tumor-derived CCL5 promotes macrophage recruitment and polarization toward a pro-tumoral state through CCR5 signaling. Disruption of this axis, either by pharmacological inhibition of CCR5 using maraviroc or by genetic silencing of CCL5, reduces macrophage infiltration and significantly impairs tumor progression. These findings reveal microenvironment-driven mechanism of chemoresistance in PM and identify the CCL5-CCR5 axis as a key vulnerability. Targeting this pathway may therefore represent a promising therapeutic strategy to limit the progression of cisplatin-resistant mesothelioma by disrupting the tumor-supportive immune microenvironment.",
+      "journal": "Cancer letters",
+      "pubDate": "2026-11-12",
+      "year": 2026,
+      "doi": "10.1016/j.canlet.2026.218950",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/43020316/",
+      "firstAuthor": "Laura Gerardelli",
+      "firstAffiliation": "Laboratory of Tumor and Developmental Biology, GIGA Institute, University of Li&#xe8;ge, Li&#xe8;ge, Belgium.",
+      "country": "Belgium",
+      "language": "eng",
+      "termsMatched": [
+        "mesothelioma"
+      ]
+    },
+    {
+      "pmid": "43015536",
+      "title": "High-Pressure/High-Dose Versus Standard PIPAC in Epithelioid Peritoneal Mesothelioma: Safety, Feasibility, and Outcomes From a Bicentric Comparative Cohort Study.",
+      "abstract": "Pressurized intraperitoneal aerosol chemotherapy (PIPAC) is a minimally invasive option for peritoneal mesothelioma (PeM) in patients not eligible for cytoreductive surgery (CRS) and hyperthermic intraperitoneal chemotherapy (HIPEC). This bicentric study compared the safety, feasibility, and sex-specific outcomes of standard versus high-pressure/high-dose PIPAC (HP/HD-PIPAC). Patients who had non-resectable epithelioid PeM (ePeM) treated with PIPAC at two German centers were retrospectively analyzed. Group 1 received standard PIPAC (cisplatin 7.5 mg/m+ doxorubicin 1.5 mg/m, 12 mmHg), and group 2 received HP/HD-PIPAC (cisplatin 20 mg/m+ doxorubicin 4 mg/m, 20 mmHg). Procedural outcomes, postoperative complications, interval from diagnosis to first PIPAC, and overall survival (OS) were analyzed. Uni- and multivariable Cox regression analyses were performed to identify factors associated with OS. The 46 patients in the study (group 1: 25 patients; group 2: 21 patients) underwent 120 of 132 scheduled PIPAC procedures. The median OS from diagnosis was 48 months overall: 48 months in group 1, and 36 months in group 2. The interval from diagnosis to first PIPAC was shorter in group 2 (2 vs. 20 months; p = 0.009). Severe complications (Clavien-Dindo &#x2265;III) occurred in 6.2 % of group 1 versus 2.9 % of group 2.&#xa0;The median OS was 106 months for the females versus 35 months for the males (p = 0.064). Multivariable analysis identified female sex, bidirectional treatment, and a longer interval between diagnosis and first PIPAC as independent factors associated with improved OS. The HP/HD-PIPAC regimen is feasible and safe. Although no significant survival differences were observed between treatment groups, prospective studies are required to define the optimal timing and integration of PIPAC within multimodal treatment strategies. Findings should be interpreted in the context of the retrospective study design.",
+      "journal": "Annals of surgical oncology",
+      "pubDate": "2026-11-11",
+      "year": 2026,
+      "doi": "10.1245/s10434-026-20789-9",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/43015536/",
+      "firstAuthor": "Fabian Kockelmann",
+      "firstAffiliation": "Department of Surgery, Klinikum Dortmund, Hospital of Witten-Herdecke University, Dortmund, Germany. Kockelmann.Fabian@mh-hannover.de.",
+      "country": "Germany",
+      "language": "eng",
+      "termsMatched": [
+        "mesothelioma"
+      ]
+    },
     {
       "pmid": "43007715",
       "title": "Assessing the suitability of Australian regulatory asbestos monitoring methods for naturally occurring asbestos in high-dust mining environments.",
