@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-11-13T09:31:05.829Z",
+    "generatedAt": "2026-11-14T08:58:29.224Z",
     "source": "NCBI E-utilities (PubMed)",
     "terms": [
       "asbestos",
@@ -34,6 +34,24 @@
       "language": "eng",
       "termsMatched": [
         "mesothelioma"
+      ]
+    },
+    {
+      "pmid": "43022666",
+      "title": "Extraction of critical metals from chrysotile asbestos tailingsan ammonium sulfate roasting-water leaching process.",
+      "abstract": "Chrysotile asbestos tailings (CATs) are hazardous industrial wastes that contain substantial amounts of valuable critical metals, including Mg, Fe, and Ni. This study investigates the co-extraction of these metals from CATs using an ammonium sulfate ((NH)SO) roasting-water leaching process. Key process parameters, including (NH)SOdosage, roasting temperature, and roasting time, were systematically optimized to maximize the leaching efficiencies of Mg, Fe, and Ni. The phase transformations and microstructural evolution during roasting were characterized by X-ray diffraction (XRD), scanning electron microscopy (SEM), and thermogravimetric analysis (TG). Under the optimal conditions, the leaching efficiencies of Mg, Fe, and Ni all exceeded 93%. XRD and TG analyses revealed that the roasting process effectively decomposed the chrysotile structure and transformed the metal-bearing phases into water-soluble Fe(SO), NiSO, and magnesium sulfate, which were subsequently dissolved during water leaching. The results demonstrate that the proposed process achieves high simultaneous extraction efficiencies for multiple valuable metals while minimizing secondary pollution. This study provides a feasible and cleaner production route for the sustainable utilization of CATs.",
+      "journal": "RSC advances",
+      "pubDate": "2026-11-12",
+      "year": 2026,
+      "doi": "10.1039/d6ra09542a",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/43022666/",
+      "firstAuthor": "Hongxiang Gan",
+      "firstAffiliation": "School of Metallurgy and Environment, Engineering Research Center of the Ministry of Education for Advanced Battery Materials, Central South University Changsha 410083 China 1453636044@qq.com +8613278881878.",
+      "country": "China",
+      "language": "eng",
+      "termsMatched": [
+        "asbestos",
+        "chrysotile"
       ]
     },
     {
@@ -117,6 +135,23 @@
       "firstAuthor": "Akiko Tateishi",
       "firstAffiliation": "National Cancer Centre Japan Tokyo Japan.",
       "country": "Japan",
+      "language": "eng",
+      "termsMatched": [
+        "mesothelioma"
+      ]
+    },
+    {
+      "pmid": "43021707",
+      "title": "Recent advances in the treatment of pleural mesothelioma.",
+      "abstract": "In a short period, pleural mesothelioma has undergone major revisions in its nomenclature, grading, staging, and treatment approach. In this review, we provide an updated overview of recent advances in diagnosing, biomarker research, and treating malignant pleural mesothelioma. Five-year follow-up from CheckMate 743 confirms a durable survival benefit with nivolumab plus ipilimumab (hazard ratio 0.74), greater in nonepithelioid disease (hazard ratio 0.48) than in epithelioid disease (hazard ratio 0.85). BEAT-meso, evaluating atezolizumab added to bevacizumab-chemotherapy, missed its primary overall survival (OS) endpoint overall, but the same histology-dependent pattern recurred: a clear benefit in nonepithelioid disease (17.9 vs. 10&#x200a;months; hazard ratio 0.51) and none in epithelioid disease (hazard ratio 1.00). Adding pembrolizumab to platinum-pemetrexed improved OS overall survival (hazard ratio 0.79), especially in nonepithelioid disease, leading to FDA approval regardless of histology. Pegargiminase became the first metabolically targeted agent to improve survival in nonepithelioid mesothelioma. MARS 2 showed that pleurectomy decortication added to chemotherapy shortens survival and worsens quality of life. Hemithoracic IMRT after pleurectomy/decortication showed consistent survival benefit across cohorts. First-line treatment is now determined by histology and the patient's performance status rather than by any molecular biomarker. The main unmet needs remain epithelioid disease, second-line therapy, and a validated predictive biomarker.",
+      "journal": "Current opinion in oncology",
+      "pubDate": "2026-11-06",
+      "year": 2026,
+      "doi": "10.1097/CCO.0000000000001282",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/43021707/",
+      "firstAuthor": "Marko Jakopovi&#x107;",
+      "firstAffiliation": "Department for Respiratory Diseases Jordanovac, University Hospital Centre Zagreb.",
+      "country": "",
       "language": "eng",
       "termsMatched": [
         "mesothelioma"
@@ -322,6 +357,23 @@
       "firstAffiliation": "Department of Cardiovascular Surgery, Takeda General Hospital, Kyoto, Japan.",
       "country": "Japan",
       "language": "jpn",
+      "termsMatched": [
+        "mesothelioma"
+      ]
+    },
+    {
+      "pmid": "43022139",
+      "title": "Correction: Machine learning, molecular docking, and experimental validation identify shared molecular signatures between idiopathic pulmonary arterial hypertension and malignant pleural mesothelioma: a retrospective study.",
+      "abstract": "[This corrects the article DOI: 10.3389/fgene.2026.1894027.].",
+      "journal": "Frontiers in genetics",
+      "pubDate": "2026-10-29",
+      "year": 2026,
+      "doi": "10.3389/fgene.2026.2032350",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/43022139/",
+      "firstAuthor": "Neng Zhang",
+      "firstAffiliation": "Department of General Medicine, The First Affiliated Hospital of Xinjiang Medical University, Urumqi, China.",
+      "country": "China",
+      "language": "eng",
       "termsMatched": [
         "mesothelioma"
       ]
