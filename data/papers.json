@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-11-14T08:58:29.224Z",
+    "generatedAt": "2026-11-15T09:26:50.578Z",
     "source": "NCBI E-utilities (PubMed)",
     "terms": [
       "asbestos",
@@ -52,6 +52,24 @@
       "termsMatched": [
         "asbestos",
         "chrysotile"
+      ]
+    },
+    {
+      "pmid": "43032416",
+      "title": "The Sibat&#xe9; Asbestos-Cement Facility Case Study: Reconstructing the Production Process to Assess Occupational and Environmental Impacts.",
+      "abstract": "Despite hosting one of the largest asbestos industries in Latin America, Colombia lacked adequate environmental and occupational surveillance, hindering a full understanding of its operations and impacts. The first asbestos-processing facility began operations in the municipality of Sibat&#xe9; in 1942, where the first cluster of malignant pleural mesothelioma was recently identified. Areas containing friable asbestos waste have also been documented within the urban zone.This study aimed to develop and apply a structured approach to (i) reconstruct historical production practices and operational conditions under which workers may have been exposed to asbestos and (ii) identify potential environmental pathways through which asbestos may have been released from the facility into the surrounding environment.Thirteen former workers were interviewed to reconstruct key production processes, including handling and disposal of raw asbestos and asbestos-containing materials. In parallel, environmental surveillance records from the regional environmental authority for 1980-2019 were reviewed to identify documented environmental management and monitoring practices.Findings identified operational stages and waste-management practices that may have provided potential pathways for asbestos release, including wastewater discharges, sludge disposal, and landfilling in Sibat&#xe9; and nearby municipalities. Environmental records began only in 1980, leaving the facility's first 38 years of operation (1942-1979) without documented environmental oversight, and included no asbestos-specific monitoring or quantitative exposure data.The Sibat&#xe9; case shows how asbestos risks persist beyond industrial boundaries, while this study provides a practical framework for countries facing similar surveillance limitations. Findings highlight the need for transparent data, sustained environmental surveillance, and comprehensive remediation to address the long-term environmental and public health consequences of asbestos-contaminated sites.",
+      "journal": "Annals of global health",
+      "pubDate": "2026-11-12",
+      "year": 2026,
+      "doi": "10.5334/aogh.5341",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/43032416/",
+      "firstAuthor": "Margarita Giraldo",
+      "firstAffiliation": "Department of Civil and Environmental Engineering, Universidad de Los Andes, Bogot&#xe1;, Colombia.",
+      "country": "Colombia",
+      "language": "eng",
+      "termsMatched": [
+        "asbestos",
+        "mesothelioma"
       ]
     },
     {
@@ -118,6 +136,23 @@
       "firstAuthor": "Andrew Churg",
       "firstAffiliation": "Department of Pathology, Vancouver General Hospital and University of British Columbia, Vancouver, BC, Canada.",
       "country": "Canada",
+      "language": "eng",
+      "termsMatched": [
+        "mesothelioma"
+      ]
+    },
+    {
+      "pmid": "43026902",
+      "title": "Metabolomics in Thoracic Oncology from Biomarker Discovery to Therapeutic Targeting: A Narrative Review.",
+      "abstract": "Thoracic malignancies show context-dependent metabolic plasticity that influences growth, immune evasion, and treatment response. This review examines how metabolomics, stable-isotope tracing, and metabolic flux analysis complement molecular profiling in lung, esophageal, pleural, and thymic cancers. We distinguish metabolite abundance from isotope enrichment and quantitative flux, and review analytical platforms, computational workflows, histology-specific programs, immunometabolism, biomarkers, and therapy. Lung squamous cell carcinoma often depends on glycolysis, lung adenocarcinoma shows substrate and spatial heterogeneity, and molecular subsets of small cell lung cancer have preclinical vulnerabilities in arginine metabolism and guanosine nucleotide synthesis. Hypoxia and metabolite exchange among malignant, stromal, and immune cells may shape therapeutic resistance. Biofluid and tissue studies support early detection and monitoring, but most circulating signatures and findings in rare thoracic tumors remain exploratory. Translation is limited by confounding, incomplete metabolite identification, small cohorts, and limited external validation. Trials of unselected metabolic inhibitors have largely failed. Two biomarker-selected strategies have advanced: arginine deprivation in non-epithelioid pleural mesothelioma, a population enriched for argininosuccinate synthetase 1 (ASS1) deficiency, and PRMT5 inhibition in tumors with MTAP deletion. These results suggest that success may depend on selecting patients by a demonstrated metabolic dependency rather than by the plausibility of the target. Progress requires harmonized multicenter workflows, paired tissue and biofluid sampling, rigorous validation, and integration with spatial, single-cell, multi-omic, and clinical data.",
+      "journal": "Cancers",
+      "pubDate": "2026-11-07",
+      "year": 2026,
+      "doi": "10.3390/cancers18213582",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/43026902/",
+      "firstAuthor": "Mohamed A Mahmoud",
+      "firstAffiliation": "Department of Cardiovascular and Thoracic Surgery, University of Texas Southwestern Medical Center, Dallas, TX 75390, USA.",
+      "country": "United States",
       "language": "eng",
       "termsMatched": [
         "mesothelioma"
@@ -220,6 +255,23 @@
       "firstAuthor": "Licun Wu",
       "firstAffiliation": "Latner Thoracic Surgery Research Laboratories, Division of Thoracic Surgery, Toronto General Hospital, Toronto General Hospital Research Institute, University Health Network, University of Toronto, Toronto, ON, M5G 1L7, Canada.",
       "country": "Canada",
+      "language": "eng",
+      "termsMatched": [
+        "mesothelioma"
+      ]
+    },
+    {
+      "pmid": "43026862",
+      "title": "Real-World Outcomes of Oral VEGFR Tyrosine Kinase Inhibitor-Containing Therapy in Unresectable Malignant Mesothelioma: A Single-Center Retrospective Study.",
+      "abstract": "Systemic treatment choices after failure of standard therapy are limited for malignant mesothelioma. Oral vascular endothelial growth factor receptor tyrosine kinase inhibitors (VEGFR-TKIs) have been incorporated into salvage treatment strategies, but real-world evidence regarding their effectiveness and safety remains scarce. We retrospectively analyzed a single-center cohort comprising patients with pathologically confirmed malignant mesothelioma treated at Cancer Hospital, Chinese Academy of Medical Sciences/National Cancer Center between 1 April 2017 and 16 March 2023. Patients with unresectable disease who received a VEGFR-TKI-containing regimen and had sufficient clinical follow-up for outcome assessment were included. Progression-free survival (PFS) served as the primary endpoint. Objective response rate (ORR), disease control rate (DCR), overall survival (OS) from VEGFR-TKI initiation, and recorded adverse events were included as secondary endpoints. The cohort comprised 48 patients, with a median follow-up of 24.0 months. The Kaplan-Meier estimated median PFS was 4.8 months (95% CI, 2.9-8.8), and median OS from VEGFR-TKI initiation was 17.9 months (95% CI, 13.5-not estimable). Among 39 response-evaluable patients, 6 achieved partial response, 20 had stable disease, and 13 had progressive disease as their best overall response, yielding an ORR of 15.4% and a DCR of 66.7%. Two patients remained progression-free for more than 24 months. Grade 3 adverse events in the records included hematuria, hypertension, and nausea/vomiting; no grade 4 or grade 5 adverse event was documented. VEGFR-TKI-containing therapy was associated with clinically relevant disease control in unresectable malignant mesothelioma, with durable benefit observed in a small subset of patients. These observations warrant further evaluation of VEGFR-TKI-based salvage strategies in larger multicenter cohorts.",
+      "journal": "Cancers",
+      "pubDate": "2026-11-04",
+      "year": 2026,
+      "doi": "10.3390/cancers18213541",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/43026862/",
+      "firstAuthor": "Zheng Liu",
+      "firstAffiliation": "State Key Laboratory of Molecular Oncology, Beijing Key Laboratory, CAMS Key Laboratory of Translational Research on Lung Cancer, Department of Medical Oncology, National Cancer Center/National Clinical Research Center for Cancer/Cancer Hospital, Chinese Academy of Medical Sciences and Peking Union Medical College, Beijing 100021, China.",
+      "country": "China",
       "language": "eng",
       "termsMatched": [
         "mesothelioma"
@@ -362,6 +414,23 @@
       ]
     },
     {
+      "pmid": "43026817",
+      "title": "BRCA1-Associated Protein 1 in Sarcoma.",
+      "abstract": "Soft tissue sarcomas (STSs) are genetically complex mesenchymal tumors with limited therapeutic options. BRCA1-associated protein 1 (BAP1), a deubiquitinase, is a critical regulator of chromatin architecture, DNA repair, and cell cycle control. Whilealterations are well-characterized in mesothelioma and uveal melanoma, their role in STS remains understudied. Increasing evidence showsalterations are associated with STS. This review summarizes current evidence on BAP1 biology and its emerging significance in sarcoma. We discuss BAP1's molecular functions, including its role in the Polycomb Repressive Deubiquitinase (PR-DUB) complex, and summarize recent findings implicatingloss in multiple subtypes of STS. We highlight mechanistic links betweendeficiency, genomic instability, and tumor progression, and explore therapeutic implications such as polo-like kinase 1 (PLK1) inhibition and epigenetic modulation. Understanding-driven pathways in STS may uncover novel biomarkers and targeted strategies, addressing a critical unmet need in sarcoma management.",
+      "journal": "Cancers",
+      "pubDate": "2026-10-30",
+      "year": 2026,
+      "doi": "10.3390/cancers18213496",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/43026817/",
+      "firstAuthor": "Xingliang Liu",
+      "firstAffiliation": "Earle A. Chiles Research Institute, Providence Cancer Institute, Portland, OR 97213, USA.",
+      "country": "United States",
+      "language": "eng",
+      "termsMatched": [
+        "mesothelioma"
+      ]
+    },
+    {
       "pmid": "43022139",
       "title": "Correction: Machine learning, molecular docking, and experimental validation identify shared molecular signatures between idiopathic pulmonary arterial hypertension and malignant pleural mesothelioma: a retrospective study.",
       "abstract": "[This corrects the article DOI: 10.3389/fgene.2026.1894027.].",
@@ -390,6 +459,23 @@
       "firstAuthor": "Nor Safiqah Sharil",
       "firstAffiliation": "Department of Medicine, Faculty of Medicine, Hospital Canselor Tuanku Muhriz UKM, Cheras, Federal Territory of Kuala Lumpur, Malaysia n.safiqah@gmail.com.",
       "country": "Malaysia",
+      "language": "eng",
+      "termsMatched": [
+        "mesothelioma"
+      ]
+    },
+    {
+      "pmid": "43027900",
+      "title": "Beyond Mesothelioma: From Diagnostic Biomarker to Therapeutic Opportunity-The Emerging Role of MTAP in Cancer.",
+      "abstract": "Methylthioadenosine phosphorylase (MTAP) loss is an emerging biomarker in several human malignancies, mainly due to its frequent co-deletion withon chromosome 9p21. Beyond its diagnostic value, MTAP deficiency has important biological consequences, including metabolic reprogramming, immune microenvironment modulation, and increased dependency on PRMT5-related pathways. This review summarizes the current evidence on MTAP alterations across different tumor types. The role of MTAP immunohistochemistry as a practical surrogate forhomozygous deletion is discussed, together with its advantages and interpretative limitations. In addition, the potential predictive relevance of MTAP loss for immunotherapy, antifolate-based treatments, and novel PRMT5-targeted strategies is explored. Overall, MTAP assessment represents a promising tool in modern diagnostic pathology and precision oncology, bridging morphology, molecular alterations, and therapeutic decision-making.",
+      "journal": "International journal of molecular sciences",
+      "pubDate": "2026-10-28",
+      "year": 2026,
+      "doi": "10.3390/ijms27219653",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/43027900/",
+      "firstAuthor": "Anna Diluvio",
+      "firstAffiliation": "Pathology Unit, Department of Mental Health and Physic and Preventive Medicine University of Campania \"L. Vanvitelli\", 80138 Naples, Italy.",
+      "country": "Italy",
       "language": "eng",
       "termsMatched": [
         "mesothelioma"
@@ -443,6 +529,24 @@
       "country": "United States",
       "language": "eng",
       "termsMatched": [
+        "mesothelioma"
+      ]
+    },
+    {
+      "pmid": "43026761",
+      "title": "Review of Registries, Databases and Biobanks for Surveillance and Research on Mesothelioma.",
+      "abstract": "Mesothelioma is considered a signal tumour of asbestos exposure. Many countries have imposed asbestos bans or effectively no longer use asbestos, but a small number continue to import or mine it. Controls are generally much improved, with resulting plateauing or decreasing rates in many countries, but the effect of past exposures and ongoing exposure through in situ asbestos in buildings and environmental sources results in continued cases of mesothelioma globally. Improper disposal of asbestos is also an obstacle to managing and reducing asbestos exposure. Data on mesothelioma are recorded by mesothelioma registries, population-based cancer registries, healthcare databases, biobanks and online epidemiological data sources. Data from the various sources are significantly different and generally not directly comparable. Mesothelioma registries and population-based cancer registries are excellent resources for epidemiological and statistical data but are typically not linked to clinical data or biospecimen collections. Integrating biospecimen collections with linked clinical data creates rich real-world datasets that enhance research quality, enable data-driven discoveries, and support future translational research. The diagnosis of mesothelioma can be challenging, and data recording is not always accurate or complete across centres. Inconsistencies in data can affect epidemiological studies and undermine efforts to improve policies that affect individuals with mesothelioma and prevent further occurrence of mesothelioma. Linkage between mesothelioma registries, cancer registries, biobanks and other health-related databases will benefit researchers and allow access for further research initiatives. Closer collaboration between registries offers benefits for countries that lack diagnostic and healthcare infrastructure. Established mesothelioma registries can serve as valuable models for countries developing national surveillance systems by sharing expertise in case ascertainment, exposure assessment, registry governance and epidemiological methods. This study is a narrative review based on a non-systematic search of the published literature. This review of mesothelioma-related data resources and biospecimen collections serves as a foundation for enhancing collaboration and knowledge sharing in the fight against mesothelioma.",
+      "journal": "Cancers",
+      "pubDate": "2026-10-24",
+      "year": 2026,
+      "doi": "10.3390/cancers18213441",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/43026761/",
+      "firstAuthor": "Sarita Prabhakaran",
+      "firstAffiliation": "Department of Anatomical Pathology, College of Medicine and Public Health, Flinders Health and Medical Research Institute, Flinders University, Adelaide, SA 5042, Australia.",
+      "country": "Australia",
+      "language": "eng",
+      "termsMatched": [
+        "asbestos",
         "mesothelioma"
       ]
     },
