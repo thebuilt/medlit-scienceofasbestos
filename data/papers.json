@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-11-15T09:26:50.578Z",
+    "generatedAt": "2026-11-16T09:44:49.152Z",
     "source": "NCBI E-utilities (PubMed)",
     "terms": [
       "asbestos",
@@ -19,6 +19,40 @@
     "notes": "Keyword matching includes multilingual aliases. Expand TERM_GROUPS in scripts/update_pubmed_data.mjs to add more translations."
   },
   "papers": [
+    {
+      "pmid": "43035157",
+      "title": "Emerging strategies targeting the Hippo-YAP/TEAD pathway and the translational relevance in solid tumors.",
+      "abstract": "The Hippo-YAP/TEAD signaling axis regulates tissue growth, cellular identity, and organ homeostasis. Dysregulation of this pathway, through NF2 loss, LATS1 or LATS2 inactivation, or YAP1- or WWTR1-derived gene fusions, results in persistent nuclear localization of YAP/TAZ, driving TEAD-dependent transcriptional programs. NF2-deficient and YAP1/TAZ-driven tumors, such as mesothelioma, schwannoma, meningioma, and epithelioid hemangioendothelioma, exemplify Hippo-pathway dependency and are potential therapeutic targets. Targeting TEAD disrupts transcriptional circuits sustaining tumor growth, plasticity, and immune suppression while modulating metabolic and stromal dependencies. Pharmacologic interventions targeting YAP/TEAD include TEAD palmitate-binding pocket inhibitors, direct YAP/TEAD protein-protein interaction disruptors, PROTAC-mediated TEAD degraders, and YAP-directed antisense oligonucleotide strategies. Early-phase trials have demonstrated preliminary clinical activity, particularly with TEAD palmitate-binding pocket inhibitors in mesothelioma and have been associated with mild drug-related toxicities, such as proteinuria. YAP/TEAD inhibition may also be a rational combinatorial approach given the emergence of adaptive resistance mechanisms to EGFR/KRAS inhibitors and immunotherapies. Collectively, these findings provide rationale and early proof-of-concept for the pharmacologic targeting of the YAP/TEAD pathway. In this review, we describe the biological underpinnings of the YAP/TEAD pathway in cancer medicine, the anti-cancer strategies targeting this pathway, and discuss future directions in the field.",
+      "journal": "Pharmacology & therapeutics",
+      "pubDate": "2026-11-15",
+      "year": 2026,
+      "doi": "10.1016/j.pharmthera.2026.109146",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/43035157/",
+      "firstAuthor": "Oriol Mirallas",
+      "firstAffiliation": "Department of Investigational Cancer Therapeutics, Division of Cancer Medicine, The University of Texas MD Anderson Cancer Center, Houston, USA. Electronic address: omirallas@mdanderson.org.",
+      "country": "United States",
+      "language": "eng",
+      "termsMatched": [
+        "mesothelioma"
+      ]
+    },
+    {
+      "pmid": "43034640",
+      "title": "Real-World Toxicity and Hospitalization Outcomes Following Immunotherapy for Malignant Pleural Mesothelioma.",
+      "abstract": "Introduction Malignant pleural mesothelioma (MPM) is an aggressive disease with poor outcomes despite advances in systemic treatment. Combination immune checkpoint inhibitor therapy with nivolumab and ipilimumab is increasingly used in clinical practice for advanced MPM; however, real-world treatment outcomes and treatment-related toxicities remain important considerations. This study evaluated survival outcomes, treatment response, toxicity, and hospitalization in patients with advanced mesothelioma receiving combination immunotherapy with nivolumab and ipilimumab. Methods We conducted a retrospective cohort study of 24 patients with advanced mesothelioma who received nivolumab and ipilimumab at a tertiary NHS hospital in Birmingham, United Kingdom, between April 2021 and October 2025. Demographic and clinical characteristics, treatment exposure, radiological response, progression-free survival (PFS), overall survival (OS), adverse events, and hospital admissions were reviewed. Survival outcomes were assessed using Kaplan-Meier analysis. Results Twenty-four patients were included, of whom 23 (95.8%) had pleural disease and 14 (58.3%) had an Eastern Cooperative Oncology Group performance status of 1. The median number of treatment cycles was five (range, 1-24). Recorded response categories were progressive disease in 12 patients (50%), stable disease in seven (29.2%), partial response in three (12.5%), and mixed response in two (8.3%). Median PFS was 4.5 months, and median OS was 9.5 months. Grade 3 or higher immune-related adverse events occurred in six patients (25%). Twenty patients (83.3%) experienced at least one hospital admission, with 36 admission episodes recorded. Admissions were attributed to immunotherapy-related adverse effects in 16 patients and disease-related or other non-immune complications in four patients. Conclusions Outcomes following nivolumab and ipilimumab varied considerably in this real-world cohort. Hospital admissions occurred in a substantial proportion of patients and were attributed to both immunotherapy-related adverse effects and disease-related complications. These findings highlight the importance of careful assessment, toxicity recognition, and multidisciplinary management during treatment.",
+      "journal": "Cureus",
+      "pubDate": "2026-11-14",
+      "year": 2026,
+      "doi": "10.7759/cureus.119661",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/43034640/",
+      "firstAuthor": "Reshma David",
+      "firstAffiliation": "Acute Medicine, Queen Elizabeth Hospital Birmingham, University Hospitals Birmingham NHS Foundation Trust, Birmingham, GBR.",
+      "country": "",
+      "language": "eng",
+      "termsMatched": [
+        "mesothelioma"
+      ]
+    },
     {
       "pmid": "43020316",
       "title": "Targeting the CCL5-CCR5 axis protects against chemoresistant mesothelioma development through macrophage reprogramming.",
