@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-11-16T09:44:49.152Z",
+    "generatedAt": "2026-11-17T10:44:02.923Z",
     "source": "NCBI E-utilities (PubMed)",
     "terms": [
       "asbestos",
@@ -19,6 +19,23 @@
     "notes": "Keyword matching includes multilingual aliases. Expand TERM_GROUPS in scripts/update_pubmed_data.mjs to add more translations."
   },
   "papers": [
+    {
+      "pmid": "43036849",
+      "title": "RETRACTED: Ramundo et al. APE-1/Ref-1 Inhibition Blocks Malignant Pleural Mesothelioma Cell Proliferation and Migration: Crosstalk Between Oxidative Stress and Epithelial Mesenchymal Transition (EMT) in Driving Carcinogenesis and Metastasis.2023,, 12570.",
+      "abstract": "The journal retracts the article titled \"APE-1/Ref-1 Inhibition Blocks Malignant Pleural Mesothelioma Cell Proliferation and Migration: Crosstalk between Oxidative Stress and Epithelial Mesenchymal Transition (EMT) in Driving Carcinogenesis and Metastasis [...].",
+      "journal": "International journal of molecular sciences",
+      "pubDate": "2026-11-16",
+      "year": 2026,
+      "doi": "10.3390/ijms272210266",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/43036849/",
+      "firstAuthor": "Valeria Ramundo",
+      "firstAffiliation": "Department of Oncology, University of Torino, 10126 Torino, Italy.",
+      "country": "Italy",
+      "language": "eng",
+      "termsMatched": [
+        "mesothelioma"
+      ]
+    },
     {
       "pmid": "43035157",
       "title": "Emerging strategies targeting the Hippo-YAP/TEAD pathway and the translational relevance in solid tumors.",
@@ -928,6 +945,23 @@
       "language": "eng",
       "termsMatched": [
         "asbestos"
+      ]
+    },
+    {
+      "pmid": "43039493",
+      "title": "Lung Cancer and Thoracic Malignancies: Staging and Treatment Response.",
+      "abstract": "This article reviews the clinical role of 18F-fluorodeoxyglucose PET/ computed tomography (CT) in lung cancer and selected thoracic malignancies, focusing on staging and treatment response assessment, while emphasizing major interpretation pitfalls. In lung cancer, emphasis is placed on nodal and metastatic staging, evaluation for recurrence, metabolic response criteria, quantitative PET parameters, and treatment-specific imaging considerations. Selected applications in thymic epithelial tumors and malignant pleural mesothelioma are also discussed. Emerging approaches, including somatostatin receptor PET, fibroblast activation protein inhibitor PET, PET/MR imaging, and artificial intelligence-based PET/CT analysis, are briefly summarized.",
+      "journal": "Magnetic resonance imaging clinics of North America",
+      "pubDate": "2026-10-12",
+      "year": 2026,
+      "doi": "10.1016/j.mric.2026.09.002",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/43039493/",
+      "firstAuthor": "Murat Yilmaz Kiran",
+      "firstAffiliation": "Department of Nuclear Medicine, Nigde Training and Research Hospital, Asagi Kayabasi, Hastaneler Caddesi, 51100 Merkez, Nigde, Turkey. Electronic address: muratkiran@istanbul.edu.tr.",
+      "country": "Turkey",
+      "language": "eng",
+      "termsMatched": [
+        "mesothelioma"
       ]
     },
     {
