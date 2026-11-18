@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-11-17T10:44:02.923Z",
+    "generatedAt": "2026-11-18T10:10:14.538Z",
     "source": "NCBI E-utilities (PubMed)",
     "terms": [
       "asbestos",
@@ -19,6 +19,23 @@
     "notes": "Keyword matching includes multilingual aliases. Expand TERM_GROUPS in scripts/update_pubmed_data.mjs to add more translations."
   },
   "papers": [
+    {
+      "pmid": "43045489",
+      "title": "Cell-block rapid multiplex molecular pathology with noncontact antibody mixing for malignant pleural mesothelioma.",
+      "abstract": "",
+      "journal": "Journal of clinical pathology",
+      "pubDate": "2026-11-17",
+      "year": 2026,
+      "doi": "10.1136/jcp-2026-210930",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/43045489/",
+      "firstAuthor": "Hidenobu Iwai",
+      "firstAffiliation": "Akita University Graduate School of Medicine School of Medicine Department of Thoracic Surgery, Akita, Japan.",
+      "country": "Japan",
+      "language": "eng",
+      "termsMatched": [
+        "mesothelioma"
+      ]
+    },
     {
       "pmid": "43036849",
       "title": "RETRACTED: Ramundo et al. APE-1/Ref-1 Inhibition Blocks Malignant Pleural Mesothelioma Cell Proliferation and Migration: Crosstalk Between Oxidative Stress and Epithelial Mesenchymal Transition (EMT) in Driving Carcinogenesis and Metastasis.2023,, 12570.",
