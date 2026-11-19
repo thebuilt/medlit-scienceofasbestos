@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-11-18T10:10:14.538Z",
+    "generatedAt": "2026-11-19T10:20:42.191Z",
     "source": "NCBI E-utilities (PubMed)",
     "terms": [
       "asbestos",
@@ -20,6 +20,40 @@
   },
   "papers": [
     {
+      "pmid": "43050449",
+      "title": "Novel risk models based on screening history results and timing of lung cancer diagnosis: Post hoc analysis of the National Lung Cancer Screening Trial.",
+      "abstract": "Our group previously reported that lung cancer (LC) screening history results and subsequent timing of diagnosis are associated with significant differences in survival outcomes. As a follow-up study, we sought to develop novel personalized risk models that considered screening history for incidence cancers, interval LCs, and prevalence LCs. Using data from the CT-arm of the NLST, four independent case-control analyses were conducted to develop parsimonious risk models. Controls (n&#x2009;=&#x2009;26,038) were those never diagnosed with LC. The four LC case groups were 270 prevalence LCs, 44 interval LCs, 206 screen-detected LCs (SDLCs) that had a baseline positive screen, and 164 SDLCs that had a baseline negative screen. For each case-control analysis, univariable analyses identified statistically significant covariates from 48 variables and then significant covariates were included into a stepwise backward selection approach to identify a model with the most informative covariates. Model discrimination was quantified by the area under the curve (AUC). Internal validation was performed using 500 bootstrap replications in which the entire variable-selection procedure was repeated, yielding optimism-corrected AUCs, and calibration was assessed using calibration slope and calibration-in-the-large. LASSO logistic regression was applied to all 48 covariates as a sensitivity analysis. For prevalence LCs, the model (AUC&#x2009;=&#x2009;0.711) included age, pack-years smoked, BMI, smoking status, smoking onset age, personal history of cancer, family history of LC, alcohol consumption, and milling occupation. For interval LCs, the model (AUC&#x2009;=&#x2009;0.734) included age, smoking status, smoking onset age, cigar smoking, marital status, and asbestos occupation. For baseline positive SDLCs, the model (AUC&#x2009;=&#x2009;0.685) included age, pack-years smoked, BMI, emphysema, chemicals/plastics exposure, and milling occupation. For baseline negative SDLCs, the model (AUC&#x2009;=&#x2009;0.701) included age, pack-years smoked, BMI, smoking status, emphysema, sarcoidosis, and sandblasting occupation. Optimism-corrected AUCs were 0.676, 0.644, 0.640, and 0.652 for the prevalence, interval, baseline positive SDLC, and baseline negative SDLC models, respectively, and calibration slopes ranged from 0.67 to 0.81. LASSO sensitivity analyses retained largely consistent model covariates. Besides smoking and age, which are inclusion criteria for screening, these models identified other risk factors that may inform personalized LC risk assessment. These findings should be regarded as exploratory and hypothesis-generating.",
+      "journal": "PloS one",
+      "pubDate": "2026-11-18",
+      "year": 2026,
+      "doi": "10.1371/journal.pone.0363145",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/43050449/",
+      "firstAuthor": "Sofia A Haddan",
+      "firstAffiliation": "Department of Cancer Epidemiology, H. Lee Moffitt Cancer Center and Research Institute, Tampa, Florida, United States of America.",
+      "country": "United States",
+      "language": "eng",
+      "termsMatched": [
+        "asbestos"
+      ]
+    },
+    {
+      "pmid": "43048679",
+      "title": "DDR1: a potential pan-cancer prognostic biomarker and therapeutic target in ECM remodeling and CAF infiltration.",
+      "abstract": "Discoidin domain receptor 1 (DDR1) is implicated in tumor progression, yet its clinical and molecular roles across cancers remain incompletely understood. To address this gap, we conducted a systematic pan-cancer analysis of DDR1 using multiple online databases, including The Cancer Genome Atlas (TCGA), Tumor Immune Estimation Resource 2.0 (TIMER2.0), and cBioPortal for Cancer Genomics, and evaluated its expression, prognostic value, genomic alterations, tumor microenvironment associations, and functional networks. DDR1 was upregulated in 18 cancer types. In survival analyses, high DDR1 expression was significantly associated with favorable overall survival (OS) in kidney renal clear cell carcinoma (KIRC) and mesothelioma (MESO), and with unfavorable disease-free survival (DFS) in cholangiocarcinoma (CHOL), kidney chromophobe (KICH), and KIRC. High DDR1 expression was also associated with advanced pathological stage in several cancer types. Genomic amplification was the predominant alteration. DDR1 expression showed positive correlations with estimated cancer-associated fibroblast (CAF) infiltration in multiple cancer types, although the strength and significance varied by deconvolution algorithm and cancer type. Functional analyses linked DDR1 to extracellular matrix (ECM) regulation and cell migration and proliferation. Notably, no significant correlation was observed between DDR1 and DDR2 expression across cancer types (&#xa0;=&#xa0;-0.011,&#xa0;=&#xa0;0.26). Whether these two family members have divergent functions warrants further investigation. Collectively, these findings suggest that DDR1 may serve as a potential pan-cancer biomarker and candidate therapeutic target; however, further experimental and clinical validation is required.",
+      "journal": "Open life sciences",
+      "pubDate": "2026-11-18",
+      "year": 2026,
+      "doi": "10.1515/biol-2025-1400",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/43048679/",
+      "firstAuthor": "Dan Jin",
+      "firstAffiliation": "Department of Gastroenterology, Wuzhong People's Hospital, Wuzhong, Ningxia, China.",
+      "country": "China",
+      "language": "eng",
+      "termsMatched": [
+        "mesothelioma"
+      ]
+    },
+    {
       "pmid": "43045489",
       "title": "Cell-block rapid multiplex molecular pathology with noncontact antibody mixing for malignant pleural mesothelioma.",
       "abstract": "",
@@ -31,6 +65,23 @@
       "firstAuthor": "Hidenobu Iwai",
       "firstAffiliation": "Akita University Graduate School of Medicine School of Medicine Department of Thoracic Surgery, Akita, Japan.",
       "country": "Japan",
+      "language": "eng",
+      "termsMatched": [
+        "mesothelioma"
+      ]
+    },
+    {
+      "pmid": "43045833",
+      "title": "Access to systemic anti-cancer treatment in mesothelioma: a systematic review of inequities in treatment access and decision-making.",
+      "abstract": "To synthesise evidence on factors influencing access to and uptake of systemic anti-cancer treatment (SACT) for people with mesothelioma, an incurable cancer, with a focus on inequities in treatment pathways and decision-making within supportive oncology care. An integrative systematic review with narrative synthesis (PROSPERO: 603309) was conducted. APA PsycInfo, ASSIA, CINAHL, Cochrane Library, PubMed Central, Scopus and Web of Science were searched for English-language publications between 1 January 2008 and 18 October 2024. Eligible studies included empirical research and reproducible reviews reporting factors affecting access to or receipt of SACT among individuals with mesothelioma. The search yielded 716 records, of which 18 met inclusion criteria. Four interrelated themes were identified: (1) demographic characteristics; (2) information provision and decision-making; (3) clinical and disease-related factors; and (4) healthcare system and structural factors. An overarching theme of intersectionality demonstrated how social, clinical and organisational influences interact to shape treatment access and decision-making. Access to and uptake of SACT in mesothelioma is shaped by complex, interacting patient- and system-level factors, resulting in persistent inequities in treatment pathways. As SACT is typically delivered with palliative intent in this population, these findings highlight its role within supportive oncology care and the importance of equitable access, shared decision-making and consistent information provision across services.",
+      "journal": "Supportive care in cancer : official journal of the Multinational Association of Supportive Care in Cancer",
+      "pubDate": "2026-11-17",
+      "year": 2026,
+      "doi": "10.1007/s00520-026-11480-6",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/43045833/",
+      "firstAuthor": "Bethany Taylor",
+      "firstAffiliation": "Mesothelioma UK Research Centre, School of Allied Health Professionals, Pharmacy, Nursing and Midwifery, University of Sheffield, Sheffield, UK. btaylor3@sheffield.ac.uk.",
+      "country": "United Kingdom",
       "language": "eng",
       "termsMatched": [
         "mesothelioma"
