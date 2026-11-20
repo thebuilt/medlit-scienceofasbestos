@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-11-19T10:20:42.191Z",
+    "generatedAt": "2026-11-20T10:01:05.867Z",
     "source": "NCBI E-utilities (PubMed)",
     "terms": [
       "asbestos",
@@ -19,6 +19,24 @@
     "notes": "Keyword matching includes multilingual aliases. Expand TERM_GROUPS in scripts/update_pubmed_data.mjs to add more translations."
   },
   "papers": [
+    {
+      "pmid": "43055494",
+      "title": "Transcriptional Profile and DNA Hydroxymethylation Pattern of Signature Genes Mediating Iron Metabolism and Oxidative Stress in Chrysotile-Exposed Bronchial Epithelial BEAS-2B Cells.",
+      "abstract": "Asbestos is a fibrous mineral that may disrupt iron and oxidation homeostasis, mediating ferroptosis. However, the integrative profile of genetic and epigenetic modification of signature genes in bronchial epithelium remains unknown. BEAS-2B, a human bronchial epithelial cell line, was exposed to chrysotile asbestos at concentrations ranging from 6.25 to 50&#xa0;&#x3bc;g/cmfor up to 72 h. Exposure to 50&#xa0;&#x3bc;g/cmof chrysotile compromised cell viability in a time-dependent manner, accompanied by reduced glutathione and increased malondialdehyde and iron at 72 h. Transcriptomic data revealed 389 downregulated differentially expressed genes (DEGs) and 617 upregulated DEGs in cells exposed to 6.25&#xa0;&#x3bc;g/cmand 50&#xa0;&#x3bc;g/cmchrysotile compared to non-exposed cells and uncovered 14 signature genes mediating ferroptosis. Notably, global DNA hypohydroxymethylation of FTL was observed in cells exposed to 50&#xa0;&#x3bc;g/cmof chrysotile exposure, but not at 6.25&#xa0;&#x3bc;g/cmconcentration. Additionally, the pattern of CpG site-specific DNA hydroxymethylation modification in ACSL3, ANPEP, CHAC1, GSTM2, GSTA4, and TFRC varied depending on chrysotile exposure concentration. Furthermore, the hydroxymethylation of FTL negatively correlated with its expression. FTL expression was positively associated with malondialdehyde and iron, but negatively correlated with glutathione. Accordingly, the relationship between FTL expression and DNA hypohydroxymethylation might disrupt iron and oxidation balance, providing a putative biomarker mediating ferroptosis in chrysotile-exposed airway epithelium.",
+      "journal": "International journal of toxicology",
+      "pubDate": "2026-11-19",
+      "year": 2026,
+      "doi": "10.1177/10915818261509137",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/43055494/",
+      "firstAuthor": "Min Yu",
+      "firstAffiliation": "Department of Medical Affair and Education, Hangzhou Hospital for the Prevention and Treatment of Occupational Disease, Hangzhou, China.",
+      "country": "China",
+      "language": "eng",
+      "termsMatched": [
+        "asbestos",
+        "chrysotile"
+      ]
+    },
     {
       "pmid": "43050449",
       "title": "Novel risk models based on screening history results and timing of lung cancer diagnosis: Post hoc analysis of the National Lung Cancer Screening Trial.",
@@ -185,6 +203,24 @@
       "firstAuthor": "Margarita Giraldo",
       "firstAffiliation": "Department of Civil and Environmental Engineering, Universidad de Los Andes, Bogot&#xe1;, Colombia.",
       "country": "Colombia",
+      "language": "eng",
+      "termsMatched": [
+        "asbestos",
+        "mesothelioma"
+      ]
+    },
+    {
+      "pmid": "43056991",
+      "title": "Bridging the molecular and immune landscapes of pleural mesothelioma: Implications for immune checkpoint inhibitor response.",
+      "abstract": "Pleural mesothelioma is a rare, asbestos-related malignancy with limited therapeutic options and dismal survival. Despite regulatory efforts, ongoing exposures, long disease latency and cases without recognized exposure suggest that pleural mesothelioma will remain a global challenge for decades. Immune checkpoint inhibitors yield modest, although clinically meaningful benefit in a subset of patients, and histology alone incompletely captures the pronounced intra- and inter-patient heterogeneity that drives prognosis and treatment responses. Multi-omic studies depict pleural mesothelioma as a tumor suppressor loss malignancy with low mutation rates, extensive structural genomic damage and a spectrum of immune states. In this review, we bridge genomic, transcriptomic, epigenomic and immune-profiling data to explain how asbestos-induced genomic fragility, germline predisposition and the tumor immune microenvironment interact to shape disease biology and therapeutic vulnerability. We highlight how histo-molecular and immune-vascular continua refine risk stratification beyond histology, and how recurrent alterations intersect with immune infiltration, checkpoint expression and T cell dysfunction to potentially modulate immune checkpoint inhibitors sensitivity. These insights support comprehensive and integrative profiling to develop robust biomarkers, optimize patient selection and guide rational combinatorial strategies.",
+      "journal": "Lung cancer (Amsterdam, Netherlands)",
+      "pubDate": "2026-11-12",
+      "year": 2026,
+      "doi": "10.1016/j.lungcan.2026.109686",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/43056991/",
+      "firstAuthor": "Jo&#xe3;o Soares-Gon&#xe7;alves",
+      "firstAffiliation": "CNC-UC - Center for Neuroscience and Cell Biology, Center for Innovative Biomedicine and Biotechnology (CiBB), University of Coimbra, Coimbra, Portugal; Univ Coimbra - University of Coimbra, CiBB, Faculty of Pharmacy, Coimbra, Portugal.",
+      "country": "Portugal",
       "language": "eng",
       "termsMatched": [
         "asbestos",
