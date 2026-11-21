@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-11-20T10:01:05.867Z",
+    "generatedAt": "2026-11-21T09:50:23.449Z",
     "source": "NCBI E-utilities (PubMed)",
     "terms": [
       "asbestos",
@@ -19,6 +19,57 @@
     "notes": "Keyword matching includes multilingual aliases. Expand TERM_GROUPS in scripts/update_pubmed_data.mjs to add more translations."
   },
   "papers": [
+    {
+      "pmid": "43063366",
+      "title": "Survival Outcomes of Sequential Therapies in Malignant Pleural Mesothelioma: A Real-World Analysis of Second-Line Treatment With Nivolumab or Carboplatin-Pemetrexed.",
+      "abstract": "Optimal treatment sequencing in malignant pleural mesothelioma (MPM) remains uncertain, particularly after progression on first-line (1L) treatment. We assessed real-world outcomes of patients receiving second-line (2L) carboplatin-pemetrexed (CARBO-PEM) after nivolumab-ipilimumab (NIVO-IPI), or 2L nivolumab (NIVO) after CARBO-PEM and explored the prognostic value of the Mesothelioma Risk Score (MRS) in the 1L setting. This multicenter retrospective study included patients with advanced MPM treated across five UK institutions between May 2015 and November 2025. Eligible patients received either 2L CARBO-PEM after NIVO-IPI, or 1L CARBO-PEM followed by 2L NIVO. The primary end point was overall survival (OS) from 1L treatment initiation. Overall, 147 patients were included, and 54 received NIVO-IPI followed by CARBO-PEM and 93 received CARBO-PEM followed by NIVO. The median age was 73.8 years and 83.0% had epithelioid histology. The median follow-up was 43.3 months from 1L initiation. The median OS was 23.55 months with CARBO-PEM followed by NIVO versus 25.53 months with NIVO-IPI followed by CARBO-PEM (hazard ratio 1.28 [95% CI, 0.82 to 2.01];= .270). The median PFS 2L was 3.65 months with 2L NIVO versus 6.15 months with 2L CARBO-PEM, without statistical significance, while median OS 2L was 12.53 months and 14.11, respectively. In the 1L setting, MRS showed limited discrimination for PFS and OS. Grade &#x2265;2 irAEs during NIVO-IPI were associated with longer PFS 1L but not OS. In patients with MPM receiving 2L therapy, CARBO-PEM after NIVO-IPI remains clinically active, and OS appeared similar across treatment sequences. These findings support sequence flexibility in fit patients but highlight the need for more robust prognostic biomarkers.",
+      "journal": "JCO oncology practice",
+      "pubDate": "2026-11-20",
+      "year": 2026,
+      "doi": "10.1200/OP-26-00765",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/43063366/",
+      "firstAuthor": "Michele Maffezzoli",
+      "firstAffiliation": "Medical Oncology Unit, University Hospital of Parma, Parma, Italy.",
+      "country": "Italy",
+      "language": "eng",
+      "termsMatched": [
+        "mesothelioma"
+      ]
+    },
+    {
+      "pmid": "43063279",
+      "title": "Subclonal evolution can shape the transition toward a sarcomatoid phenotype in pleural mesothelioma.",
+      "abstract": "A better understanding of intratumor heterogeneity in pleural mesothelioma (PM) is crucial to implementing precision medicine for this deadly cancer. Using single-cell RNA sequencing approaches on tumor samples and derived primary cell lines, we defined four phenotypic cell types, related to overall survival in larger bulk cohorts: epithelioid, sarcomatoid, intermediate, and nondifferentiated. Some tumor samples showed intratumor phenotypic heterogeneity, associated with subclonal evolution, in which sarcomatoid cells can emerge from parental cells with an intermediate phenotype following the acquisition of copy number variations. Subclones were conserved in cell lines and retained their specific phenotypes, suggesting high phenotypic heritability. Spatial transcriptomics illustrated the link between phenotypic and subclonal evolution, showing that subclonal cells were colocalized and exhibited specific morphologies within the tumor tissue. Our study provides a comprehensive single-cell profiling of PM tumor cells and reveals a link between phenotypic evolution, clonal architecture, and tumor spatial organization.",
+      "journal": "Science advances",
+      "pubDate": "2026-11-20",
+      "year": 2026,
+      "doi": "10.1126/sciadv.aee4872",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/43063279/",
+      "firstAuthor": "Maya Arnould",
+      "firstAffiliation": "INSERM, Universit&#xe9; Paris Cit&#xe9;, Sorbonne Universit&#xe9;, Centre de Recherche des Cordeliers, Functional Genomics of Solid Tumors, Paris, France.",
+      "country": "France",
+      "language": "eng",
+      "termsMatched": [
+        "mesothelioma"
+      ]
+    },
+    {
+      "pmid": "43061761",
+      "title": "Quality benchmarks in CRS-HIPEC surgery: An 11-year single-center analysis of outcomes, safety, and perioperative performance (2014-2024).",
+      "abstract": "Quality indicators (QIs) are central to safe delivery of cytoreductive surgery with hyperthermic intraperitoneal chemotherapy (CRS-HIPEC), yet program-level benchmarking across tumor types is scarce. To describe the structure, process, and outcome QIs of a single-center CRS-HIPEC program (2014-2024) and to assess temporal trends in cytoreduction completeness, early mortality, length of stay (LOS), renal safety, and multidisciplinary team (MDT) integration against contemporary international benchmarks. A retrospective cohort study of consecutive CRS-HIPEC procedures (2014-2024) was conducted at a Polish tertiary center. Prespecified QIs included complete or near-complete cytoreduction (CC-0/1), 30- and 90-day mortality, LOS, LOS > 10 days, unplanned reoperation, 30-day readmission, MDT uptake, and acute kidney injury (AKI; defined using Kidney Disease: Improving Global Outcomes (KDIGO) serum creatinine criteria). Time trends were displayed with Shewhart charts and funnel plots; Wilson's 95% confidence intervals (95% CIs) were used for proportions. Among 319 procedures (colorectal cancer (CRC) 111; ovarian cancer 87; mesothelioma/other 57; low-grade appendiceal mucinous neoplasm/pseudomyxoma peritonei (LAMN/PMP) 52; gastric cancer 12), the CC-0/1 rate was 93.4% overall (CRC 96.4%; LAMN/PMP 100%; ovarian cancer 90.8%; gastric cancer 91.7%; mesothelioma/other 86.0%). Thirtyand 90-day mortality were 0.6% and 1.6%, respectively; tumor-specific 30-day mortality ranged from 0% to 1.9%. Median LOS fell from 8.6 to 7.4 days (2014-2018 vs 2019-2024), and LOS > 10 days declined from 25.0% to 13.2%. Peritoneal cancer index (PCI) correlated weakly with LOS (Spearman's &#x3c1; = 0.13, p = 0.019), while AKI occurred in 70/308 (22.7%, 95% CI: 18.4-27.7), predominantly stage 1; AKI did not differ by cisplatin exposure (26.0% vs 21.2%, p = 0.389). The proportion of procedures with documented MDT discussion increased to approx. 20-33% after 2018. Over 11 years, a single-center CRS-HIPEC program achieved high-quality cytoreduction with low early mortality and a reduction in LOS, meeting or exceeding contemporary QI standards. Incorporating AKI and MDT uptake into routine audit supports comprehensive, program-level benchmarking.",
+      "journal": "Advances in clinical and experimental medicine : official organ Wroclaw Medical University",
+      "pubDate": "2026-11-20",
+      "year": 2026,
+      "doi": "10.17219/acem/217492",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/43061761/",
+      "firstAuthor": "Micha&#x142; Kazanowski",
+      "firstAffiliation": "Department of Surgical Oncology, Lower Silesian Center of Oncology, Pulmonology and Hematology, Wroclaw, Poland.",
+      "country": "Poland",
+      "language": "eng",
+      "termsMatched": [
+        "mesothelioma"
+      ]
+    },
     {
       "pmid": "43055494",
       "title": "Transcriptional Profile and DNA Hydroxymethylation Pattern of Signature Genes Mediating Iron Metabolism and Oxidative Stress in Chrysotile-Exposed Bronchial Epithelial BEAS-2B Cells.",
@@ -150,6 +201,23 @@
       "url": "https://pubmed.ncbi.nlm.nih.gov/43034640/",
       "firstAuthor": "Reshma David",
       "firstAffiliation": "Acute Medicine, Queen Elizabeth Hospital Birmingham, University Hospitals Birmingham NHS Foundation Trust, Birmingham, GBR.",
+      "country": "",
+      "language": "eng",
+      "termsMatched": [
+        "mesothelioma"
+      ]
+    },
+    {
+      "pmid": "43059885",
+      "title": "Epigenomic circuits shaping cellular heterogeneity in pleural mesothelioma.",
+      "abstract": "Pleural mesothelioma (PM) is an aggressive and lethal malignancy with current treatments offering limited clinical benefit. In this study, we utilized single-cell chromatin accessibility and transcriptomic profiling of patient-matched samples to infer the epigenomic regulation underlying cellular heterogeneity in PM. High-resolution epigenomic profiling suggested transcriptional regulators with putative pro-tumoral roles in mesothelioma, whose function was experimentally tested using genetic perturbations across four PM cell lines. Furthermore, we observed several putative associations between epigenomic circuits and macrophage ontogeny, a sarcomatoid-like neoplastic state, and a fetal-like endothelial cell state. Our analysis also showed similarities between the chromatin accessibility landscapes of exhausted CD8 T and KLRC1 natural killer cells and identified NR4A2 as a potential shared regulator of dysfunction in both lymphocyte subsets. We further identified a state-specific distal enhancer near NR4A2 and experimentally validated its regulation of NR4A2 expression in Jurkat cells. Together, we provide an epigenomic map of PM and nominate candidate transcription factors and regulatory elements for future functional investigation, including their potential relevance to epigenetic editing strategies to limit tumor growth and enhance anti-tumor immunity.",
+      "journal": "bioRxiv : the preprint server for biology",
+      "pubDate": "2026-11-13",
+      "year": 2026,
+      "doi": "10.64898/2026.11.11.765995",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/43059885/",
+      "firstAuthor": "Bruno Giotti",
+      "firstAffiliation": "",
       "country": "",
       "language": "eng",
       "termsMatched": [
@@ -464,6 +532,23 @@
       "language": "eng",
       "termsMatched": [
         "asbestos"
+      ]
+    },
+    {
+      "pmid": "43060261",
+      "title": "Anti-TGF&#x3b2; peptide P144 augments CAR-T cell efficacy through neutrophil recruitment and TME remodeling in malignant mesothelioma.",
+      "abstract": "Malignant mesothelioma is a rare, aggressive and highly desmoplastic cancer characterised by a profoundly immunosuppressive tumour microenvironment (TME). Chimeric antigen receptor (CAR)-T cell therapy has transformed the treatment of hematological malignancies, but its activity against solid tumours such as mesothelioma remains limited, in part through transforming growth factor-beta (TGF&#x3b2;)-mediated immunosuppression. To address this barrier, we engineered murine CAR-T cells that simultaneously target tumour antigen and deliver TGF&#x3b2; blockade to the tumour. We first compared two anti-TGF&#x3b2; peptides, the beta glycan-derived P144 and the phage-display-derived P17, in vitro; both attenuated TGF&#x3b2;-induced epithelial-to-mesenchymal transition and reporter activity, but P144 suppressed canonical Smad3 phosphorylation more effectively and was selected for downstream work. Murine CAR constructs targeting either mesothelin (M11) or fibroblast activation protein (FAP) were modified to secrete P144, and the resulting products were assessed in co-culture assays and in the syngeneic AE17m model of mesothelioma. P144 secretion did not alter transduction efficiency, expansion or antigen-specific cytotoxicity, but markedly increased antigen-driven IFN&#x3b3; production, most notably at low effector-to-target ratios. In vivo, both M11-P144 and FAP-P144 CAR-T cells-controlled tumour growth better than their parental, peptide-free counterparts, although complete tumour resolution was not achieved. Flow cytometric profiling of the tumour immune infiltrate showed that P144 delivery increased intratumoral neutrophil frequency approximately three-fold, and neutrophils recovered from these tumours were substantially more cytotoxic ex vivo than those from control tumours. Antibody-mediated neutrophil depletion attenuated the additional benefit conferred by P144 while leaving parental CAR-T activity largely intact, indicating that neutrophils contribute functionally to the effect. Local, CAR-T-delivered TGF&#x3b2; blockade therefore remodels the mesothelioma TME and engages a tumoricidal neutrophil response, offering a modular strategy for enhancing adoptive cell therapy in desmoplastic solid tumours.",
+      "journal": "bioRxiv : the preprint server for biology",
+      "pubDate": "2026-11-03",
+      "year": 2026,
+      "doi": "10.64898/2026.10.28.762702",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/43060261/",
+      "firstAuthor": "Reyisa Bughda",
+      "firstAffiliation": "",
+      "country": "",
+      "language": "eng",
+      "termsMatched": [
+        "mesothelioma"
       ]
     },
     {
