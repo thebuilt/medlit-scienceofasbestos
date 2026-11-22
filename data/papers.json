@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-11-21T09:50:23.449Z",
+    "generatedAt": "2026-11-22T09:46:48.020Z",
     "source": "NCBI E-utilities (PubMed)",
     "terms": [
       "asbestos",
@@ -187,6 +187,24 @@
       "country": "United States",
       "language": "eng",
       "termsMatched": [
+        "mesothelioma"
+      ]
+    },
+    {
+      "pmid": "43067216",
+      "title": "HER2 status in Diffuse pleural mesothelioma.",
+      "abstract": "Diffuse pleural mesothelioma (DPM) is an aggressive, most commonly asbestos-related malignancy with limited therapeutic options. HER2-directed antibody-drug conjugates active against HER2-low tumors have renewed interest in HER2 assessment across malignancies, yet no DPM-specific HER2 scoring system exists and the impact of applying tumor-specific guidelines to DPM is unknown. We evaluated HER2 expression by immunohistochemistry, with FISH confirmation, in 53 consecutive DPM patients, and compared classification when the breast, gastric, and colorectal scoring guidelines were applied in parallel to the same cases. HER2 membrane staining was detected in 9 cases (17.0%), consistently faint-barely perceptible, incomplete, and segmental (median 5% of neoplastic cells), with no overexpression or amplification. The identical staining pattern yielded markedly discordant scores: most cases were classified as \"0&#x2033; under breast criteria but as \"1+\" under gastric and colorectal criteria. HER2 expression was confined to epithelioid components. These findings show that, in the absence of a validated DPM-specific scoring system, HER2 guidelines are not interchangeable, a methodological caveat with direct implications for biomarker comparability and for interpreting \"HER2-low\" status in the era of next-generation antibody - drug conjugates.",
+      "journal": "Lung cancer (Amsterdam, Netherlands)",
+      "pubDate": "2026-11-15",
+      "year": 2026,
+      "doi": "10.1016/j.lungcan.2026.109694",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/43067216/",
+      "firstAuthor": "Moira Ragazzi",
+      "firstAffiliation": "Pathology Unit, Azienda USL-IRCCS di Reggio Emilia, Reggio Emilia, Italy; Department of Medical and Surgical Sciences for Children and Adults, University of Modena and Reggio Emilia, Modena, Italy. Electronic address: Moira.Ragazzi@ausl.re.it.",
+      "country": "Italy",
+      "language": "eng",
+      "termsMatched": [
+        "asbestos",
         "mesothelioma"
       ]
     },
