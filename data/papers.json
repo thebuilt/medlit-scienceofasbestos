@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-11-23T10:46:19.575Z",
+    "generatedAt": "2026-11-24T12:28:51.522Z",
     "source": "NCBI E-utilities (PubMed)",
     "terms": [
       "asbestos",
@@ -19,6 +19,58 @@
     "notes": "Keyword matching includes multilingual aliases. Expand TERM_GROUPS in scripts/update_pubmed_data.mjs to add more translations."
   },
   "papers": [
+    {
+      "pmid": "43072721",
+      "title": "[The EU-funded CONNECT study: Digital monitoring of immune-related adverse events during immunotherapy for stage IV non-small cell lung cancer and advanced pleural mesothelioma].",
+      "abstract": "For both advanced stage IV non-small lung cancer (NSCLC) and advanced, inoperable pleural mesothelioma, (chemo-)immunotherapy has recently become standard of care and has significantly improved the prognosis. However, in the course of treatment, disease progression and/or immune-related adverse events (irAEs) often occur, which ultimately influence the prognosis and the course of treatment. As many patients and their primary health care providers are unfamiliar with the specific symptoms, oncology medical staff regularly only become aware of them on the occasion of scheduled routine examinations. This issue is addressed by the EU-funded, two-center CONNECT study, which started in July 2026 and is currently open for recruitment. It investigates the effectiveness and feasibility of a symptom-oriented, app- and smartwatch-based digital monitoring during treatment.",
+      "journal": "Pneumologie (Stuttgart, Germany)",
+      "pubDate": "2026-11-23",
+      "year": 2026,
+      "doi": "10.1055/a-3000-7348",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/43072721/",
+      "firstAuthor": "Claas Wesseler",
+      "firstAffiliation": "Asklepios Klinikum Harburg, Abteilung f&#xfc;r Pneumologie, Deutschland, Hamburg.",
+      "country": "Germany",
+      "language": "ger",
+      "termsMatched": [
+        "mesothelioma"
+      ]
+    },
+    {
+      "pmid": "43072553",
+      "title": "Multi-Omics Profiling Reveals NF2 Loss-Driven Glycosphingolipid Remodeling in Mesothelial Cells.",
+      "abstract": "Neurofibromin 2 (NF2) loss is common in malignant mesothelioma and is associated with the activation of Yes-associated protein/transcriptional co-activator with PDZ-binding motif (YAP/TAZ)-dependent transcription. However, its effects on cellular lipid metabolism remain unclear. In this study, we integrated non-targeted lipidomics with transcriptomic and proteomic analyses of MeT-5A mesothelial cells to characterize NF2 deficiency-induced lipid metabolic remodeling. NF2 loss was associated with significant accumulation of glycosylated ceramides, particularly hexosylceramides, accompanied by increased UDP-glucose ceramide glucosyltransferase (UGCG) expression. Analysis of public transcriptomic datasets revealed that UGCG expression was positively associated with YAP/TAZ-TEA domain transcription factor activity in mesothelial and mesothelioma cells and was associated with poorer clinical outcomes in patients with mesothelioma. Pharmacological inhibition of UGCG using miglustat reduced hexosylceramide levels and was accompanied by increased sphingomyelin (SM) levels. Although inhibiting either ceramide glycosylation or SM synthesis alone had limited effects on cell growth, their combined inhibition using miglustat and malabaricone C markedly suppressed cell growth in both parental and NF2-deficient MeT-5A cells. Together, these findings identify NF2 loss-associated glycosphingolipid remodeling as a previously unrecognized metabolic feature of mesothelial cells.",
+      "journal": "Journal of lipid research",
+      "pubDate": "2026-11-23",
+      "year": 2026,
+      "doi": "10.1016/j.jlr.2026.101211",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/43072553/",
+      "firstAuthor": "Tatsuhiro Sato",
+      "firstAffiliation": "Division of Cancer Biology, Aichi Cancer Center Research Institute, 1-1 Kanokoden, Chikusa-ku, Nagoya, Aichi, Japan.",
+      "country": "Japan",
+      "language": "eng",
+      "termsMatched": [
+        "mesothelioma"
+      ]
+    },
+    {
+      "pmid": "43071622",
+      "title": "Persistent global mesothelioma mortality despite asbestos control policies: A WHO mortality database analysis, 1997-2023.",
+      "abstract": "Mesothelioma remains a major global public health concern due to its strong association with asbestos exposure, long latency period, and poor prognosis. Despite international asbestos control efforts, mortality trends vary substantially across countries. This study aimed to evaluate global mesothelioma mortality patterns and temporal trends using data from the World Health Organization (WHO) Mortality Database from 1997 to 2023. We conducted a global ecological study using mortality data from the WHO Mortality Database. Mesothelioma deaths were identified using the International Classification of Diseases, 10th Revision (ICD-10) code C45. Age-standardized mortality rates (ASMRs) per 100,000 person-years were estimated using the direct standardization method and the Segi world standard population. Temporal trends were analyzed using Joinpoint Regression Program version 5.1.0. Annual Percent Change (APC) and Average Annual Percent Change (AAPC) with 95% confidence intervals (95%CI) were estimated by country and sex. Mesothelioma mortality patterns varied substantially across countries and sexes. Among men, mortality declined in several high-income countries, most notably in the United States (AAPC: -3.7%) and the Netherlands (-2.7%), whereas the largest increases were observed in the Republic of Korea (+4.8%) and Poland (+4.5%). Among women, the greatest reductions occurred in Kazakhstan (AAPC: -8.5%) and Austria (-2.6%), while mortality increased in Ireland (+5.6%) and Croatia (+3.2%). Over the last decade, the steepest declines were recorded in T&#xfc;rkiye (-6.5%) and Finland (-6.0%) among men, and in Kazakhstan (-8.5%) and Uruguay (-5.7%) among women. Mesothelioma mortality trends remain highly heterogeneous worldwide despite asbestos control policies. While several high-income countries have demonstrated declining mortality trends, increasing patterns persist in some countries, suggesting the ongoing or delayed effects of asbestos exposure and unequal implementation of regulatory measures. These findings highlight the persistent global burden of mesothelioma and the need to strengthen asbestos surveillance and preventive policies.",
+      "journal": "PloS one",
+      "pubDate": "2026-11-23",
+      "year": 2026,
+      "doi": "10.1371/journal.pone.0362206",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/43071622/",
+      "firstAuthor": "Myriam Coronel-Tineo",
+      "firstAffiliation": "Universidad Cientifica del Sur, Lima, Peru.",
+      "country": "Peru",
+      "language": "eng",
+      "termsMatched": [
+        "asbestos",
+        "mesothelioma"
+      ]
+    },
     {
       "pmid": "43069313",
       "title": "Wide Angle X-Ray Scattering Data Set of Gypsum Compounds.",
