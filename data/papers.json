@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-11-24T12:28:51.522Z",
+    "generatedAt": "2026-11-25T11:17:47.123Z",
     "source": "NCBI E-utilities (PubMed)",
     "terms": [
       "asbestos",
@@ -136,6 +136,42 @@
       "country": "Poland",
       "language": "eng",
       "termsMatched": [
+        "mesothelioma"
+      ]
+    },
+    {
+      "pmid": "43079823",
+      "title": "[Advances in pathologic diagnosis and updates in classification and grading of pleural mesothelioma].",
+      "abstract": "Pleural mesothelioma (PMe) is a primary malignant tumor originating from pleural mesothelial cells, characterized by high invasiveness, rapid progression and poor prognosis. Its occurrence closely associated with asbestos exposure. The diagnosis of pleural mesothelioma presents several challenges in diagnostic pathology, as each histological subtype has its own unique differential diagnosis. No single antibody is completely sensitive or specific for mesothelioma; instead, the diagnosis relies on a combination of several antibody panels. The most commonly mutated genes in pleural mesothelioma are,, and.Accurate diagnosis and evaluation of pleural mesothelioma typically require a multimodal approach, combining cytological testing, CT scans, and MRI imaging. This article comprehensive reviews the pathological diagnosis and differential diagnosis of PMe, interprets the relevant updates in the 2021 WHO classification of thoracic tumors. It synthesizes and summarizes the clinicopathological features of pleural mesothelioma, including the main differential diagnoses, diagnostic pitfalls, and criteria for distinguishing benign from malignant lesions. Furthermore, the article reviews the latest advancements in molecular genetic research on mesothelioma, exploring the involved pathogenesis and diagnostic methods. It also reviews the prognostic indicators associated with this disease. By providing these insights, the article offers valuable guidance for both the pathological diagnosis and clinical management of mesothelioma.",
+      "journal": "Zhonghua lao dong wei sheng zhi ye bing za zhi = Zhonghua laodong weisheng zhiyebing zazhi = Chinese journal of industrial hygiene and occupational diseases",
+      "pubDate": "2026-11-20",
+      "year": 2026,
+      "doi": "10.3760/cma.j.cn121094-20250614-00237",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/43079823/",
+      "firstAuthor": "Q S Fu",
+      "firstAffiliation": "Department of Pathology, The People's Hospital of Chuxiong Yi Autonomous Prefecture, Chuxiong 675000, China.",
+      "country": "China",
+      "language": "chi",
+      "termsMatched": [
+        "asbestos",
+        "mesothelioma"
+      ]
+    },
+    {
+      "pmid": "43079822",
+      "title": "[Research progress on the application of microRNA in the clinical diagnosis and prognostic evaluation of pleural mesothelioma].",
+      "abstract": "Pleural mesothelioma (PM) is a rare, a highly aggressive malignancy with a poor prognosis. PM occurs more frequently in individuals with a history of long-term asbestos exposure and is characterized by a long latency period, atypical early symptoms and a high rate of misdiagnosis. microRNAs (miRNAs) are a class of small non-coding RNAs that regalate gene expression post-transcriptional. Aberrant miRNA expression is closely associated with tumorigenesis, progression and metastasis, and miRNA can be detected in serum, plasma, pleural effusion, tumor tissues and extracellular vesicles. This review outlines the biogenesis and functions of miRNAs, systematically summarizes advances in miRNAs research on the early diagnosis, differential diagnosis and prognostic evaluation of PM, and discusses the challenges retated to detection standardization, clinical validation and translational application. Current evidence indicates that combined detection of multiple miRNAs may improve diagnostic efficacy, and specific miRNA expression profiles can also be used for survival risk stratification. miRNAs hold promise as novel biomarkers for the early diagnosis and prognostic evaluation of PM.",
+      "journal": "Zhonghua lao dong wei sheng zhi ye bing za zhi = Zhonghua laodong weisheng zhiyebing zazhi = Chinese journal of industrial hygiene and occupational diseases",
+      "pubDate": "2026-11-20",
+      "year": 2026,
+      "doi": "10.3760/cma.j.cn121094-20250313-00096",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/43079822/",
+      "firstAuthor": "X Cheng",
+      "firstAffiliation": "Department of Biochemistry and Molecular Biology, School of Basic Medicine, Health Science Center, Dali University, Dali 671000, China Teaching and Research Section of Radiology and Medical Imaging, School of Clinical Medicine, Dali University, Dali 671000, China.",
+      "country": "China",
+      "language": "chi",
+      "termsMatched": [
+        "asbestos",
         "mesothelioma"
       ]
     },
