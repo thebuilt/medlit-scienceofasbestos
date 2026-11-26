@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-11-25T11:17:47.123Z",
+    "generatedAt": "2026-11-26T10:54:26.852Z",
     "source": "NCBI E-utilities (PubMed)",
     "terms": [
       "asbestos",
@@ -19,6 +19,23 @@
     "notes": "Keyword matching includes multilingual aliases. Expand TERM_GROUPS in scripts/update_pubmed_data.mjs to add more translations."
   },
   "papers": [
+    {
+      "pmid": "43094114",
+      "title": "Folate receptor &#x3b1; as a therapeutic target in cancer: molecular mechanisms, receptor-mediated drug delivery, and translational advances.",
+      "abstract": "Folate receptor alpha (FR&#x3b1;) is a high-affinity folate-binding glycoprotein that is overexpressed in several epithelial cancers, including ovarian, triple-negative breast, mesothelioma, and non-small cell lung cancers, while exhibiting limited expression in normal tissues. Its selective expression and receptor-mediated endocytosis make FR&#x3b1; an attractive target for precision cancer therapy. This review summarizes the structure, biological functions, and oncogenic role of FR&#x3b1;, highlighting its involvement in tumor progression and signaling pathways. Recent advances in FR&#x3b1;-targeted therapeutics are discussed, including folic acid-functionalized nanoparticles and antibody-drug conjugates (ADCs). Folate-targeted liposomes, polymeric, silica-based, and metallic nanoparticles have demonstrated enhanced tumor targeting, cellular uptake, and anticancer efficacy in preclinical studies. In parallel, FR&#x3b1;-targeted ADCs, particularly the FDA-approved mirvetuximab soravtansine (Elahere), along with emerging candidates such as MORAb-202 and STRO-002, have shown promising clinical outcomes. Despite these advances, challenges including receptor heterogeneity, off-target uptake, and drug resistance remain. Continued optimization of targeting strategies, nanocarrier design, and patient selection is expected to further improve the efficacy and safety of FR&#x3b1;-directed cancer therapies.",
+      "journal": "Journal of receptor and signal transduction research",
+      "pubDate": "2026-11-25",
+      "year": 2026,
+      "doi": "10.1080/10799893.2026.2766551",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/43094114/",
+      "firstAuthor": "Sai Ramya Bodagala",
+      "firstAffiliation": "Department of Pharmaceutics, MB School of Pharmaceutical Sciences, Mohan Babu University, Tirupati, Andhra Pradesh, India.",
+      "country": "India",
+      "language": "eng",
+      "termsMatched": [
+        "mesothelioma"
+      ]
+    },
     {
       "pmid": "43072721",
       "title": "[The EU-funded CONNECT study: Digital monitoring of immune-related adverse events during immunotherapy for stage IV non-small cell lung cancer and advanced pleural mesothelioma].",
@@ -176,6 +193,40 @@
       ]
     },
     {
+      "pmid": "43088245",
+      "title": "Exosome-Based Therapeutic Perspectives in Pleural Mesothelioma: A Double-Edged Sword with Biological Opportunities and Translational Challenges.",
+      "abstract": "Pleural mesothelioma (PM) is an aggressive malignancy with limited therapeutic options, underscoring the need for novel therapeutic alternatives. Exosomes, a subset of extracellular vesicles mediating intercellular communication, have emerged as potential therapeutic platforms due to their ability to transfer functional biomolecules and modulate cellular responses. In PM, however, exosomes exert context-dependent effects: tumor-derived exosomes actively contribute to tumor progression, immune modulation, and therapy resistance, while exosomes of non-tumor origin or those subjected to engineering approaches may be exploited for targeted therapeutic delivery. This review discusses the mechanistic foundations of exosome biology relevant to PM and current preclinical efforts to harness exosomes as carriers of nucleic acids, small molecules, and immune-modulatory agents. It further evaluates the influence of exosome cell-of-origin and the intrinsic therapeutic paradox arising from the dual biological roles of exosomes. Finally, key translational challenges, including optimization of exosome source, cargo loading efficiency and manufacturing scalability, are examined as major obstacles to clinical implementation. Addressing these challenges is essential for translating exosome-based strategies into more effective therapeutic interventions in this malignancy.",
+      "journal": "Cancers",
+      "pubDate": "2026-11-20",
+      "year": 2026,
+      "doi": "10.3390/cancers18223716",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/43088245/",
+      "firstAuthor": "Lourdes Cortes-Dericks",
+      "firstAffiliation": "Independent Researcher, 22301 Hamburg, Germany.",
+      "country": "Germany",
+      "language": "eng",
+      "termsMatched": [
+        "mesothelioma"
+      ]
+    },
+    {
+      "pmid": "43085131",
+      "title": "Combined dopamine receptor inhibition and radiotherapy target mesothelioma-initiating cells and increase survival in a mouse model of mesothelioma.",
+      "abstract": "Malignant pleural mesothelioma (MPM) is a rare thoracic cancer associated with poor prognosis and low survival rates. In solid cancers, repurposed dopamine receptor antagonists have been shown to have anti-cancer effects. Moreover, in combination with radiotherapy, quetiapine (QTP), a dopamine 2/3 receptor antagonist, has been shown to interfere with self-renewal capacity in glioma-initiating cells and increase survival in mouse models of glioblastoma. In this study we explore combined treatment effects in MPM. Using mesothelioma cell lines, MSTO-211H, H2052, and H2452, and a MSTO-211H-derived orthotopic xenograft mouse model of MPM we examined how QTP combined with radiation affects mesothelioma-initiating cells (MICs) in vitro and survival in vivo. Subsequently, bulk and single cell RNA sequencing was used to characterize the transcriptomic landscape of MSTO-211H treated with combined radiation and QTP. We demonstrate that combining QTP with radiation reduces MIC self-renewal capacity and stem cell frequency. In vivo, this combination therapy significantly extends the median survival of mesothelioma-bearing mice. Clonogenic survival assays revealed that QTP does not enhance radiosensitivity. Sequencing data revealed, combined treatment downregulated cell cycle and proliferation pathways, depleted cancer stem cells, and increased cellular senescence. Taken together, our study highlights the therapeutic potential of radiation with QTP in the treatment of MPM.",
+      "journal": "Neoplasia (New York, N.Y.)",
+      "pubDate": "2026-11-20",
+      "year": 2026,
+      "doi": "10.1016/j.neo.2026.101413",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/43085131/",
+      "firstAuthor": "Anjelica Cardenas",
+      "firstAffiliation": "Department of Radiation Oncology, David Geffen School of Medicine at University of California Los Angeles (UCLA), Los Angeles, CA, USA.",
+      "country": "United States",
+      "language": "eng",
+      "termsMatched": [
+        "mesothelioma"
+      ]
+    },
+    {
       "pmid": "43055494",
       "title": "Transcriptional Profile and DNA Hydroxymethylation Pattern of Signature Genes Mediating Iron Metabolism and Oxidative Stress in Chrysotile-Exposed Bronchial Epithelial BEAS-2B Cells.",
       "abstract": "Asbestos is a fibrous mineral that may disrupt iron and oxidation homeostasis, mediating ferroptosis. However, the integrative profile of genetic and epigenetic modification of signature genes in bronchial epithelium remains unknown. BEAS-2B, a human bronchial epithelial cell line, was exposed to chrysotile asbestos at concentrations ranging from 6.25 to 50&#xa0;&#x3bc;g/cmfor up to 72 h. Exposure to 50&#xa0;&#x3bc;g/cmof chrysotile compromised cell viability in a time-dependent manner, accompanied by reduced glutathione and increased malondialdehyde and iron at 72 h. Transcriptomic data revealed 389 downregulated differentially expressed genes (DEGs) and 617 upregulated DEGs in cells exposed to 6.25&#xa0;&#x3bc;g/cmand 50&#xa0;&#x3bc;g/cmchrysotile compared to non-exposed cells and uncovered 14 signature genes mediating ferroptosis. Notably, global DNA hypohydroxymethylation of FTL was observed in cells exposed to 50&#xa0;&#x3bc;g/cmof chrysotile exposure, but not at 6.25&#xa0;&#x3bc;g/cmconcentration. Additionally, the pattern of CpG site-specific DNA hydroxymethylation modification in ACSL3, ANPEP, CHAC1, GSTM2, GSTA4, and TFRC varied depending on chrysotile exposure concentration. Furthermore, the hydroxymethylation of FTL negatively correlated with its expression. FTL expression was positively associated with malondialdehyde and iron, but negatively correlated with glutathione. Accordingly, the relationship between FTL expression and DNA hypohydroxymethylation might disrupt iron and oxidation balance, providing a putative biomarker mediating ferroptosis in chrysotile-exposed airway epithelium.",
@@ -256,6 +307,23 @@
       "firstAuthor": "Bethany Taylor",
       "firstAffiliation": "Mesothelioma UK Research Centre, School of Allied Health Professionals, Pharmacy, Nursing and Midwifery, University of Sheffield, Sheffield, UK. btaylor3@sheffield.ac.uk.",
       "country": "United Kingdom",
+      "language": "eng",
+      "termsMatched": [
+        "mesothelioma"
+      ]
+    },
+    {
+      "pmid": "43093415",
+      "title": "Antitumor Effects of a Small Artificial RNA Sequence in Malignant Pleural Mesothelioma Through Suppression of Cell Cycle-Related Transcriptional Programs.",
+      "abstract": ": Malignant pleural mesothelioma (MPM) is an aggressive malignancy with a poor prognosis and limited therapeutic options. Small RNA-based therapeutics may provide a means of simultaneously modulating multiple oncogenic pathways. We screened candidate small RNAs for antitumor activity in MPM and investigated the molecular basis of the response to the selected sequence. We aimed to identify a small RNA with reproducible antitumor activity in human mesothelioma cells and to define the signaling and transcriptional programs associated with its activity.: Candidate small RNAs were transfected into three human mesothelioma cell lines (H2052, H2452, and H28). Cell viability and proliferation were assessed by WST-8 and BrdU incorporation assays. Intracellular signaling was examined using dual-luciferase reporters, and RNA sequencing with gene set enrichment analysis (GSEA) was used to characterize transcriptional changes.: Among the tested RNAs, the small artificial sequence (SAS) most consistently reduced cell viability and significantly suppressed proliferation in all three cell lines. Untreated mesothelioma cells showed prominent enrichment of E2F Targets compared with normal lung tissue, whereas SAS treatment suppressed E2F-associated cell-cycle programs and significantly reduced BrdU incorporation, consistent with inhibition of G1/S cell-cycle progression. SAS also reduced AP1 and SRE activities in H2452 cells but not in H2052 cells, indicating cell line-dependent modulation of MAPK-related signaling. SAS also induced interferon- and inflammatory response gene sets, with particularly strong cytokine induction observed after phosphorothioate (PS) modification of the passenger strand.: SAS exerted reproducible antitumor effects in human mesothelioma cells, with suppression of cell proliferation and E2F-associated cell-cycle programs as the most consistent findings. These results support further investigation of SAS in MPM, although its therapeutic efficacy remains to be established in vivo.",
+      "journal": "Pharmaceuticals (Basel, Switzerland)",
+      "pubDate": "2026-11-17",
+      "year": 2026,
+      "doi": "10.3390/ph19111831",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/43093415/",
+      "firstAuthor": "Shihori Kouda",
+      "firstAffiliation": "Department of Molecular Pathology, Division of Health Sciences, Graduate School of Medicine, The University of Osaka, Suita 565-0871, Japan.",
+      "country": "Japan",
       "language": "eng",
       "termsMatched": [
         "mesothelioma"
@@ -430,6 +498,23 @@
       "firstAuthor": "Fabian Kockelmann",
       "firstAffiliation": "Department of Surgery, Klinikum Dortmund, Hospital of Witten-Herdecke University, Dortmund, Germany. Kockelmann.Fabian@mh-hannover.de.",
       "country": "Germany",
+      "language": "eng",
+      "termsMatched": [
+        "mesothelioma"
+      ]
+    },
+    {
+      "pmid": "43091723",
+      "title": "Disulfidptosis-Related Genes Comprise Two Functionally Distinct, Transcriptionally Uncoupled Subsets with Complementary Prognostic Associations: An Integrated Pan-Cancer Analysis of TCGA Data.",
+      "abstract": "Disulfidptosis is a regulated form of cell death that arises from NADPH depletion and disulfide stress on the actin cytoskeleton in cells with high. Scores built from disulfidptosis-related genes (DRGs) are increasingly put forward as prognostic markers, yet their internal structure and metabolic context have remained poorly defined. We examined 24 DRGs across 10,242 primary tumours (33 TCGA cancer types) and 722 normal tissues, drawing on survival, purity and genomic data.was up-regulated in 14 of 18 cancers, while the majority of cytoskeletal DRGs sat at lower levels in tumours. The DRG score showed a heterogeneous pooled link to shorter overall survival (HR per SD 1.15, 95% CI 1.06-1.25; prediction interval 0.78-1.70) and stayed associated after adjustment for available clinical covariates and purity in six cancers (FDR < 0.05): adverse in five, among them lower-grade glioma (HR 1.68; attenuated to 1.24,= 0.046, after adjustment forand 1p/19q status, grade and purity) and mesothelioma, and protective in clear-cell renal carcinoma. The predefined core and cytoskeleton subsets were almost uncorrelated (median &#x3c1; = -0.04):expression tracked pentose phosphate/NADPH genes independently of purity (median &#x3c1; = 0.32), whereas the cytoskeleton subset ran opposite to oxidative phosphorylation genes. After adjustment for NRF2 target expression, however,was not more strongly coupled to core PPP enzyme genes than expression-matched random genes. In joint models, each subset proved independently prognostic, but in different cancers. The composite score was prognostic in more cancer types than random gene sets of equal size (9 vs. 3;= 0.04), whereas in the four cancers with robust models, DRG-based LASSO-Cox models performed no better than models built from random 24-gene sets. DRG scores are better decomposed than read as a single disulfidptosis axis.",
+      "journal": "International journal of molecular sciences",
+      "pubDate": "2026-11-11",
+      "year": 2026,
+      "doi": "10.3390/ijms272210092",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/43091723/",
+      "firstAuthor": "Zeynep Kus",
+      "firstAffiliation": "Department of Molecular Biology and Genetics, Biruni University, Istanbul 34015, T&#xfc;rkiye.",
+      "country": "",
       "language": "eng",
       "termsMatched": [
         "mesothelioma"
@@ -913,6 +998,23 @@
       ]
     },
     {
+      "pmid": "43087711",
+      "title": "MX1 Expression in Cancer Cells Is Strongly Linked to CD8+ T-Cell Infiltration and PD-L1 Expression: A Tissue Microarray Study Evaluating More than 14,000 Tumors from 145 Different Tumor Entities.",
+      "abstract": "Myxovirus resistance protein 1 (MX1) contributes to resistance against viral infections, including to influenza, and has recently been implicated in cancer.A tissue microarray with 17,909 samples from 145 tumor types/subtypes and 608 samples from 76 normal tissue types was analyzed by immunohistochemistry (IHC) to assess MX1 expression.MX1 positivity was found in tumor cells of 5956 of 14,512 analyzable samples, and 131 of 145 entities included at least one positive case. High positivity rates occurred in squamous cell carcinomas (up to 88%), neuroendocrine neoplasms (up to 85%), germ cell neoplasms (up to 77%), salivary gland tumors (up to 75%), mesothelioma (up to 74%), endometrial and ovarian carcinomas (up to 73%), cervical adenocarcinoma (73%), pancreatic ductal adenocarcinoma (65%), and urothelial carcinoma (up to 62%). MX1 expression correlated with PD-L1 positivity and CD8+ lymphocyte density (< 0.0001 each). High MX1 expression was linked to grade progression in breast cancer (< 0.0001), microsatellite instability in colorectal adenocarcinoma (= 0.0003), high grade (= 0.0431) and advanced pT stage (= 0.0269) in hepatocellular carcinoma, distant metastasis in clear cell renal cell carcinoma (ccRCC,= 0.0164), and nodal metastasis in papillary RCC (pRCC;= 0.0326). Low MX1 expression was linked to stage progression in muscle-invasive urothelial carcinoma (= 0.0372) and colorectal adenocarcinoma (= 0.0002), papillary (= 0.013) and follicular (= 0.0221) thyroid cancer, and nodal metastasis in serous high-grade ovarian carcinoma (= 0.0355). MX1 expression was unrelated to phenotype in endometrioid endometrial and ovarian carcinoma.MX1 expression in tumors is strongly linked to CD8+ lymphocyte density and PD-L1 expression, suggesting an association with an immune-inflamed, type I interferon-related tumor microenvironment.",
+      "journal": "Biomedicines",
+      "pubDate": "2026-10-26",
+      "year": 2026,
+      "doi": "10.3390/biomedicines14112455",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/43087711/",
+      "firstAuthor": "Benjamin Bajusz",
+      "firstAffiliation": "Institute of Pathology, University Medical Center Hamburg-Eppendorf, 20246 Hamburg, Germany.",
+      "country": "Germany",
+      "language": "eng",
+      "termsMatched": [
+        "mesothelioma"
+      ]
+    },
+    {
       "pmid": "43026761",
       "title": "Review of Registries, Databases and Biobanks for Surveillance and Research on Mesothelioma.",
       "abstract": "Mesothelioma is considered a signal tumour of asbestos exposure. Many countries have imposed asbestos bans or effectively no longer use asbestos, but a small number continue to import or mine it. Controls are generally much improved, with resulting plateauing or decreasing rates in many countries, but the effect of past exposures and ongoing exposure through in situ asbestos in buildings and environmental sources results in continued cases of mesothelioma globally. Improper disposal of asbestos is also an obstacle to managing and reducing asbestos exposure. Data on mesothelioma are recorded by mesothelioma registries, population-based cancer registries, healthcare databases, biobanks and online epidemiological data sources. Data from the various sources are significantly different and generally not directly comparable. Mesothelioma registries and population-based cancer registries are excellent resources for epidemiological and statistical data but are typically not linked to clinical data or biospecimen collections. Integrating biospecimen collections with linked clinical data creates rich real-world datasets that enhance research quality, enable data-driven discoveries, and support future translational research. The diagnosis of mesothelioma can be challenging, and data recording is not always accurate or complete across centres. Inconsistencies in data can affect epidemiological studies and undermine efforts to improve policies that affect individuals with mesothelioma and prevent further occurrence of mesothelioma. Linkage between mesothelioma registries, cancer registries, biobanks and other health-related databases will benefit researchers and allow access for further research initiatives. Closer collaboration between registries offers benefits for countries that lack diagnostic and healthcare infrastructure. Established mesothelioma registries can serve as valuable models for countries developing national surveillance systems by sharing expertise in case ascertainment, exposure assessment, registry governance and epidemiological methods. This study is a narrative review based on a non-systematic search of the published literature. This review of mesothelioma-related data resources and biospecimen collections serves as a foundation for enhancing collaboration and knowledge sharing in the fight against mesothelioma.",
@@ -927,6 +1029,23 @@
       "language": "eng",
       "termsMatched": [
         "asbestos",
+        "mesothelioma"
+      ]
+    },
+    {
+      "pmid": "43090609",
+      "title": "From Pleural Drainage to Artificial Intelligence: Selected Historical Milestones and Visionary Pioneers Shaping Innovation in Thoracic Surgery.",
+      "abstract": "Thoracic surgery evolved from procedures aimed at controlling pleural infection and tuberculosis into a technologically advanced specialty integrating oncologic resection, airway and chest wall reconstruction, transplantation, minimally invasive surgery, robotics, and data-driven care. This deliberately selective narrative historical review examines selected turning points that changed the scope or practice of the specialty and the representative pioneers associated with them. A targeted literature search prioritized original landmark reports together with contemporary evidence. The trajectory begins with drainage, collapse therapy, and solutions to open pneumothorax; continues through pneumonectomy, bronchoplastic and sublobar resection, mesothelioma surgery, pulmonary metastasectomy, screening, tracheal reconstruction, lung autotransplantation, and transplantation; and extends to VATS, uniportal and non-intubated surgery, RATS, enhanced recovery, and artificial intelligence. Across these eras, innovation repeatedly shifted from radicality toward preservation and from isolated operative technique toward multidisciplinary perioperative systems. Randomized trials have also shown that progress may require reassessing or abandoning previously accepted surgical paradigms. Thoracic surgery is therefore best understood not as a chronology of operations, but as a continuing process of redefining what is technically possible, oncologically appropriate, physiologically tolerable, and clinically valuable.",
+      "journal": "Life (Basel, Switzerland)",
+      "pubDate": "2026-10-24",
+      "year": 2026,
+      "doi": "10.3390/life16111789",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/43090609/",
+      "firstAuthor": "Paolo Scanagatta",
+      "firstAffiliation": "Department of Thoracic Surgery, Alessandro Manzoni Hospital, ASST Lecco, 23900 Lecco, Italy.",
+      "country": "Italy",
+      "language": "eng",
+      "termsMatched": [
         "mesothelioma"
       ]
     },
