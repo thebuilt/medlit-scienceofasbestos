@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-11-26T10:54:26.852Z",
+    "generatedAt": "2026-11-27T10:51:52.011Z",
     "source": "NCBI E-utilities (PubMed)",
     "terms": [
       "asbestos",
@@ -1012,6 +1012,23 @@
       "language": "eng",
       "termsMatched": [
         "mesothelioma"
+      ]
+    },
+    {
+      "pmid": "43095687",
+      "title": "A Legacy Written in the Pleura: CT Findings Suggestive of Asbestos Exposure.",
+      "abstract": "Pleural plaques are the most frequent radiological manifestation of previous asbestos exposure and may remain clinically silent for decades. Their characteristic morphology and distribution on computed tomography (CT), particularly when calcified, can strongly suggest previous exposure and prompt correlation with occupational history. We report the case of a 78-year-old man who underwent thoraco-abdomino-pelvic CT for staging and assessment of the resectability of a pancreatic head mass. Thoracic CT demonstrated multiple bilateral calcified pleural plaques without associated pulmonary interstitial fibrosis. Review of the patient's occupational history revealed previous military service as a mechanic, representing a potential source of remote occupational asbestos exposure. The combination of a characteristic CT pattern and a compatible occupational history strongly supported asbestos-related pleural plaques. This case illustrates the characteristic CT appearance of pleural plaques and emphasizes their value as a radiological marker of remote asbestos exposure, particularly when the responsible occupational exposure may have occurred decades earlier.",
+      "journal": "Cureus",
+      "pubDate": "2026-10-26",
+      "year": 2026,
+      "doi": "10.7759/cureus.118642",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/43095687/",
+      "firstAuthor": "Samia Amar",
+      "firstAffiliation": "Radiology Department, Mohammed V Military Teaching Hospital, Rabat, MAR.",
+      "country": "",
+      "language": "eng",
+      "termsMatched": [
+        "asbestos"
       ]
     },
     {
